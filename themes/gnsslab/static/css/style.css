@@ -1444,6 +1444,13 @@ input, textarea, select {
   border-radius: var(--radius-lg);
 }
 
+.professor-photo img {
+  width: 180px;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
 .professor-name {
   font-size: var(--text-3xl);
   color: var(--color-primary);
@@ -1543,14 +1550,15 @@ input, textarea, select {
 
 .member-photo img,
 .member-photo .photo-placeholder {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
 }
 
 .member-photo .photo-placeholder {
-  width: 80px;
-  height: 80px;
-  font-size: var(--text-lg);
+  font-size: var(--text-2xl);
 }
 
 .member-name {
