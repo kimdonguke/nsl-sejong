@@ -1,9 +1,9 @@
 ---
-title: "Park Inkyung"
+title: "Park Inkyeong"
 nameKorean: "박인경"
 role: "undergrad"
 weight: 2
 research: "-"
 email: "student@sju.kr"
-photo: "/images/members/park-inkyong.jpg"
+photo: "/images/members/park-inkyung.jpg"
 ---
