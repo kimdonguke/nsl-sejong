@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      {{ with .Parent }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="breadcrumb-sep">&#8250;</span>
+      {{ end }}
+      <span class="breadcrumb-current">{{ .Title }}</span>
+    </nav>
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ if not .Date.IsZero }}
+    <div class="page-meta">
+      <span>{{ .Date.Format "January 02, 2006" }}</span>
+      {{ with .Params.author }}<span>By {{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="content-layout">
+    <article class="article-content">
+      {{ .Content }}
+    </article>
+  </div>
+</div>
+{{ end }}

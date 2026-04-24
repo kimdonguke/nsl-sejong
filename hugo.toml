@@ -1,0 +1,57 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Navigation System Lab"
+theme = "gnsslab"
+
+[params]
+  labNameKorean = "항법시스템 연구실"
+  labNameEnglish = "Navigation System Lab"
+  labShort = "NSL"
+  university = "Sejong University"
+  universityKorean = "세종대학교"
+  department = "Department of Aerospace Engineering"
+  departmentKorean = "항공우주공학과"
+  professorName = "Byungwoon Park"
+  professorNameKorean = "박병운"
+  email = "byungwoon@sejong.ac.kr"
+  phone = "02-3408-4385"
+  office = "충무관(C관) 1016호"
+  officeHours = "수요일 10:00–14:00"
+  address = "209 Neungdong-ro, Gwangjin-gu, Seoul 05006, Republic of Korea"
+  addressKorean = "서울특별시 광진구 능동로 209(군자동) 세종대학교 05006"
+  description = "세종대학교 항공우주공학과 항법시스템 연구실 - Navigation System Lab at Sejong University"
+  # Theme CSS: "style.css" (Navy+Gold), "style2.css" (Crimson Red Minimal)
+  themeCSS = "style.css"
+
+[pagination]
+  pagerSize = 6
+
+[[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menus.main]]
+  name = "Research"
+  url = "/research/"
+  weight = 2
+
+[[menus.main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 3
+
+[[menus.main]]
+  name = "Members"
+  url = "/members/"
+  weight = 4
+
+[[menus.main]]
+  name = "News"
+  url = "/news/"
+  weight = 5
+
+[[menus.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 6

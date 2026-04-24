@@ -1,0 +1,366 @@
+papers:
+- title: GNSS L5/E5a Code Properties in the Presence of a Blanker
+  journal: Navigation, Journal of the Institute of Navigation
+  volume: '72'
+  year: '2025'
+  scope: 국외
+- title: A GNSS/Barometric Altimeter Tightly Coupled Integration for Three-Dimensional
+    Semi-Indoor Mapping With Android Smartphones
+  journal: IEEE Geoscience and Remote Sensing Letters
+  volume: '21'
+  year: '2024'
+  scope: 국외
+- title: L1 SFMC SBAS Message for Service Expansion of Multi-Constellation GNSS Support
+  journal: IEEE Access
+  volume: '11'
+  year: '2023'
+  scope: 국외
+- title: Seamless Accurate Positioning in Deep Urban Area Based on Mode Switching
+    Between DGNSS and Multipath Mitigation Positioning
+  journal: IEEE Transactions on Intelligent Transportation Systems
+  volume: '24'
+  year: '2023'
+  scope: 국외
+- title: Carrier Phase Residual Modeling and Fault Monitoring Using Short-Baseline
+    Double Difference and Machine Learning
+  journal: Mathematics
+  volume: '11'
+  year: '2023'
+  scope: 국외
+- title: Nonlinear Regression-Based GNSS Multipath Dynamic Map Construction and Its
+    Application in Deep Urban Areas
+  journal: IEEE Transactions on Intelligent Transportation Systems
+  volume: '24'
+  year: '2023'
+  scope: 국외
+- title: Inherent Limitations of Smartphone GNSS Positioning and Effective Methods
+    to Increase the Accuracy Utilizing Dual-Frequency Measurements
+  journal: Sensors
+  volume: '22'
+  year: '2022'
+  scope: 국외
+- title: Optimal Parameter Inflation to Enhance the Availability of Single-Frequency
+    GBAS for Intelligent Air Transportation
+  journal: IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS
+  volume: '23'
+  year: '2022'
+  scope: 국외
+- title: Horizontal Drift Velocity and Dimensions of Ionospheric Irregularities Using
+    ROT From a GNSS Receiver Array
+  journal: IEEE Transactions on Geoscience and Remote Sensing
+  volume: ''
+  year: '2022'
+  scope: 국외
+- title: Nonlinear Regression-Based GNSS Multipath Modelling in Deep Urban Area
+  journal: Mathematics
+  volume: '10'
+  year: '2022'
+  scope: 국외
+- title: An Online SBAS Service to Improve Drone Navigation Performance in High-Elevation
+    Masked Areas
+  journal: Sensors
+  volume: '20'
+  year: '2020'
+  scope: 국외
+- title: Dynamic Performance Evaluation of Various GNSS Receivers and Positioning
+    Modes with Only One Flight Test
+  journal: ELECTRONICS
+  volume: '8'
+  year: '2019'
+  scope: 국외
+- title: Accuracy Improvement of DGPS for Low-Cost Single-Frequency Receiver using
+    Modified Flächen Korrektur parameter Correction
+  journal: ISPRS INTERNATIONAL JOURNAL OF GEO-INFORMATION
+  volume: '6'
+  year: '2017'
+  scope: 국외
+- title: Optimal Divergence-Free Hatch Filter for GNSS Single-Frequency Measurement
+  journal: Sensors
+  volume: '17'
+  year: '2017'
+  scope: 국외
+- title: Comparative Analysis of Height-Related Multiple Correction Interpolation
+    Methods with Constraints for Network RTK in Mountainous Areas
+  journal: Journal Of Navigation
+  volume: '69'
+  year: '2016'
+  scope: 국외
+- title: Optimal Selection of an Inertial Sensor for Cycle Slip Detection Considering
+    Single-frequency RTK/INS Integrated Navigation
+  journal: Transactions Of The Japan Society For Aeronautical And Space Sciences
+  volume: '59'
+  year: '2016'
+  scope: 국외
+- title: Position Accuracy Improvement by Implementing the DGNSS-CP Algorithm in Smartphones
+  journal: Sensors
+  volume: '16'
+  year: '2016'
+  scope: 국외
+- title: A Single Distance Measuring Equipment (DME) Station-Based Positioning System
+    for Alternative Position Navigation and Timing (APNT)
+  journal: Navigation, Journal Of The Institute Of Navigation
+  volume: '62'
+  year: '2015'
+  scope: 국외
+- title: GPS Cycle Slip Detection Considering Satellite Geometry Based on TDCP/INS
+    Integrated Navigation
+  journal: SENSORS
+  volume: '15'
+  year: '2015'
+  scope: 국외
+- title: Predictions of Allowable Sensor Error Limit for Cycle-Slip Detection
+  journal: TRANSACTIONS OF THE JAPAN SOCIETY FOR AERONAUTICAL AND SPACE SCIENCES
+  volume: '57'
+  year: '2014'
+  scope: 국외
+- title: 'DGPS Enhancement to GPS NMEA Output Data: DGPS by Correction Projection
+    to Position-Domain'
+  journal: JOURNAL OF NAVIGATION
+  volume: '66'
+  year: '2013'
+  scope: 국외
+- title: 'The Compact Network RTK Method: An Effective Solution to Reduce GNSS Temporal
+    and Spatial Decorrelation Error'
+  journal: JOURNAL OF NAVIGATION
+  volume: '63'
+  year: '2010'
+  scope: 국외
+- title: Design of Efficient Navigation Message Format for UAV Pseudolite Navigation
+    System
+  journal: IEEE TRANSACTIONS ON AEROSPACE AND ELECTRONIC SYSTEMS
+  volume: '44'
+  year: '2008'
+  scope: 국외
+- title: Optimal hatch filter with an adaptive smoothing window width
+  journal: Journal of Navigation
+  volume: '61'
+  year: '2008'
+  scope: 국외
+- title: A feasibility study on a regional navigation transceiver system
+  journal: Journal of Navigation
+  volume: '61'
+  year: '2008'
+  scope: 국외
+- title: A guideline to establish DGPS reference station requirements
+  journal: Journal of Navigation
+  volume: '61'
+  year: '2008'
+  scope: 국외
+- title: RRC unnecessary for DGPS messages
+  journal: IEEE TRANSACTIONS ON AEROSPACE AND ELECTRONIC SYSTEMS
+  volume: '42'
+  year: '2006'
+  scope: 국외
+- title: PPP-RTK 사용자 정확도 최적화를 위한 보정 메시지 스케줄링 기법 설계
+  journal: 한국항행학회논문지
+  volume: ''
+  year: '2025'
+  scope: 국내
+- title: 다중 GNSS 위성군 측정치를 활용한 EKF 기반 달 위성 궤도 결정 시뮬레이션
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '14'
+  year: '2025'
+  scope: 국내
+- title: L1 Legacy SBAS 대비 DFMC SBAS 메시지 구조 차이에 대한 기술적 고찰
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '14'
+  year: '2025'
+  scope: 국내
+- title: 국내 GNSS 오차 성분별 공간 상관성 및 선형 모델링 특성 분석
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '13'
+  year: '2024'
+  scope: 국내
+- title: GPS CNAV
+  journal: QZSS LNAV/CNAV 및 BDS CNAV/CNAV-2의 방송 주기와 시퀀스에 대한 실험적 분석, Journal of Positioning,
+    Navigation, and Timing
+  volume: '13'
+  year: '2024'
+  scope: 국내
+- title: 도심지 GNSS 다중경로 오차 지도 적용을 위한 다중경로 보정정보 위치 영역 투영 기법
+  journal: 한국항행학회논문지
+  volume: '28'
+  year: '2024'
+  scope: 국내
+- title: Performance Analysis of GNSS Residual Error Bounding for QZSS CLAS
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '12'
+  year: '2023'
+  scope: 국내
+- title: 해양 및 내륙 정밀 PNT 사용자 성능 최적화를 위한 내륙 기준국 배치 연구
+  journal: 한국항행학회논문지
+  volume: '27'
+  year: '2023'
+  scope: 국내
+- title: Open PPP/PPP-RTK 보정정보 서비스 동향
+  journal: 한국항행학회논문지
+  volume: '26'
+  year: '2022'
+  scope: 국내
+- title: Monitoring QZSS CLAS-based VRS-RTK Positioning Performance
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '11'
+  year: '2022'
+  scope: 국내
+- title: Vehicle Reference Dynamics Estimation by Speed and Heading Information Sensed
+    from a Distant Point
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '11'
+  year: '2022'
+  scope: 국내
+- title: 동적 드론과 RTK 수신기를 이용한 기압계 보정정보 생성 방법론
+  journal: 한국항행학회논문지
+  volume: '26'
+  year: '2022'
+  scope: 국내
+- title: A Review on the Usage of RTKLIB for Precise Navigation of Unmanned Vehicles
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '10'
+  year: '2021'
+  scope: 국내
+- title: 기선 거리에 따른 VRS와 FKP 방식의 Network RTK 사용자 성능 비교
+  journal: 한국항행학회논문지
+  volume: '24'
+  year: '2020'
+  scope: 국내
+- title: Assessment of Position Degradation Due to Intermittent Broadcast of RTK MSM
+    Correction Under Various Conditions
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '9'
+  year: '2020'
+  scope: 국내
+- title: Feasibility Study on Integration of SSR Correction into Network RTK to Provide
+    More Robust Service
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '7'
+  year: '2018'
+  scope: 국내
+- title: Network RTK 품질 분석 방법론별 성능 지표와 사용자 항법 정확도의 상관성
+  journal: 한국항행학회논문지
+  volume: '22'
+  year: '2018'
+  scope: 국내
+- title: A Study on Compact Network RTK for Land Vehicles and Real-Time Test Results
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '7'
+  year: '2018'
+  scope: 국내
+- title: A Study on Compact Network RTK for Land Vehicles and Real-Time Test Results
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '7'
+  year: '2018'
+  scope: 국내
+- title: Navigation Augmentation in Urban Area by HALE UAV with Onboard Pseudolite
+    during Multi-Purpose Missions
+  journal: International Journal Of Aeronautical And Space Sciences
+  volume: '18'
+  year: '2017'
+  scope: 국내
+- title: PAV를 활용한 공유형 항공 이동수단의 해외 연구 동향 및 국내 적용 방안
+  journal: 한국항행학회논문지
+  volume: '21'
+  year: '2017'
+  scope: 국내
+- title: 국내 지역에서의 DGPS와 SBAS 성능 비교 분석
+  journal: 한국항행학회논문지
+  volume: '21'
+  year: '2017'
+  scope: 국내
+- title: 드론의 저가형 GPS 수신기용 SBAS 보강 정보 전송 시스템 제안
+  journal: 한국항행학회논문지
+  volume: '21'
+  year: '2017'
+  scope: 국내
+- title: Analysis on the Multi-Constellation SBAS Performance of SDCM in Korea
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '5'
+  year: '2016'
+  scope: 국내
+- title: 관측 행렬 산출 기법 별 DGNSS-CP 성능 비교
+  journal: 한국항행학회논문지
+  volume: '20'
+  year: '2016'
+  scope: 국내
+- title: SDCM의 국내 적용 및 성능 평가를 통한 다중 위성군 SBAS의 효과 예측
+  journal: 한국항행학회논문지
+  volume: '20'
+  year: '2016'
+  scope: 국내
+- title: 도심 지역에서의 드론 운용을 위한 비행 고도별 SBAS 보강항법 가용 시간 예측
+  journal: 지적과 국토정보
+  volume: '46'
+  year: '2016'
+  scope: 국내
+- title: 도심지역에서의 연도별 다중위성항법 통합성능 예측
+  journal: 한국측량학회지
+  volume: '34'
+  year: '2016'
+  scope: 국내
+- title: 고고도 장기체공 무인기와 의사위성/트랜시버를 활용한 국지적 대체항법에 관한 연구
+  journal: 한국항행학회논문지
+  volume: '19'
+  year: '2015'
+  scope: 국내
+- title: 비행거리와 적재량 변화에 따른 항공기 온실가스 배출량 및 연료소모량 산정
+  journal: 한국항행학회논문지
+  volume: '19'
+  year: '2015'
+  scope: 국내
+- title: Study on GNSS Constellation Combination to Improve the Current and Future
+    Multi-GNSS Navigation Performance
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '4'
+  year: '2015'
+  scope: 국내
+- title: 'Performance Analysis of Low-Order Surface Methods for Compact Network RTK:
+    Case Study'
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '4'
+  year: '2015'
+  scope: 국내
+- title: DO-278의 Validation & Verification에 적합한 WA-DGNSS 기준국 소프트웨어의 모듈별 통합 검증 방법론
+    제시
+  journal: 한국항행학회논문지
+  volume: '19'
+  year: '2015'
+  scope: 국내
+- title: 위성배치정보와 보정정보 맵핑 알고리즘을 이용한 저가형 GPS 수신기의 DGPS 서비스 적용 방안 연구
+  journal: 한국항해항만학회지
+  volume: '38'
+  year: '2014'
+  scope: 국내
+- title: 위성배치정보와 보정정보 맵핑 알고리즘을 이용한 저가형 GPS 수신기의 DGPS 서비스 적용 방안 연구
+  journal: 한국항해항만학회지
+  volume: '38'
+  year: '2014'
+  scope: 국내
+- title: A Feasibility Test on the DGPS by Correction Projection Using MSASCorrection
+  journal: Journal of Positioning, Navigation, and Timing
+  volume: '3'
+  year: '2014'
+  scope: 국내
+- title: 다중 기준국 보정정보 모델링 방식에 따른 Compact Network RTK 사용자 성능 비교
+  journal: 한국항행학회논문지
+  volume: '17'
+  year: '2013'
+  scope: 국내
+- title: 육상교통 인프라 구축을 위한 다중 네트워크 간 미지정수 수준 조정이 고려된 Compact Network RTK 보정정보 생성기법 연구
+  journal: 한국항행학회논문지
+  volume: '17'
+  year: '2013'
+  scope: 국내
+- title: 위성항법 보정정보 표준화 동향 - GNSS 성능 향상을 위한 약속
+  journal: TTA Journal
+  volume: ''
+  year: '2013'
+  scope: 국내
+- title: Network RTK 항체의 불연속 위치 결정 개선을 위한 기준국 셀간 미지정수 차이 조정 연구
+  journal: 한국항행학회논문지
+  volume: '16'
+  year: '2012'
+  scope: 국내
+- title: A Closed-form Method for the Attitude Determination Using GNSS Doppler Measurements
+  journal: INTERNATIONAL JOURNAL OF CONTROL AUTOMATION AND SYSTEMS
+  volume: '9'
+  year: '2011'
+  scope: 국내

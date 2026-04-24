@@ -1,0 +1,89 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <a href="/news/">News</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">{{ .Title }}</span>
+    </nav>
+    <h1 class="page-title">{{ .Title }}</h1>
+    <div class="page-meta">
+      {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 02, 2006" }}</span>{{ end }}
+      {{ with .Params.category }}<span class="news-tag news-tag--{{ lower . }}">{{ . }}</span>{{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content-layout">
+    <article class="article-content">
+      {{ .Content }}
+    </article>
+
+    {{/* Prev / Next across all news items, sorted by date (newest first) */}}
+    {{ $newsPages := where .Site.RegularPages "Section" "news" }}
+    {{ $sorted := $newsPages.ByDate.Reverse }}
+    {{ $currentIndex := -1 }}
+    {{ range $i, $p := $sorted }}
+      {{ if eq $p.Permalink $.Permalink }}
+        {{ $currentIndex = $i }}
+      {{ end }}
+    {{ end }}
+
+    {{ $newer := "" }}
+    {{ $older := "" }}
+    {{ if ge $currentIndex 0 }}
+      {{ if gt $currentIndex 0 }}{{ $newer = index $sorted (sub $currentIndex 1) }}{{ end }}
+      {{ $nextIdx := add $currentIndex 1 }}
+      {{ if lt $nextIdx (len $sorted) }}{{ $older = index $sorted $nextIdx }}{{ end }}
+    {{ end }}
+
+    {{ if or $newer $older }}
+    <nav class="post-nav" aria-label="News navigation" data-replace-history>
+      <div class="post-nav-cell post-nav-older">
+        {{ with $older }}
+        <a href="{{ .Permalink }}" class="post-nav-link">
+          <span class="post-nav-label"><span class="post-nav-arrow">&larr;</span>이전글</span>
+          <span class="post-nav-title">{{ .Title }}</span>
+          <span class="post-nav-date">{{ .Date.Format "2006.01.02" }}</span>
+        </a>
+        {{ else }}
+        <div class="post-nav-empty">
+          <span class="post-nav-label"><span class="post-nav-arrow">&larr;</span>이전글</span>
+          <span class="post-nav-placeholder">가장 오래된 글입니다</span>
+        </div>
+        {{ end }}
+      </div>
+      <div class="post-nav-cell post-nav-newer">
+        {{ with $newer }}
+        <a href="{{ .Permalink }}" class="post-nav-link">
+          <span class="post-nav-label">다음글<span class="post-nav-arrow">&rarr;</span></span>
+          <span class="post-nav-title">{{ .Title }}</span>
+          <span class="post-nav-date">{{ .Date.Format "2006.01.02" }}</span>
+        </a>
+        {{ else }}
+        <div class="post-nav-empty">
+          <span class="post-nav-label">다음글<span class="post-nav-arrow">&rarr;</span></span>
+          <span class="post-nav-placeholder">최신 글입니다</span>
+        </div>
+        {{ end }}
+      </div>
+    </nav>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+(function () {
+  document.querySelectorAll('[data-replace-history] a.post-nav-link').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      e.preventDefault();
+      window.location.replace(link.href);
+    });
+  });
+})();
+</script>
+{{ end }}

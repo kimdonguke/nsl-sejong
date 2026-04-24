@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">{{ .Title }}</span>
+    </nav>
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+  </div>
+</div>
+
+<div class="container section">
+  <div class="list-grid">
+    {{ range .Pages }}
+    <article class="list-card reveal">
+      <div class="list-card-meta">
+        {{ if not .Date.IsZero }}<span class="list-card-date">{{ .Date.Format "Jan 02, 2006" }}</span>{{ end }}
+        {{ with .Params.category }}<span class="list-card-tag">{{ . }}</span>{{ end }}
+      </div>
+      <h2 class="list-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="list-card-summary">{{ .Summary | truncate 200 }}</p>
+      <a href="{{ .Permalink }}" class="card-link">Read more &#8594;</a>
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

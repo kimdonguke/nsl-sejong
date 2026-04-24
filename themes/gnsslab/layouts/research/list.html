@@ -1,0 +1,94 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">Research</span>
+    </nav>
+    <h1 class="page-title">Research</h1>
+    <p class="page-intro-text">Our research spans fundamental theory and practical applications in satellite navigation and positioning systems.</p>
+  </div>
+</div>
+
+<div class="container section">
+
+  {{ with .Content }}
+  <div class="research-intro reveal">{{ . }}</div>
+  {{ end }}
+
+  <!-- Research Areas -->
+  <h2 class="research-section-heading reveal">Research Areas</h2>
+  <div class="research-areas-grid">
+    {{ range .Pages }}
+    <article class="research-card reveal">
+      <div class="research-card-header">
+        <div class="research-icon-wrap">
+          {{ if eq .Params.icon "gnss" }}
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="15" stroke="currentColor" stroke-width="2"/>
+            <circle cx="18" cy="18" r="3" fill="currentColor"/>
+            <path d="M18 3 L18 9 M18 27 L18 33 M3 18 L9 18 M27 18 L33 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          {{ else if eq .Params.icon "integration" }}
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="14" width="28" height="18" rx="3" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 14 L12 9 C12 6.5 14.5 4 18 4 C21.5 4 24 6.5 24 9 L24 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="18" cy="23" r="3.5" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          {{ else if eq .Params.icon "autonomous" }}
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 3 L30 10 L30 26 L18 33 L6 26 L6 10 Z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="18" cy="18" r="5" stroke="currentColor" stroke-width="2"/>
+            <path d="M18 3 L18 13 M18 23 L18 33" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          {{ else }}
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="15" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 18 Q14 9 18 18 Q22 27 27 18" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+          {{ end }}
+        </div>
+        <div class="research-card-meta">
+          {{ with .Params.funding }}<span class="research-funding-badge">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+      <h3 class="research-card-title">{{ .Title }}</h3>
+      {{ with .Params.titleKorean }}<p class="research-card-title-ko">{{ . }}</p>{{ end }}
+      <p class="research-card-desc">{{ .Summary | truncate 220 }}</p>
+      <div class="research-card-topics">
+        {{ range .Params.topics }}
+        <span class="topic-tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      <a href="{{ .Permalink }}" class="card-link">View details &#8594;</a>
+    </article>
+    {{ end }}
+  </div>
+
+  <!-- Funding Section -->
+  <div class="funding-section reveal">
+    <h2 class="research-section-heading">Research Funding</h2>
+    <p class="funding-intro">Our research is supported by leading national funding agencies and industry partners.</p>
+    <div class="funding-logos">
+      <div class="funding-item">
+        <div class="funding-badge">NRF</div>
+        <span>National Research Foundation of Korea</span>
+      </div>
+      <div class="funding-item">
+        <div class="funding-badge">ADD</div>
+        <span>Agency for Defense Development</span>
+      </div>
+      <div class="funding-item">
+        <div class="funding-badge">IITP</div>
+        <span>Institute of Information & Communications Technology Planning & Evaluation</span>
+      </div>
+      <div class="funding-item">
+        <div class="funding-badge">MSIT</div>
+        <span>Ministry of Science and ICT</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+{{ end }}

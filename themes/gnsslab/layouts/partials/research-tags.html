@@ -1,0 +1,30 @@
+{{ $research := .research }}
+{{ if $research }}
+<div class="member-research-tags">
+  {{ $researchSection := .site.GetPage "/research" }}
+  {{ $interests := split $research "," }}
+  {{ range $interests }}
+    {{ $term := trim . " " }}
+    {{ $s := newScratch }}
+    {{ $s.Set "link" "" }}
+    {{ if $researchSection }}
+      {{ range $researchSection.Pages }}
+        {{ $rPage := . }}
+        {{ if eq (lower .Title) (lower $term) }}
+          {{ $s.Set "link" .RelPermalink }}
+        {{ end }}
+        {{ range .Params.topics }}
+          {{ if eq (lower .) (lower $term) }}
+            {{ $s.Set "link" $rPage.RelPermalink }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ with $s.Get "link" }}
+      <a href="{{ . }}" class="research-tag research-tag--linked">{{ $term }}</a>
+    {{ else }}
+      <span class="research-tag">{{ $term }}</span>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

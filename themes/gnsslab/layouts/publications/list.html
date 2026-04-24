@@ -1,0 +1,154 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">Publications</span>
+    </nav>
+    <h1 class="page-title">Publications</h1>
+    <p class="page-intro-text">세종대학교 항법시스템 연구실 연구 실적</p>
+  </div>
+</div>
+
+<div class="container section">
+
+  <!-- Stats -->
+  {{ $papers := .Site.Data.publications.papers.papers }}
+  {{ $patents := .Site.Data.publications.patents.patents }}
+  {{ $presentations := .Site.Data.publications.presentations.presentations }}
+  <div class="pub-stats reveal">
+    <div class="pub-stat-item">
+      <span class="pub-stat-num">{{ len $papers }}</span>
+      <span class="pub-stat-label">Journal Papers</span>
+    </div>
+    <div class="pub-stat-item">
+      <span class="pub-stat-num">{{ len $patents }}</span>
+      <span class="pub-stat-label">Patents</span>
+    </div>
+    <div class="pub-stat-item">
+      <span class="pub-stat-num">{{ len $presentations }}</span>
+      <span class="pub-stat-label">Presentations</span>
+    </div>
+  </div>
+
+  <!-- Section Tabs -->
+  <div class="pub-tabs reveal" role="tablist">
+    <button class="pub-tab active" data-target="sec-papers" role="tab" aria-selected="true">
+      &#128196; Journal Papers
+    </button>
+    <button class="pub-tab" data-target="sec-patents" role="tab" aria-selected="false">
+      &#128274; Patents
+    </button>
+    <button class="pub-tab" data-target="sec-presentations" role="tab" aria-selected="false">
+      &#127908; Academic Presentations
+    </button>
+  </div>
+
+  <!-- ===== SECTION 1: JOURNAL PAPERS ===== -->
+  <div id="sec-papers" class="pub-section active">
+    {{ $.Scratch.Set "curYear" "" }}
+    {{ $.Scratch.Set "idx" 0 }}
+    {{ range sort $papers "year" "desc" }}
+      {{ if ne .year ($.Scratch.Get "curYear") }}
+        {{/* close previous group */}}
+        {{ if ne ($.Scratch.Get "curYear") "" }}
+          </ol></div>
+        {{ end }}
+        {{ $.Scratch.Set "curYear" .year }}
+        {{ $.Scratch.Set "idx" 0 }}
+        <div class="pub-year-group reveal">
+        <h3 class="pub-year">{{ .year }}</h3>
+        <ol class="pub-data-list">
+      {{ end }}
+      {{ $.Scratch.Add "idx" 1 }}
+      <li class="pub-row">
+        <div class="pub-row-body">
+          <span class="pub-title-text">{{ .title }}</span>
+          <span class="pub-venue">{{ .journal }}{{ with .volume }}, vol. {{ . }}{{ end }}</span>
+        </div>
+        <div class="pub-row-meta">
+          {{ if eq .scope "국외" }}
+            <span class="scope-badge scope-intl">International</span>
+          {{ else if eq .scope "국내" }}
+            <span class="scope-badge scope-domestic">Domestic</span>
+          {{ end }}
+          <span class="pub-year-tag">{{ .year }}</span>
+        </div>
+      </li>
+    {{ end }}
+    {{/* close last group */}}
+    {{ if ne ($.Scratch.Get "curYear") "" }}
+      </ol></div>
+    {{ end }}
+  </div>
+
+  <!-- ===== SECTION 2: PATENTS ===== -->
+  <div id="sec-patents" class="pub-section">
+    {{ $.Scratch.Set "curYear" "" }}
+    {{ range sort $patents "date" "desc" }}
+      {{ $yr := substr .date 0 4 }}
+      {{ if ne $yr ($.Scratch.Get "curYear") }}
+        {{ if ne ($.Scratch.Get "curYear") "" }}
+          </ol></div>
+        {{ end }}
+        {{ $.Scratch.Set "curYear" $yr }}
+        <div class="pub-year-group reveal">
+        <h3 class="pub-year">{{ $yr }}</h3>
+        <ol class="pub-data-list">
+      {{ end }}
+      <li class="pub-row">
+        <div class="pub-row-body">
+          <span class="pub-title-text">{{ .title }}</span>
+          <span class="pub-venue">{{ .date }}</span>
+        </div>
+        <div class="pub-row-meta">
+          {{ if eq .status "등록" }}
+            <span class="status-badge status-granted">등록</span>
+          {{ else if eq .status "출원" }}
+            <span class="status-badge status-filed">출원</span>
+          {{ end }}
+          {{ if eq .scope "국외" }}
+            <span class="scope-badge scope-intl">국외</span>
+          {{ else if eq .scope "국내" }}
+            <span class="scope-badge scope-domestic">국내</span>
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+    {{ if ne ($.Scratch.Get "curYear") "" }}
+      </ol></div>
+    {{ end }}
+  </div>
+
+  <!-- ===== SECTION 3: PRESENTATIONS ===== -->
+  <div id="sec-presentations" class="pub-section">
+    {{ $.Scratch.Set "curYear" "" }}
+    {{ range sort $presentations "date" "desc" }}
+      {{ $yr := substr .date 0 4 }}
+      {{ if ne $yr ($.Scratch.Get "curYear") }}
+        {{ if ne ($.Scratch.Get "curYear") "" }}
+          </ol></div>
+        {{ end }}
+        {{ $.Scratch.Set "curYear" $yr }}
+        <div class="pub-year-group reveal">
+        <h3 class="pub-year">{{ $yr }}</h3>
+        <ol class="pub-data-list">
+      {{ end }}
+      <li class="pub-row">
+        <div class="pub-row-body">
+          <span class="pub-title-text">{{ .topic }}</span>
+          <span class="pub-venue">{{ .conference }}</span>
+        </div>
+        <div class="pub-row-meta">
+          <span class="pub-year-tag">{{ .date }}</span>
+        </div>
+      </li>
+    {{ end }}
+    {{ if ne ($.Scratch.Get "curYear") "" }}
+      </ol></div>
+    {{ end }}
+  </div>
+
+</div>
+{{ end }}

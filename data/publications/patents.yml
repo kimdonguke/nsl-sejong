@@ -1,0 +1,357 @@
+patents:
+- title: HN-RTK 보정정보에 기반하는 정밀 GNSS 사용자 위치에 근거한 사용자 반송파 가상관측치 생성장치 및 그 방법
+  date: 2025-06
+  status: 등록
+  scope: 국외
+- title: 항체 사이의 상대 측위 오차를 보상하는 위성항법 시스템
+  date: 2024-01
+  status: 등록
+  scope: 국외
+- title: HN-RTK 보정정보에 기반하는 정밀 GNSS 사용자 위치에 근거한 사용자 반송파 가상관측치 생성장치 및 그 방법
+  date: 2022-10
+  status: 출원
+  scope: 국외
+- title: GPS 위치 정보 무결성 검증 방법 및 시스템
+  date: 2022-09
+  status: 등록
+  scope: 국외
+- title: 항체 사이의 상대 측위 오차를 보상하는 위성항법 시스템
+  date: 2021-11
+  status: 출원
+  scope: 국외
+- title: 위성항법 다중경로오차 감쇄 방법 및 장치
+  date: 2021-09
+  status: 등록
+  scope: 국외
+- title: 위성항법 다중경로오차 감쇄 방법 및 장치
+  date: 2019-12
+  status: 출원
+  scope: 국외
+- title: GPS 위치 정보 무결성 검증 방법 및 시스템
+  date: 2019-11
+  status: 출원
+  scope: 국외
+- title: 위치영역 보정정보 투영을 이용한 위성항법 보강 시스템 및 위성항법 보강 방법
+  date: 2014-01
+  status: 출원
+  scope: 국외
+- title: eLoran 전파 지연 예측 방법 및 장치
+  date: 2025-12
+  status: 출원
+  scope: 국내
+- title: 도심 환경에서 수신되는 GNSS 관측치의 구조적 이상치를 제거하기 위한 그래프 컷 기반 임의 표본 합의 장치 및 방법
+  date: 2025-12
+  status: 출원
+  scope: 국내
+- title: 도심 환경에서 수신되는 GNSS 관측치의 군집형 이상치를 제거하기 위한 오류 타원 기반 임의 표본 합의 장치 및 방법
+  date: 2025-12
+  status: 출원
+  scope: 국내
+- title: 비균일 소프트 라벨을 이용한 딥러닝 기반의 GNSS 다중경로 신호 탐지 방법과 그 장치
+  date: 2025-11
+  status: 출원
+  scope: 국내
+- title: 네트워크 RTK의 잔여오차 모델링 장치 및 그 방법
+  date: 2025-10
+  status: 등록
+  scope: 국내
+- title: VRS 측정치를 이용한 기준국 GNSS 보정정보 원격 감시 방법
+  date: 2025-09
+  status: 등록
+  scope: 국내
+- title: 통신 단말과 컴퓨팅 장치 및 그 GNSS 정보 처리 방법
+  date: 2025-06
+  status: 출원
+  scope: 국내
+- title: 기준국 GNSS 안테나 속성을 반영한 반송파 측정치 오차 보상 방법
+  date: 2025-03
+  status: 등록
+  scope: 국내
+- title: 고앙각 위성에 기반하여 GNSS 다중경로오차를 추출하는 장치 및 그 방법
+  date: 2025-01
+  status: 등록
+  scope: 국내
+- title: 사용자 위치에 기반하여 GNSS 다중경로 맵을 선별하는 장치 및 그 방법
+  date: 2024-12
+  status: 등록
+  scope: 국내
+- title: GNSS의 정확한 속도 산출을 위한 임의 표본 합의 기법
+  date: 2024-12
+  status: 출원
+  scope: 국내
+- title: 리더의 속도 추정을 통한 이동체 간 정밀 상대 위치 산출 및 편대 비행 궤적 설계 시스템 및 방법
+  date: 2024-12
+  status: 출원
+  scope: 국내
+- title: 무인 항공기의 이동 경로 설정 방법 및 장치
+  date: 2024-09
+  status: 출원
+  scope: 국내
+- title: HN-RTK 보정정보를 생성하는 장치 및 그 방법
+  date: 2024-06
+  status: 등록
+  scope: 국내
+- title: 통신 단말과 컴퓨팅 장치 및 그 GNSS 정보 처리 방법
+  date: 2024-04
+  status: 출원
+  scope: 국내
+- title: HN-RTK 보정정보에 기반하는 정밀 GNSS 사용자 위치에 근거한 사용자 반송파 가상관측치 생성장치 및 그 방법
+  date: 2024-04
+  status: 등록
+  scope: 국내
+- title: 네트워크 RTK의 잔여오차 모델링 장치 및 그 방법
+  date: 2023-11
+  status: 출원
+  scope: 국내
+- title: 고앙각 위성 및 고도정보를 이용하는 위성 선별 장치 및 그 방법
+  date: 2023-11
+  status: 출원
+  scope: 국내
+- title: 가시 위성 선별장치 및 그 방법
+  date: 2023-11
+  status: 출원
+  scope: 국내
+- title: 위성항법 반송파 측정치의 사이클 슬립 검출장치 및 그 방법
+  date: 2023-09
+  status: 등록
+  scope: 국내
+- title: 위성 항법 시스템 및 그의 신호 처리 방법
+  date: 2023-09
+  status: 등록
+  scope: 국내
+- title: 고앙각 GNSS 위성과 고도정보 결합을 통한 측위 양호 위성 선별 방법
+  date: 2023-07
+  status: 출원
+  scope: 국내
+- title: 위성항법 예상 수신 환경에 근거한 비가시 위성 선별 방법
+  date: 2023-07
+  status: 출원
+  scope: 국내
+- title: Network RTK 잔여오차 모델링 방법
+  date: 2023-07
+  status: 출원
+  scope: 국내
+- title: 기저선 구속조건에 기초하여 반송파 이상현상을 검출하는 장치 및 그 방법
+  date: 2023-05
+  status: 등록
+  scope: 국내
+- title: GNSS와 고도 정보를 이용한 복합 측위 방법 및 장치
+  date: 2023-02
+  status: 등록
+  scope: 국내
+- title: 메시지 스케줄링을 통한 GNSS 보정정보 전송량 절감 방법
+  date: 2022-12
+  status: 출원
+  scope: 국내
+- title: VRS 측정치를 이용한 기준국 GNSS 보정정보 원격 감시 방법
+  date: 2022-12
+  status: 출원
+  scope: 국내
+- title: 기준국 GNSS 안테나 속성을 반영한 반송파 측정치 오차 보상 방법
+  date: 2022-11
+  status: 출원
+  scope: 국내
+- title: HN-RTK 보정정보를 생성하는 장치 및 그 방법
+  date: 2022-10
+  status: 출원
+  scope: 국내
+- title: HN-RTK 보정정보에 기반하는 정밀 GNSS 사용자 위치에 근거한 사용자 반송파 가상관측치 생성장치 및 그 방법
+  date: 2022-09
+  status: 출원
+  scope: 국내
+- title: 고앙각 위성에 기반하여 GNSS 다중경로오차를 추출하는 장치 및 그 방법
+  date: 2022-08
+  status: 출원
+  scope: 국내
+- title: 사용자 위치에 기반하여 GNSS 다중경로 맵을 선별하는 장치 및 그 방법
+  date: 2022-07
+  status: 출원
+  scope: 국내
+- title: 위성항법 및 기압고도계의 상대 위치 정확도를 향상 시키는 위성항법 시스템 및 그 방법
+  date: 2022-02
+  status: 등록
+  scope: 국내
+- title: 위성항법 다중경로오차 감쇄 방법 및 장치
+  date: 2021-10
+  status: 등록
+  scope: 국내
+- title: 위성항법 반송파 측정치의 사이클 슬립 검출장치 및 그 방법
+  date: 2021-08
+  status: 출원
+  scope: 국내
+- title: GNSS 반송파 측정치의 미지정수 결정장치 및 그 방법
+  date: 2021-08
+  status: 등록
+  scope: 국내
+- title: DGNSS 유효성 검사에 기반하여 GNSS 수신 환경을 판단하는 장치 및 그 방법
+  date: 2021-07
+  status: 등록
+  scope: 국내
+- title: 기저선 구속조건에 기초하여 반송파 이상현상을 검출하는 장치 및 그 방법
+  date: 2021-06
+  status: 출원
+  scope: 국내
+- title: 상대 측위 결과의 신속 출력을 위한 위성항법 시스템
+  date: 2021-05
+  status: 등록
+  scope: 국내
+- title: GNSS 반송파 측정치의 미지정수 결정장치 및 그 방법
+  date: 2021-05
+  status: 출원
+  scope: 국내
+- title: 위성항법 및 기압고도계의 상대 위치 정확도를 향상 시키는 위성항법 시스템 및 그 방법
+  date: 2021-05
+  status: 출원
+  scope: 국내
+- title: DGNSS 유효성 검사에 기반하여 GNSS 수신 환경을 판단하는 장치 및 그 방법
+  date: 2021-04
+  status: 출원
+  scope: 국내
+- title: 항체 사이의 상대 측위 오차를 보상하는 위성항법 시스템
+  date: 2021-04
+  status: 등록
+  scope: 국내
+- title: 주파수별 위성항법 보정정보를 산출하는 장치 및 그 방법
+  date: 2021-03
+  status: 등록
+  scope: 국내
+- title: GNSS와 고도 정보를 이용한 복합 측위 방법 및 장치
+  date: 2020-12
+  status: 출원
+  scope: 국내
+- title: 주파수별 위성항법 보정정보를 산출하는 장치 및 그 방법
+  date: 2020-11
+  status: 출원
+  scope: 국내
+- title: 항체 사이의 상대 측위 오차를 보상하는 위성항법 시스템
+  date: 2020-11
+  status: 출원
+  scope: 국내
+- title: 상대 측위 결과의 신속 출력을 위한 위성항법 시스템
+  date: 2020-11
+  status: 출원
+  scope: 국내
+- title: 운동성 전리층 교란의 폭 추정을 위한 GNSS 수신기 네트워킹 장치 및 그 방법
+  date: 2020-03
+  status: 등록
+  scope: 국내
+- title: 운동성 전리층 교란 검출 및 속도 추정을 위한 GNSS 수신기 네트워킹 장치 및 그 방법
+  date: 2020-03
+  status: 등록
+  scope: 국내
+- title: GPS 위치 정보 무결성 검증 방법 및 시스템
+  date: 2020-03
+  status: 등록
+  scope: 국내
+- title: GNSS 신호의 전리층 변화율에 기반하는 전리층 교란 검출장치 및 그 방법
+  date: 2020-03
+  status: 등록
+  scope: 국내
+- title: GNSS 신호의 전리층 변화율에 기반하는 전리층 교란 검출장치 및 그 방법
+  date: 2019-11
+  status: 출원
+  scope: 국내
+- title: 운동성 전리층 교란의 폭 추정을 위한 GNSS 수신기 네트워킹 장치 및 그 방법
+  date: 2019-11
+  status: 출원
+  scope: 국내
+- title: 운동성 전리층 교란 검출 및 속도 추정을 위한 GNSS 수신기 네트워킹 장치 및 그 방법
+  date: 2019-11
+  status: 출원
+  scope: 국내
+- title: GPS 위치 정보 무결성 검증 방법 및 시스템
+  date: 2019-11
+  status: 출원
+  scope: 국내
+- title: 시스템간 시각차이 보상을 통한 다중위성군 GNSS 측위 시스템 및 그 방법
+  date: 2019-10
+  status: 등록
+  scope: 국내
+- title: 위성간 단일 차분을 이용한 평활화 필터 장치 및 방법
+  date: 2019-09
+  status: 등록
+  scope: 국내
+- title: 위성항법 수신기 네트워크를 이용한 비행체 탐지 시스템 및 방법
+  date: 2019-09
+  status: 등록
+  scope: 국내
+- title: 위성기반보강 메시지를 이용하여 위치 측정 성능을 향상하는 장치 및 방법
+  date: 2019-07
+  status: 등록
+  scope: 국내
+- title: 전리층 변화율 추정을 이용한 다중 주파수 위성항법 반송파 측정치의 사이클 슬립 검출장치 및 그 방법
+  date: 2019-05
+  status: 등록
+  scope: 국내
+- title: 이종채널을 통하여 수신된 위성기반보강 메시지들을 처리하는 장치 및 방법
+  date: 2019-04
+  status: 등록
+  scope: 국내
+- title: 위성간 단일 차분을 이용한 평활화 필터 장치 및 방법
+  date: 2019-04
+  status: 출원
+  scope: 국내
+- title: 위성항법 수신기 네트워크를 이용한 비행체 탐지 시스템 및 방법
+  date: 2019-03
+  status: 출원
+  scope: 국내
+- title: 전리층 변화율 추정을 이용한 다중 주파수 위성항법 반송파 측정치의 사이클 슬립 검출장치 및 그 방법
+  date: 2019-03
+  status: 출원
+  scope: 국내
+- title: 위성항법 다중경로오차 감쇄 방법 및 장치
+  date: 2019-02
+  status: 출원
+  scope: 국내
+- title: 위성간 단일 차분을 이용한 평활화 필터 장치 및 방법
+  date: 2018-12
+  status: 출원
+  scope: 국내
+- title: 위성항법 수신기 네트워크를 이용한 비행체 탐지 시스템 및 방법
+  date: 2018-12
+  status: 출원
+  scope: 국내
+- title: 전리층 변화율 추정을 이용한 다중 주파수 위성항법 반송파 측정치의 사이클 슬립 검출 및 보정
+  date: 2018-12
+  status: 출원
+  scope: 국내
+- title: 전리층 보정 정보를 이용하여 평활화 필터의 전리층 오차를 감쇄하는 장치 및 방법
+  date: 2018-11
+  status: 등록
+  scope: 국내
+- title: 위성 항법 시스템 및 그의 신호 처리 방법
+  date: 2018-06
+  status: 출원
+  scope: 국내
+- title: 항체 사이의 상대 위치 결정시스템 및 이의 방법
+  date: 2018-04
+  status: 등록
+  scope: 국내
+- title: 시스템간 시각차이 보상을 통한 다중위성군 GNSS 측위 시스템 및 그 방법
+  date: 2017-11
+  status: 출원
+  scope: 국내
+- title: 이종채널을 통하여 수신된 위성기반보강 메시지들을 처리하는 장치 및 방법
+  date: 2017-06
+  status: 출원
+  scope: 국내
+- title: 위성기반보강 메시지를 이용하여 위치 측정 성능을 향상하는 장치 및 방법
+  date: 2017-06
+  status: 출원
+  scope: 국내
+- title: 전리층 보정 정보를 이용하여 평활화 필터의 전리층 오차를 감쇄하는 장치 및 방법
+  date: 2017-03
+  status: 출원
+  scope: 국내
+- title: 항체 사이의 상대 위치 결정시스템 및 이의 방법
+  date: 2016-05
+  status: 출원
+  scope: 국내
+- title: 항법위성의 배치정보를 이용한 위성항법 보강 시스템 및 위성항법 보강 방법
+  date: 2014-08
+  status: 등록
+  scope: 국내
+- title: 항법위성의 배치정보를 이용한 위성항법 보강 시스템 및 위성항법 보강 방법
+  date: 2013-01
+  status: 출원
+  scope: 국내

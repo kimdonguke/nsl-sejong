@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+  (function () {
+    if (sessionStorage.getItem('nsl_unlock') === '1') return;
+    var answer;
+    while (true) {
+      answer = prompt('사이트 접근을 위해 비밀번호를 입력하세요.');
+      if (answer === null) {
+        document.documentElement.innerHTML = '';
+        window.location.replace('about:blank');
+        return;
+      }
+      if (answer === '9125') {
+        sessionStorage.setItem('nsl_unlock', '1');
+        return;
+      }
+      alert('비밀번호가 올바르지 않습니다.');
+    }
+  })();
+  </script>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <title>{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.university }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  {{/* Theme CSS — change to style2.css, style3.css etc. to switch theme */}}
+  <link rel="stylesheet" href="/css/{{ default "style.css" .Site.Params.themeCSS }}">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%231a3a5c'/><text y='.9em' font-size='60' x='50%' text-anchor='middle' fill='%23c8a951' font-family='Inter' font-weight='700'>N</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-badge">NSL</span>
+        <div class="logo-text">
+          <span class="logo-title">Navigation System Lab</span>
+          <span class="logo-subtitle">{{ .Site.Params.universityKorean }} {{ .Site.Params.departmentKorean }}</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        {{ range .Site.Menus.main }}
+        <li class="nav-item">
+          <a href="{{ .URL }}" class="nav-link{{ if eq $.RelPermalink .URL }} active{{ end }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="logo-badge logo-badge--sm">NSL</span>
+            <div>
+              <div class="footer-lab-name">Navigation System Lab</div>
+              <div class="footer-lab-name-ko">위성항법 연구실</div>
+            </div>
+          </div>
+          <p class="footer-desc">Advancing the frontiers of satellite navigation, GNSS signal processing, and autonomous navigation systems.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <address class="footer-address">
+            <p>
+              <span class="footer-icon">&#127968;</span>
+              {{ .Site.Params.university }}<br>
+              {{ .Site.Params.department }}<br>
+              {{ .Site.Params.address }}
+            </p>
+            <p>
+              <span class="footer-icon">&#9993;</span>
+              <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+            </p>
+          </address>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.labNameEnglish }}, {{ .Site.Params.university }}. All rights reserved.</p>
+        <p class="footer-bottom-ko">세종대학교 항공우주공학과 위성항법 연구실</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

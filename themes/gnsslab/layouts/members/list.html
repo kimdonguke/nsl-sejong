@@ -1,0 +1,205 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">Members</span>
+    </nav>
+    <h1 class="page-title">Lab Members</h1>
+    <p class="page-intro-text">Meet the talented researchers and students driving innovation at the Navigation System Lab.</p>
+  </div>
+</div>
+
+<div class="container section">
+
+  <!-- Professor (always visible) -->
+  {{ $professor := where .RegularPagesRecursive "Params.role" "professor" }}
+  {{ with index $professor 0 }}
+  <div class="professor-section reveal">
+    <h2 class="members-section-title">
+      <span class="members-section-icon">&#127891;</span>
+      Principal Investigator
+    </h2>
+    <div class="professor-card">
+      <div class="professor-photo">
+        {{ if .Params.photo }}
+        <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="prof-img">
+        {{ else }}
+        <div class="photo-placeholder photo-placeholder--lg">
+          <span>{{ substr .Title 0 2 }}</span>
+        </div>
+        {{ end }}
+      </div>
+      <div class="professor-info">
+        <h3 class="professor-name">{{ .Title }}</h3>
+        {{ with .Params.nameKorean }}<p class="professor-name-ko">{{ . }}</p>{{ end }}
+        {{ with .Params.position }}<p class="professor-position">{{ . }}</p>{{ end }}
+        <p class="professor-dept">{{ $.Site.Params.department }}<br>{{ $.Site.Params.university }}</p>
+        {{ with .Params.email }}<p class="professor-email"><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+        {{ with .Params.office }}<p class="professor-detail"><strong>Office:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.research }}<p class="professor-detail"><strong>Research Interests:</strong> {{ . }}</p>{{ end }}
+        <div class="professor-links">
+          {{ with .Params.googleScholar }}<a href="{{ . }}" class="prof-link" target="_blank" rel="noopener">Google Scholar</a>{{ end }}
+          {{ with .Params.researchgate }}<a href="{{ . }}" class="prof-link" target="_blank" rel="noopener">ResearchGate</a>{{ end }}
+          {{ with .Params.orcid }}<a href="{{ . }}" class="prof-link" target="_blank" rel="noopener">ORCID</a>{{ end }}
+          <a href="{{ .Permalink }}" class="prof-link">Full Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Tabs -->
+  <div class="pub-tabs reveal" role="tablist">
+    <button class="pub-tab active" data-target="sec-current" role="tab" aria-selected="true">
+      &#128101; Current Members
+    </button>
+    <button class="pub-tab" data-target="sec-alumni" role="tab" aria-selected="false">
+      &#127942; Alumni
+    </button>
+  </div>
+
+  <!-- Current Members -->
+  <div class="pub-section active" id="sec-current">
+
+    <!-- PhD Students -->
+    {{ $phd := where .RegularPagesRecursive "Params.role" "phd" }}
+    {{ if $phd }}
+    <div class="members-group reveal">
+      <h2 class="members-section-title">
+        <span class="members-section-icon">&#128218;</span>
+        PhD Students
+      </h2>
+      <div class="members-grid">
+        {{ range sort $phd "Params.weight" "desc" }}
+        <div class="member-card">
+          <div class="member-photo">
+            {{ if .Params.photo }}
+            <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="member-img">
+            {{ else }}
+            <div class="photo-placeholder">
+              <span>{{ substr .Title 0 2 }}</span>
+            </div>
+            {{ end }}
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ .Title }}</h3>
+            {{ with .Params.nameKorean }}<p class="member-name-ko">{{ . }}</p>{{ end }}
+            <p class="member-role-label">PhD Student</p>
+            {{ partial "research-tags.html" (dict "research" .Params.research "site" $.Site) }}
+            {{ with .Params.email }}<a href="mailto:{{ . }}" class="member-email">{{ . }}</a>{{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- MS Students -->
+    {{ $ms := where .RegularPagesRecursive "Params.role" "ms" }}
+    {{ if $ms }}
+    <div class="members-group reveal">
+      <h2 class="members-section-title">
+        <span class="members-section-icon">&#128196;</span>
+        Master's Students
+      </h2>
+      <div class="members-grid">
+        {{ range sort $ms "Params.weight" "desc" }}
+        <div class="member-card">
+          <div class="member-photo">
+            {{ if .Params.photo }}
+            <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="member-img">
+            {{ else }}
+            <div class="photo-placeholder">
+              <span>{{ substr .Title 0 2 }}</span>
+            </div>
+            {{ end }}
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ .Title }}</h3>
+            {{ with .Params.nameKorean }}<p class="member-name-ko">{{ . }}</p>{{ end }}
+            <p class="member-role-label">Master Student</p>
+            {{ partial "research-tags.html" (dict "research" .Params.research "site" $.Site) }}
+            {{ with .Params.email }}<a href="mailto:{{ . }}" class="member-email">{{ . }}</a>{{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Undergraduate Students -->
+    {{ $undergrad := where .RegularPagesRecursive "Params.role" "undergrad" }}
+    {{ if $undergrad }}
+    <div class="members-group reveal">
+      <h2 class="members-section-title">
+        <span class="members-section-icon">&#128300;</span>
+        Undergraduate Students
+      </h2>
+      <div class="members-grid">
+        {{ range sort $undergrad "Params.weight" "desc" }}
+        <div class="member-card">
+          <div class="member-photo">
+            {{ if .Params.photo }}
+            <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="member-img">
+            {{ else }}
+            <div class="photo-placeholder">
+              <span>{{ substr .Title 0 2 }}</span>
+            </div>
+            {{ end }}
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ .Title }}</h3>
+            {{ with .Params.nameKorean }}<p class="member-name-ko">{{ . }}</p>{{ end }}
+            <p class="member-role-label">Undergraduate Researcher</p>
+            {{ partial "research-tags.html" (dict "research" .Params.research "site" $.Site) }}
+            {{ with .Params.email }}<a href="mailto:{{ . }}" class="member-email">{{ . }}</a>{{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+  </div>
+
+  <!-- Alumni -->
+  {{ $alumni := where .RegularPagesRecursive "Params.role" "alumni" }}
+  <div class="pub-section" id="sec-alumni">
+    {{ if $alumni }}
+    <div class="alumni-list">
+      {{ $s := newScratch }}
+      {{ $s.Set "curYear" 0 }}
+      {{ range sort $alumni "Params.graduationYear" "desc" }}
+        {{ $yr := .Params.graduationYear }}
+        {{ if ne $yr ($s.Get "curYear") }}
+          {{ $s.Set "curYear" $yr }}
+          <div class="alumni-year-heading">{{ $yr }}</div>
+        {{ end }}
+        <div class="alumni-item">
+          <div class="alumni-main">
+            <span class="alumni-name">{{ .Title }}</span>
+            {{ with .Params.degree }}<span class="alumni-degree">{{ . }}</span>{{ end }}
+          </div>
+          {{ with .Params.thesis }}<p class="alumni-thesis">{{ . }}</p>{{ end }}
+          {{ with .Params.currentPosition }}<p class="alumni-position">{{ . }}</p>{{ end }}
+        </div>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="alumni-empty">Alumni information will be updated soon.</p>
+    {{ end }}
+  </div>
+
+  <!-- Join Us -->
+  <div class="join-section reveal">
+    <div class="join-box">
+      <h3>Interested in Joining NSL?</h3>
+      <p>We welcome motivated students interested in GNSS, navigation systems, and related fields. Please contact us for available positions.</p>
+      <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </div>
+
+</div>
+{{ end }}

@@ -1,0 +1,12 @@
+name = "GNSS Lab"
+license = "MIT"
+licenselink = "https://github.com/gohugoio/hugo/blob/master/LICENSE"
+description = "Professional academic lab theme for Navigation System Lab at Sejong University"
+homepage = "https://sejong.ac.kr"
+tags = ["academic", "research", "laboratory", "navigation", "gnss"]
+features = ["responsive", "bilingual", "academic"]
+min_version = "0.100.0"
+
+[author]
+  name = "NSL Web Team"
+  homepage = "/"

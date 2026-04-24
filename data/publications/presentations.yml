@@ -1,0 +1,1045 @@
+presentations:
+- topic: 스마트 웨어러블 기기를 활용한 피트니스 앱 사용자의 위치 정확도 향상 연구
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: 저궤도 위성을 활용한 PPP 수렴시간 개선 연구
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: 부분 구면 조화 함수와 Residual 방식 기반 Homogeneous Network RTK 서비스 방안
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: Lunar PNT를 위한 다중계층 달 위성군 위성의 궤도 결정
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: 저궤도 위성 오차 분석 및 모델링 방법
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: PPP-RTK 위성 위상 바이어스 전송 효율 최적화를 위한 Common IFPB 포맷
+    성능 분석
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: LEO 위성의 고속 이동성을 활용한 PPP 수렴시간 단축
+  conference: 2025 한국항공우주학회 추계학술대회(한국항공우주학회)
+  date: 2025-11
+  scope: null
+- topic: DFMC KASS의 성능 향상을 위한 측위 모델 연구
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: PPP 기법을 이용한 저궤도 위성의 정밀 궤도 결정 연구
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: 도심지 환경에서 그래프 기반 RANSAC을 활용한 GNSS 측정 이상치 제거 기법
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: Augmented Forward Signal과 Inter-Satellite Link를 활용한 Multi-Layered 달 항법 위성
+    궤도 결정 시뮬레이션
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: Universal Kriging 기반 HN-RTK 네트워크 외곽 사용자의 대기 오차 모델링 및 불확실성 정량화
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: 재귀벡터와 확률적 가시성 맵 선택을 통한 도심지 스마트폰 측위 정확도 향상 연구
+  conference: 2025 IPNT Conference(항법시스템학회)
+  date: 2025-11
+  scope: null
+- topic: Analysis of Earth GNSS Signal Visibility in the Lunar Environment
+  conference: 2025 Asia-Pacific International Symposium on Aerospace Technology (APISAT2025)(한국항공우주학회)
+  date: 2025-10
+  scope: null
+- topic: Differential Positioning Feasibility Analysis of Low Earth Orbit Satellite
+    Navigation Systems
+  conference: 2025 Asia-Pacific International Symposium on Aerospace Technology (APISAT2025)(한국항공우주학회)
+  date: 2025-10
+  scope: null
+- topic: GNSS 전리층 지연 보정을 위한 Klobuchar
+  conference: NeQuick-G, NTCM-G 모델 비교 분석, 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: 다중 기준 위성과 재귀 벡터를 이용한 도심지 스마트폰 GNSS 다중경로오차 추정 기법
+  conference: 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: 네트워크 경계에서의 QZSS CLAS 사용자 성능 분석
+  conference: 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: Lunar PNT를 위한 달 위성의 궤도 파라미터 추정 방안
+  conference: 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: DFMC SBAS Performance Enhancement Using L1 SBAS Ionospheric Corrections
+  conference: 2025 Asia-Pacific International Symposium on Aerospace Technology (APISAT2025)(항공우주학회)
+  date: 2025-10
+  scope: null
+- topic: 저궤도 과학 위성 궤도 오차의 정량적 특성 분석
+  conference: 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: GNSS 기준국 간 ROT 교차상관 분석을 통한 지진 진원지 추정
+  conference: 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: 국내 보정정보별 정밀측위 사용자 성능 분석을 통한 실시간 감시국 체계 필요성
+  conference: 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: 스마트 웨어러블 기기 제조업체 간 피트니스 애플리케이션 궤적 및 성능 평가
+  conference: 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: Kinemtaic SPP 기반 저궤도 위성 궤도 결정 가용성 분석
+  conference: 2025 한국항행학회 종합학술대회(한국항행학회)
+  date: 2025-10
+  scope: null
+- topic: Design of Adaptive Complementary Filter for Three-Dimensional Attitude Estimation
+    of an Android Smartphone
+  conference: ION GNSS+ 2025(Institute of Navigation)
+  date: 2025-09
+  scope: null
+- topic: Improving DFMC SBAS Performance by Integrating L1 SBAS Ionospheric Corrections
+    with an Ionosphere-Weighted Model
+  conference: ION GNSS+ 2025(Institute of Navigation)
+  date: 2025-09
+  scope: null
+- topic: 'A New Paradigm in Nationwide GNSS Precise Positioning: Satellite-Broadcasted
+    OSR Corrections via Homogeneous Network RTK Methodology'
+  conference: ION GNSS+ 2025(Institute of Navigation)
+  date: 2025-09
+  scope: null
+- topic: Error Ellipse-Based Outlier Detection for GNSS Doppler Measurements in Urban
+    Environments
+  conference: ION GNSS+ 2025(Institute of Navigation)
+  date: 2025-09
+  scope: null
+- topic: Enhancing GNSS Performance in Urban Canyon using GNSS Visibility Map and
+    Recurrence Vector
+  conference: ION GNSS+ 2025(Institute of Navigation)
+  date: 2025-09
+  scope: null
+- topic: EKF와 Full GNSS Constellation 신호를 활용한 달 위성 궤도 결정 시뮬레이션
+  conference: 2025년도 한국항공우주학회 우주학술대회(한국항공우주학회)
+  date: 2025-06
+  scope: null
+- topic: 지구 GNSS 위성군의 달 궤도 신호 가시성 분석 및 지역 위성항법 시스템의 기여도 예측
+  conference: 2025년도 한국항공우주학회 우주학술대회(한국항공우주학회)
+  date: 2025-06
+  scope: null
+- topic: 'GNSS UERE 경향석 분석: 함수 기반 위협상황 모델링 기법 연구'
+  conference: 2025년도 한국항공우주학회 우주학술대회(한국항공우주학회)
+  date: 2025-06
+  scope: null
+- topic: Dual-SDR 기반 측정치의 Divergence Free Hatch Filter 기법을 통한 GNSS 측위 성능 향상 방법
+  conference: 2025 한국항공우주학회 춘계학술대회(한국항공우주학회)
+  date: 2025-04
+  scope: null
+- topic: 밀도기반 데이터 군집화를 활용한 GNSS 도플러 측정치의 이상신호 검출 및 성능분석 연구
+  conference: 2025 한국통신학회 동계종합학술발표회(한국통신학회)
+  date: 2025-02
+  scope: null
+- topic: '저궤도 위성 항법(LEO-PNT)의 최신 연구 동향 : 글로벌 현황과 전략적 전망'
+  conference: 2025 한국통신학회 동계종합학술발표회(한국통신학회)
+  date: 2025-02
+  scope: null
+- topic: Approach to Utilizing SFMC SBAS Message for Dual-frequency Users to Enable
+    Universally Applicable SBAS
+  conference: ION ITM 2025(Institute of Navigation)
+  date: 2025-01
+  scope: null
+- topic: 'Predicted Orbit Determination Performance of a Lunar Navigation System:
+    Utilizing Inter-Satellite Measurements with Batch and EKF Estimation'
+  conference: ION ITM 2025(Institute of Navigation)
+  date: 2025-01
+  scope: null
+- topic: Design Strategies for RTK Systems for Universal Application in Various Fields
+  conference: ION ITM 2025(Institute of Navigation)
+  date: 2025-01
+  scope: null
+- topic: Lunar PNT를 위한 달 항법 위성 궤도 결정 시뮬레이션
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: 재귀벡터 기반 다중경로 추정 기법과 고해상도 GNSS 가시성맵 적용을 통한 도심지내 사용자 위치 결정 방법
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: 네트워크 외부 사용자의 무결성 감시를 위한 네트워크 RTK 보정정보 잔여오차 모델링
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: 안테나 위상 중심 오차 모델링을 이용한 정밀 항법에서의 저가형 안테나 정확도 향상 기법
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: 도심지 보행자의 GNSS 위치 정확도 향상을 위한 위성 가시성 지도 적용 기법
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: NRHO 궤도에서의 달 항법위성에 대한 GNSS 신호 가시성 분석
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: 단일 및 이중 주파수 사용자를 위한 SBAS 보정정보 설계
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: Simulation Doppler 측정치를 이용한 LEO-PNT 가용성 검증
+  conference: 2024 항공우주학회 추계학술대회(항공우주학회)
+  date: 2024-11
+  scope: null
+- topic: 적응형 GNSS 다중경로 지도 생성 방법론과 사용자 데이터 클라우딩을 이용한 전주기적 도심지 GNSS 다중경로 지도 관리 연구
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: 스마트폰 위치 정확도 개선을 위한 2단계 속도 추정 방법
+  conference: 2024년 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2024-11
+  scope: null
+- topic: GNSS Signal Tracking Analysis and Satellite Orbit Determination Based on
+    EKF at Cislunar Distance
+  conference: APISAT 2024 (The Korean Society for Aeronautical and Space Sciences
+    (KSAS))
+  date: 2024-10
+  scope: null
+- topic: Modeling of Antenna Phase Center Offset of Low-cost Antenna to Mitigate RTK
+    Vertical Position Error
+  conference: APISAT 2024 (The Korean Society for Aeronautical and Space Sciences
+    (KSAS))
+  date: 2024-10
+  scope: null
+- topic: L1 SBAS 대비 DFMC SBAS 메시지 주요 변경점 분석
+  conference: 2024 한국항행학회 종합학술대회(한국항행학회)
+  date: 2024-10
+  scope: null
+- topic: GPS 및 QZSS의 위협상황에 관한 사례 연구
+  conference: 2024 한국항행학회 종합학술대회(한국항행학회)
+  date: 2024-10
+  scope: null
+- topic: 주요 우주국의 Lunar PNT 시스템 개발 동향
+  conference: 2024 한국항행학회 종합학술대회(한국항행학회)
+  date: 2024-10
+  scope: null
+- topic: 지구 GNSS 기반 달 NRHO 궤도 결정 시뮬레이션
+  conference: 2024 한국항행학회 종합학술대회(한국항행학회)
+  date: 2024-10
+  scope: null
+- topic: 오픈 소스 소프트웨어 GNSS 수신기의 성능 평가 Iono-Free 선형 조합 및 이중차분 기법을 통한 수신기 노이즈 비교
+  conference: 2024 한국항행학회 종합학술대회(한국항행학회)
+  date: 2024-10
+  scope: null
+- topic: Simulation Based Tropospheric Error Estimation Performance Analysis with
+    Low Earth Orbit (LEO) Satellites
+  conference: ION GNSS+ 2024(Institute of Navigation)
+  date: 2024-09
+  scope: null
+- topic: Enhanced GNSS Multipath Map in Urban Canyon Using User Data Clouding
+  conference: ION GNSS+ 2024(Institute of Navigation)
+  date: 2024-09
+  scope: null
+- topic: Enhanced Smartphone Positioning in Urban Environments-GNSS Fault Detection
+    and Mitigation through Integrated Navigation System
+  conference: ION GNSS+ 2024(Institute of Navigation)
+  date: 2024-09
+  scope: null
+- topic: 'Third Place Winner of the Smartphone Decimeter Challenge: Improving Smartphone
+    Accuracy with a Two-step Accurate Velocity Estimation'
+  conference: ION GNSS+ 2024(Institute of Navigation)
+  date: 2024-09
+  scope: null
+- topic: Network RTK Correction Residual Stochastic Uncertainty Modeling for Network
+    External Users
+  conference: ION GNSS+ 2024(Institute of Navigation)
+  date: 2024-09
+  scope: null
+- topic: Empirical Error Modeling of Android GNSS using Machine Learning for PVT Improvement
+  conference: ION GNSS+ 2024(Institute of Navigation)
+  date: 2024-09
+  scope: null
+- topic: Relative Precise Positioning Method for Two Moving Vehicles and UGV-UAV System
+    based on Moving Baseline RTK
+  conference: ICMIC 2024(The Korean Institute of Communications and Information Sciences)
+  date: 2024-08
+  scope: null
+- topic: '저궤도 위성 기반 정밀 항법시스템(LEO-PNT)의 전망: 현황'
+  conference: 기대 및 한계점, 2024년도 우주학술대회(한국항공우주학회)
+  date: 2024-06
+  scope: null
+- topic: LNSS 미래우주 항법시스템 구성요소 설계 및 시뮬레이션 결과
+  conference: 2024년도 우주학술대회(한국항공우주학회)
+  date: 2024-06
+  scope: null
+- topic: 지구 GNSS 신호 기반 달 항법 위성 궤도 결정 시뮬레이션
+  conference: 2024년도 우주학술대회(한국항공우주학회)
+  date: 2024-06
+  scope: null
+- topic: Enhancing GNSS Precise Positioning Performance by Residual Modeling in Network
+    RTK Corrections
+  conference: Pacific PNT(Institute of Navigation)
+  date: 2024-04
+  scope: null
+- topic: Moving Baseline RTK 기반 지상 이동체-드론 결합 시스템
+  conference: 한국항공우주학회 2024년도 춘계학술대회(한국항공우주학회 )
+  date: 2024-04
+  scope: null
+- topic: Approach to Enhancing Urban Positioning based on Smartphone GNSS-VPS Integration
+  conference: Pacific PNT(Institute of Navigation)
+  date: 2024-04
+  scope: null
+- topic: Multi-Resolution Multipath Map Generation and Application with Machine Learning
+    and 3D Builiding Models for Urban GNSS Positioning
+  conference: Pacific PNT(Institute of Navigation)
+  date: 2024-04
+  scope: null
+- topic: 다중해상도 GNSS 다중경로 지도 적용을 위한 재귀벡터 기반 위성 가시성 판별 기법
+  conference: 2024년도 한국통신학회 동계종합학술발표회(한국통신학회)
+  date: 2024-02
+  scope: null
+- topic: GNSS 와 VPS 결합을 통한 도시 환경에서의 Android 스마트폰 플랫폼에서의
+    위치
+  conference: 2024년도 한국통신학회 동계종합학술발표회( 한국통신학회)
+  date: 2024-02
+  scope: null
+- topic: Moving Baseline RTK-based Ground Vehicle-Drone Combination System
+  conference: ITM 2024(Institute of Navigation)
+  date: 2024-01
+  scope: null
+- topic: 측위 정확성 및 가용성 향상을 위한 모바일 기기 센서 융합 기술 연구
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: 드론용 Moving Baseline RTK 기반 실시간 정밀 상대항법 프로그램 구축
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: 지진에 의한 전리층 변동 감시와 ROT의 Inter-Station Cross Correlation을 이용한 진앙지 추정 기법
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: 도시 항법 정확도 향상을 위한 스마트폰 플랫폼 기반 GNSS-INS 및 VPS 결합에 관한 연구
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: 상용 시뮬레이터의 기능 분석을 통한 지역항법시스템의 GNSS Raw Data Generation 설계
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: 측정치 잔여오차 감시 임계값에 따른 반송파 측정치 기반 정밀 측위 성능 분석
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: HN-RTK 네트워크 내부 및 외부 사용자의 측위성능 향상을 위한 보정정보 잔여오차 모델링 기법
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: 한반도 지역 위성항법시스템 측정치 오차 성분 경향성 분석
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: 기계 학습 기반 다중경로 추정 모델과 3D 빌딩 모델을 이용한 도심지 다중 해상도 GNSS 다중경로 오차 지도 생성 및 적용
+  conference: 2023 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2023-11
+  scope: null
+- topic: 온라인 후처리 프로그램 적용을 위한 안드로이드 스마트폰 RINEX 변환기네-
+  conference: 2023 한국항행학회 종합학술대회(한국항행학회)
+  date: 2023-10
+  scope: null
+- topic: 위성간 거리 및 도플러 측정치 기반 초기 달 항법 위성 궤도 결정 전략
+  conference: 2023 한국항행학회 종합학술대회(한국항행학회)
+  date: 2023-10
+  scope: null
+- topic: A Strategy for Initial Orbit Determination of Lunar Navigation Satellite
+    Based on Range and Doppler Measurements from a Lunar Ground Station
+  conference: 2023 APISAT(Korean Society for Aeronautical & Space Sciences)
+  date: 2023-10
+  scope: null
+- topic: 스마트폰 단거리 이중 차분을 통한 노이즈 모델링
+  conference: 2023 한국항행학회 종합학술대회(한국항행학회)
+  date: 2023-10
+  scope: null
+- topic: 도심지 GNSS 다중경로 오차 지도 기반 보정정보 위치 영역 투영 기법
+  conference: 2023 한국항행학회 종합학술대회(한국항행학회)
+  date: 2023-10
+  scope: null
+- topic: Synergistic Fusion of GNSS Multipath Map and CMC-based Multipath Estimation
+    for Enhanced GNSS Positioning in Urban Canyon
+  conference: ION GNSS+ 2023(Institute of Navigation)
+  date: 2023-09
+  scope: null
+- topic: Homogeneous Network RTK Correction Residual Error Modeling Techniques for
+    Improving the Position Accuracy of Network Internal and External Users
+  conference: ION GNSS+ 2023(Institute of Navigation)
+  date: 2023-09
+  scope: null
+- topic: Effective Carrier Phase Anomaly Detection using Short-Baseline Double Difference
+    and Machine Learning
+  conference: ION GNSS+ 2023(Institute of Navigation)
+  date: 2023-09
+  scope: null
+- topic: 'Elevating Android GNSS Raw Measurement Processing: A Universal RINEX Converter
+    for Precise Post-Processing Solution'
+  conference: ION GNSS+ 2023(Institute of Navigation)
+  date: 2023-09
+  scope: null
+- topic: A Strategy for Initial Orbit Determination of Lunar Navigation Satellite
+    Based on Range and Doppler Measurements from a Lunar Ground Station
+  conference: ION GNSS+ 2023(Institute of Navigation)
+  date: 2023-09
+  scope: null
+- topic: 'Ionospheric Irregularities Signature Correlation on ROT Variation for Earthquake
+    Detection and Epicenter Estimation: A Case Study of Türkiye-Syria Earthquake'
+  conference: ION GNSS+ 2023(Institute of Navigation)
+  date: 2023-09
+  scope: null
+- topic: Android GNSS/INS Using Complementary Filter
+  conference: ION GNSS+ 2023(Institute of Navigation)
+  date: 2023-09
+  scope: null
+- topic: LNSS 미래우주항법 시스템 및 요소기술 소개
+  conference: 2023 항공우주학회 우주학술대회(한국항공우주학회)
+  date: 2023-04
+  scope: null
+- topic: Moving Baseline RTK를 위한 확장 RTCM 메시지 제안 및 실시간 적용
+  conference: 2023 항공우주학회 춘계학술대회(한국항공우주학회)
+  date: 2023-04
+  scope: null
+- topic: 후처리 소프트웨어 적용을 위한 스마트폰의 원시 GNSS 측정치 변환 Toolbox
+  conference: 2023 항공우주학회 춘계학술대회(한국항공우주학회)
+  date: 2023-04
+  scope: null
+- topic: 3D 건물 정보를 이용한 GNSS 신호 단절지역 예측에 관한 연구
+  conference: 2023 통신학회 동계종합학술발표회(한국통신학회)
+  date: 2023-02
+  scope: null
+- topic: 사용자 위치측위 성능 향상을 위한 오픈소스 프로그램 성능 개선 알고리즘에 대한 연구
+  conference: 2023 통신학회 동계종합학술발표회(한국통신학회)
+  date: 2023-02
+  scope: null
+- topic: HIGH PRECISION POSITIONING – A SCALABLE SOLUTION FOR RAPID CM-LEVEL UAS DEPLOYMENTS
+    USING THE UBLOX F9 GNSS ENGINE
+  conference: ANNUAL AAS GUIDANCE, NAVIGATION AND CONTROL CONFERENCE(American Astronautical
+    Society)
+  date: 2023-02
+  scope: null
+- topic: RTKLIB을 이용한 GNSS 보정정보 성능 평가
+  conference: 2022 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2022-11
+  scope: null
+- topic: 위성간 통신 기반 위성 궤도 결정 시뮬레이션 연구
+  conference: 2022 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2022-11
+  scope: null
+- topic: QZSS-CLAS 기반 GNSS 오차 요소 별 보정정보 및 무결성 정보 감시
+  conference: 2022 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2022-11
+  scope: null
+- topic: 기계학습 기반 GNSS 다중경로 지도와 CMC 기반 다중경로 추정 기법을 이용한 도심지 연속 정밀 측위
+  conference: 2022 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2022-11
+  scope: null
+- topic: Kalman Filter를 이용한 차량 OBD 속도 측정값과 실제 속도 사이의 Scale Factor 추정
+  conference: 2022 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2022-11
+  scope: null
+- topic: 실시간 이동체 상 착륙을 위한 드론의 위성항법 정밀 상대항법 연구
+  conference: 2022 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2022-11
+  scope: null
+- topic: 위성 간 단일 차분 기반 감시 기법을 활용한 안드로이드 스마트폰 위치 신뢰성 향상 기법
+  conference: 2022 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2022-11
+  scope: null
+- topic: 동적 드론과 RTK 수신기를 이용한 기압계 보정 방법론
+  conference: 2022 한국항공우주학회 종합학술대회(한국항공우주학회)
+  date: 2022-11
+  scope: null
+- topic: SSR 보정정보의 사용자 적용을 통한 QZSS-CLAS 보정정보 성능 분석
+  conference: 2022 항법시스템학회 정기학술대회(항법시스템학회)
+  date: 2022-11
+  scope: null
+- topic: RTK Correction Message Scheduling 방법에 따른 성능 평가
+  conference: 2022 한국항행학회 종합학술대회(한국항행학회)
+  date: 2022-10
+  scope: null
+- topic: 항법장치 성능 평가를 위한 웹기반 GNSS 후처리 및 보고서 생성 모듈 개발
+  conference: 2022 한국항행학회 종합학술대회(한국항행학회)
+  date: 2022-10
+  scope: null
+- topic: 간선도로 자율주행 환경을 고려한 Ublox-Pointperfect 서비스 성능 분석
+  conference: 2022 한국항행학회 종합학술대회(한국항행학회)
+  date: 2022-10
+  scope: null
+- topic: 머신러닝 기법을 이용한 반송파 측정치 잡음 및 다중경로 오차 모델링
+  conference: 2022 한국항행학회 종합학술대회(한국항행학회)
+  date: 2022-10
+  scope: null
+- topic: 도심지 다중경로 완화 Map 동적 적용을 위한 Map 유효성 판별 기법
+  conference: 2022 한국항행학회 종합학술대회(한국항행학회)
+  date: 2022-10
+  scope: null
+- topic: Practical Approaches to Real-time Position Accuracy Improvement of Android
+    Smartphone Dual-frequency GNSS
+  conference: ION GNSS+ 2022(Institute of Navigation)
+  date: 2022-09
+  scope: null
+- topic: GNSS Fault Detection and Mitigation using Android IMU
+  conference: ION GNSS+ 2022(Institute of Navigation)
+  date: 2022-09
+  scope: null
+- topic: Nonlinear Regression-based GNSS Multipath Map Construction and Its Dynamic
+    Application in Deep Urban Area
+  conference: ION GNSS+ 2022(Institute of Navigation)
+  date: 2022-09
+  scope: null
+- topic: Homogeneous Network RTK for Satellite Based Nationwide High Precision GNSS
+    Positioning Service
+  conference: ION GNSS+ 2022(Institute of Navigation)
+  date: 2022-09
+  scope: null
+- topic: GNSS 안테나 위상 중심 오차 보정을 이용한 저가형 수신기 RTK 성능 분석
+  conference: 2022 통신학회 동계종합학술발표회(한국통신학회)
+  date: 2022-02
+  scope: null
+- topic: 다양한 전파 수신 환경에서의 RTKLIB 오픈소스 측위 성능 분석
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: 실시간 이동 중인 드론의 보정정보와 바로미터를 이용한 실내 구조 요청자 3차원 위치 산출
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: 이중차분 기반 SSR 보정정보 측정치 영역 성능 분석
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: 다양한 전파 수신환경에서의 안드로이드 스마트폰 GNSS 동적 측위 정확도 분석
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: 전리층 섭동 발생 시 안정적인 정밀 측위 제공을 위한 사이클 슬립 검출 및 보상 기법
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: 단거리 상대 기저선 벡터 구속조건을 이용한 반송파 측정치 전처리 감시 기법 연구
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: 위성기반 전국토 GNSS 정밀측위 서비스를 위한 Homogeneous Network RTK 기법 제안
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: GNSS 수신환경에 따른 RTKLIB 정밀 측위 성능 분석 및 반송파 미지정수 결정 성능 개선 방안
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: Estimation of Multipath in Deep Urban Area Using Nonlinear Model-based Dynamic
+    Map
+  conference: 2021 항법시스템학회 정기학술대회 (항법시스템학회)
+  date: 2021-11
+  scope: null
+- topic: 군집비행 이동체간 위성 조합 차이에 따른 Moving Baseline RTK 성능 분석
+  conference: 한국항공우주공학회 2021 추계학술대회(한국항공우주학회)
+  date: 2021-11
+  scope: null
+- topic: 오픈소스 프로그램 및 저가형 수신기의 옵션 별 드론의 GNSS-RTK 측위 성능 분석
+  conference: 한국항공우주공학회 2021 추계학술대회(한국항공우주학회)
+  date: 2021-11
+  scope: null
+- topic: 신뢰성 있는 반송파 측정치 감시를 위한 이중 사이클 슬립 검출 알고리즘
+  conference: 한국항공우주공학회 2021 추계학술대회(한국항공우주학회)
+  date: 2021-11
+  scope: null
+- topic: A Technique for Finding Indoor Rescuer using GNSS and Barometer Sensors on
+    Android Smartphones in Building Disaster Situations
+  conference: the 34th International Technical Meeting of the Satellite Division of
+    The Institute of Navigation (ION GNSS+ 2021)(Institute of Navigation)
+  date: 2021-10
+  scope: null
+- topic: Cycle Slip Detection to Provide Stable Precision Positioning under Severe
+    Ionospheric Condition
+  conference: the 34th International Technical Meeting of the Satellite Division of
+    The Institute of Navigation (ION GNSS+ 2021)(Institute of Navigation)
+  date: 2021-10
+  scope: null
+- topic: GNSS Fault Monitoring using Android Devices
+  conference: the 34th International Technical Meeting of the Satellite Division of
+    The Institute of Navigation (ION GNSS+ 2021)(Institute of Navigation)
+  date: 2021-10
+  scope: null
+- topic: 안테나 보정을 이용한 반송파 이중차분 분석
+  conference: 2021년 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2021-10
+  scope: null
+- topic: 단거리 수신기 간 이중차분 기법을 이용한 반송파 측정치 감시 기법
+  conference: 2021년 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2021-10
+  scope: null
+- topic: 도심지 다중경로 완화 Map 동적 적용을 위한 Map 유효성 판별 기법
+  conference: 2021년 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2021-10
+  scope: null
+- topic: 기압계를 이용한 고도 산출 방법론 비교
+  conference: 2021년 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2021-10
+  scope: null
+- topic: 동적 GNSS 신호를 활용한 RTKLIB 정밀 측위 성능 분석
+  conference: 2021년 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2021-10
+  scope: null
+- topic: SSR 보정정보 전송 형식 현황 분석
+  conference: 2021년 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2021-10
+  scope: null
+- topic: 위성 간 단일 차분 기반 안드로이드 스마트기기 측정치 Outlier 모니터링
+  conference: 2021년 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2021-10
+  scope: null
+- topic: 웹기반 GNSS 후처리 서버 구축 및 결과 분석
+  conference: 2021년 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2021-10
+  scope: null
+- topic: ROT 기반 전리층 이상 검출 안드로이드 클라우드 시스템
+  conference: 2020 IPNT Conference(항법시스템학회)
+  date: 2020-11
+  scope: null
+- topic: 기계학습 기법을 이용한 도심지 다중경로오차 추정
+  conference: 2020 IPNT Conference(항법시스템학회)
+  date: 2020-11
+  scope: null
+- topic: RTK 기법을 이용한 무기준국 이동체 간 정밀 상대항법 측위해 도출 방안
+  conference: 2020 IPNT Conference(항법시스템학회)
+  date: 2020-11
+  scope: null
+- topic: GNSS 데이터 센터를 활용한 온라인 GNSS 정밀 후처리 시스템 개발
+  conference: 2020 IPNT Conference(항법시스템학회)
+  date: 2020-11
+  scope: null
+- topic: 전리층 이상 시 안정적인 정밀 측위 제공을 위한 사이클 슬립 검출 및 위치 결정 기법
+  conference: 2020 IPNT Conference(항법시스템학회)
+  date: 2020-11
+  scope: null
+- topic: 사용자 위치 성능 최적화를 위한 정밀 PNT용 기준국 배치 연구
+  conference: 2020 IPNT Conference(항법시스템학회)
+  date: 2020-11
+  scope: null
+- topic: 실용적 관점에서의 안드로이드 스마트 기기 위치 정확도 향상 기법
+  conference: 2020 IPNT Conference(항법시스템학회)
+  date: 2020-11
+  scope: null
+- topic: 열악한 가시 위성 환경에서의 GNSS 및 Barometer를 사용한 복합
+  conference: 2020년 한국항행학회 종합학술대회(한국항행학회)
+  date: 2020-10
+  scope: null
+- topic: 재난 상황에서의 드론과 스마트폰 간 상대 항법 알고리즘
+  conference: 2020년 한국항행학회 종합학술대회(한국항행학회)
+  date: 2020-10
+  scope: null
+- topic: 기선 거리에 따른 국내 Network RTK 서비스 성능 분석
+  conference: 2020년 한국항행학회 종합학술대회(한국항행학회)
+  date: 2020-10
+  scope: null
+- topic: Moving Base Precise Relative Position for Drone Swarm Flight using Conventional
+    RTK and NMEA Data
+  conference: ION GNSS+ 2020(Institute of Navigation)
+  date: 2020-09
+  scope: null
+- topic: Detecting Ionospheric Irregularity based on ROT variation using Android Devices
+    Cloud System
+  conference: ION GNSS+ 2020(Institute of Navigation)
+  date: 2020-09
+  scope: null
+- topic: Benefit of SFMC SBAS and its Performance Assessment for WAAS
+  conference: EGNOS, and MSAS, ION GNSS+ 2020(Institute of Navigation)
+  date: 2020-09
+  scope: null
+- topic: Seamless Accurate Positioning in Deep Urban Areausing DGNSS and CMC-based
+    Multipath Mitigation
+  conference: ION GNSS+ 2020(Institute of Navigation)
+  date: 2020-09
+  scope: null
+- topic: Assessment of Position Degradation due to RTK MSM Correction Scheduling Under
+    Various Conditions
+  conference: ISGNSS 2019 in conjunction with IPNT Conference(항법시스템학회)
+  date: 2019-11
+  scope: null
+- topic: 'A New Method to Estimate Ionospheric Irregularity Drift Velocity Using ROT
+    Variation and Spaced GNSS Reference Stations:'
+  conference: ION GNSS+ 2019(Institute of Navigation)
+  date: 2019-11
+  scope: null
+- topic: The Performance of GNSS-IMU Integration of Smartphone based on In-flight
+    Calibration of IMU using Android GNSS Raw Measurements
+  conference: ION GNSS+ 2019(Institute of Navigation)
+  date: 2019-11
+  scope: null
+- topic: Performance Comparison of L1 and L5 GNSS Measurements using Android Smartphone
+  conference: ISGNSS 2019 in conjunction with IPNT Conference(항법시스템학회)
+  date: 2019-11
+  scope: null
+- topic: Position Estimation of Mobile Landing Target Based on a Single RTK Receiver
+  conference: 2019 KONI Conference(The Korea Navigation Institute)
+  date: 2019-11
+  scope: null
+- topic: Wide-lane 측정치 조합을 이용한 Cycle Slip 검출 및 위치 결정 기법 제안
+  conference: 2019 KONI Conference(The Korea Navigation Institute)
+  date: 2019-11
+  scope: null
+- topic: 도심지 자율비행체 주행을 위한 자동전환 항법 시스템
+  conference: 2019 KONI Conference(The Korea Navigation Institute)
+  date: 2019-11
+  scope: null
+- topic: 안드로이드 스마트폰을 활용한 ROT(Rate of TEC) 기반 전리층 이상 현상 검출 방법
+  conference: 2019 KONI Conference(The Korea Navigation Institute)
+  date: 2019-11
+  scope: null
+- topic: Performance Analysis on L1 SFMC SBAS in South Korea
+  conference: ISGNSS 2019 in conjunction with IPNT Conference(항법시스템학회)
+  date: 2019-10
+  scope: null
+- topic: Switching Algorithm in Deep Urban Area Using DGNSS/RTK Technique and Multi-GNSS
+    Carrier Phase Variation
+  conference: ISGNSS 2019 in conjunction with IPNT Conference(항법시스템학회)
+  date: 2019-10
+  scope: null
+- topic: Triple Frequency GNSS Cycle Slip Detection Algorithm during High Ionospheric
+    Activities
+  conference: ISGNSS 2019 in conjunction with IPNT Conference(항법시스템학회)
+  date: 2019-10
+  scope: null
+- topic: Direct Estimation of Multipath in a Deep Urban Area using Multi-GNSS Carrier
+    Phase Variation and Previous Position
+  conference: ION Pacific PNT 2019(Institute of Navagation)
+  date: 2019-04
+  scope: null
+- topic: L1 SFMC SBAS 적용을 통한 안드로이드 스마트폰 위치 정확도 향상
+  conference: 2018년 한국항행학회 종합학술대회(한국항행학회)
+  date: 2018-11
+  scope: null
+- topic: 3D 도시 모델을 이용한 도심지 다중위성군 측위 성능 향상
+  conference: 2018년 한국항행학회 종합학술대회(한국항행학회)
+  date: 2018-11
+  scope: null
+- topic: carrier phase 이중차분 변화율을 이용한 가스관 침하 모니터링 시스템 개발
+  conference: 2018 IPNT Conference(항법시스템학회)
+  date: 2018-11
+  scope: null
+- topic: 스마트기기의 GNSS 측정치를 이용한 MEMS 센서의 오차 Calibration 방법 적용 연구
+  conference: 2018 IPNT Conference(항법시스템학회)
+  date: 2018-11
+  scope: null
+- topic: 정밀 위성 궤도 및 위성 시계를 이용한 MSAS 위성 궤도 및 시계 보정정보 성능 분석
+  conference: 2018 IPNT Conference(항법시스템학회)
+  date: 2018-11
+  scope: null
+- topic: 동적 상태의 수신기 성능의 공정한 비교를 위한 동일 위성항법 환경 제공 시스템 개발
+  conference: 2018 IPNT Conference(항법시스템학회)
+  date: 2018-11
+  scope: null
+- topic: 스마트폰의 측정치를 이용한 도심지역 다중위성군 측위에 대한 연구
+  conference: 2018년 한국항행학회 종합학술대회(한국항행학회)
+  date: 2018-11
+  scope: null
+- topic: 사용자 측위 성능 예측을 위한 다양한 Network RTK 성능지표
+  conference: 2018년 한국항행학회 종합학술대회(한국항행학회)
+  date: 2018-11
+  scope: null
+- topic: 시간 지연된 보정 정보를 적용한 수신기의 RTK 성능 비교
+  conference: 2018년 한국항행학회 종합학술대회(한국항행학회)
+  date: 2018-11
+  scope: null
+- topic: GCP를 이용한 도심지 다중경로오차 감쇄 및 정확도 개선
+  conference: 2018 IPNT Conference(항법시스템학회)
+  date: 2018-11
+  scope: null
+- topic: L1 SFMC SBAS System to Improve the Position Accuracy of Android Device
+  conference: ION GNSS+(Institute of Navigation)
+  date: 2018-09
+  scope: null
+- topic: 스마트기기의 원시측정치를 이용한 다중위성군 통합 측위에 관한 연
+  conference: 한국통신학회 2018년도 동계종합학술발표회(한국통신학회)
+  date: 2018-01
+  scope: null
+- topic: 다중 위성군 시스템간 시각 편이 추정을 활용한 도심지 가용성 향상 연구
+  conference: 한국통신학회 2018년도 동계종합학술발표회(한국통신학회)
+  date: 2018-01
+  scope: null
+- topic: 이종 수신기의 조합에 따른 상대위치 계산에 관한 연구
+  conference: 한국통신학회 2018년도 동계종합학술발표회(한국통신학회)
+  date: 2018-01
+  scope: null
+- topic: FKP 보정정보 변환 알고리즘 적용을 통한 저가 RTK 모듈에서의 GPS/GLONASS RTK 성능 분석
+  conference: 한국통신학회 2018년도 동계종합학술발표회(한국통신학회)
+  date: 2018-01
+  scope: null
+- topic: 안드로이드 N 기반 스마트기기에서 제공하는 원시 측정치를 이용한 RINEX 관측 데이터 변환 어플리케이션 개발
+  conference: 2017 IPNT 정기학술발표대회(항법시스템학회)
+  date: 2017-11
+  scope: null
+- topic: 안드로이드 N 기반 스마트기기에서 의사거리 보정정보 적용과 원시 측정치 스무딩을 통한 위치 정확도 향상 연구
+  conference: 2017 IPNT 정기학술발표대회(항법시스템학회)
+  date: 2017-11
+  scope: null
+- topic: L1 SBAS Message Type 2~5 제거에 따른 SBAS 측위 성능 및 메시지 Bandwidth 측면에서의 영향 분석
+  conference: 2017 IPNT 정기학술발표대회(항법시스템학회)
+  date: 2017-11
+  scope: null
+- topic: SBAS 차폐지역에서의 드론 운용을 위한 서버 및 사용자 시스템 개발
+  conference: 2017 IPNT 정기학술발표대회(항법시스템학회)
+  date: 2017-11
+  scope: null
+- topic: MATLAB GUI 기반 KASS 운용시험 연구용 분석도구 개발
+  conference: 2017 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2017-10
+  scope: null
+- topic: KASS CNMP 알고리즘 설계
+  conference: 2017 한국항행학회 종합학술대회 (한국항행학회 )
+  date: 2017-10
+  scope: null
+- topic: SSR 메세지 스케쥴링과 GNSS 오차 잔차간 상관관계 분석
+  conference: 2017 한국항행학회 종합학술대회 ( 한국항행학회 )
+  date: 2017-10
+  scope: null
+- topic: 안드로이드 N 스마트기기에서 측정치 평활화 기법 적용을 위한 측정치 단일 차분
+  conference: 2017 한국항행학회 종합학술대회 ( 한국항행학회 )
+  date: 2017-10
+  scope: null
+- topic: 안드로이드 N 스마트기기에서 제공하는 원시 측정치를 이용한 15개 지점 필드 테스트 결과
+  conference: 2017 한국항행학회 종합학술대회 ( 한국항행학회 )
+  date: 2017-10
+  scope: null
+- topic: SBAS 차폐지역에서의 드론 위치 정확도 향상을 위한 실시간 시스템 개발
+  conference: 2017 한국항행학회 종합학술대회 ( 한국항행학회 )
+  date: 2017-10
+  scope: null
+- topic: 이종 수신기의 조합에 따른 상대위치 성능 예측
+  conference: 2017 한국항행학회 종합학술대회 ( 한국항행학회 )
+  date: 2017-10
+  scope: null
+- topic: L1 SBAS 메시지 변경을 통한 GPS_GLONASS 다중위성군 SBAS 수행 및 성능 분석
+  conference: 2017 한국항행학회 종합학술대회 ( 한국항행학회 )
+  date: 2017-10
+  scope: null
+- topic: A New Gravity Absorption Modeling for GPS/RISS in Land Vehicle
+  conference: ION GNSS+ 2017(ION)
+  date: 2017-09
+  scope: null
+- topic: Performance Analysis on Multi-Constellation SBAS of the Modified L1-only
+    SBAS Message
+  conference: ION GNSS+ 2017(ION)
+  date: 2017-09
+  scope: null
+- topic: Single-Frequency Divergence-free Hatch Filter for the Android N GNSS Raw
+    Measurements
+  conference: ION GNSS+ 2017(ION)
+  date: 2017-09
+  scope: null
+- topic: Advanced GPS-based Attitude Estimation Scheme for Various IMU Failure Scenarios
+    of low-cost UAV
+  conference: ION GNSS+ 2017(ION)
+  date: 2017-09
+  scope: null
+- topic: 전리층 보정정보의 구면 조화 함수 생성을 위한 반송파 이중차분 측정치 기반 전리층 지연 보정정보 추정 연구
+  conference: 2017년도 한국통신학회 하계종합학술발표회
+  date: 2017-06
+  scope: null
+- topic: A Study on GPS/GLONASS Compact Network RTK and Analysis on Temporal Variations
+    of Carrier Phase Corrections for Reducing Broadcast Bandwidth
+  conference: ION Pacific PNT(ION)
+  date: 2017-05
+  scope: null
+- topic: Single-frequency Divergence-free Hatch Filterfor the Low-cost Single-frequency
+    GNSSReceiver
+  conference: ION Pacific PNT(ION)
+  date: 2017-05
+  scope: null
+- topic: Efficiency Improvement of the Current SBAS Systemby Removal of RRC and Fast
+    Correction
+  conference: ', ION TIM/PTTI 2017 Conference(Institute of Navigation)'
+  date: 2017-02
+  scope: null
+- topic: 드론의 운용 확대를 위한 저가형 GPS 수신기 정확도 향상 및 무결성 정보생성 연구
+  conference: 2016년 한국위성항법시스템 학회 정기학술대회 ( 한국위성항법시스템 학회)
+  date: 2016-11
+  scope: null
+- topic: DGNSS-CP 알고리즘 적용 Android Application 개발 연구
+  conference: 2016년 한국위성항법시스템 학회 정기학술대회 ( 한국위성항법시스템 학회 )
+  date: 2016-11
+  scope: null
+- topic: WAAS 전리층 보정정보 및 정밀궤도력을 이용한 GLONASS 측위 성능 향상 가능성 연구
+  conference: 2016년 한국위성항법시스템 학회 정기학술대회( 한국위성항법시스템 학회)
+  date: 2016-11
+  scope: null
+- topic: 서로 다른 항법 정보를 이용한 기법별 DGPS-CP 성능 분석
+  conference: 2016년도 한국항행학회 종합학술대회 ( 한국항행학회)
+  date: 2016-10
+  scope: null
+- topic: 저가형 GPS 수신기에서의 SBAS 보정정보 생성 실시간 알고리즘 검증
+  conference: 2016년도 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2016-10
+  scope: null
+- topic: SBAS 보정정보의 RTCM 포맷으로의 변환 방안 연
+  conference: 2016년도 한국항행학회 종합학술대회 (한국항행학회)
+  date: 2016-10
+  scope: null
+- topic: SDCM 및 MSAS 메시지 비교분석
+  conference: 2016년도 한국항행학회 종합학술대회 ( 한국항행학회 )
+  date: 2016-10
+  scope: null
+- topic: SDCM 보정정보 적용을 통한 국내 사용자 위치에 따른 GPS_GLONASS 다중위성군 SBAS 성능 분석
+  conference: 2016년도 한국항행학회 종합학술대회 ( 한국항행학회)
+  date: 2016-10
+  scope: null
+- topic: A Study on Cycle Slip Detection for Integrated Navigation of Single Frequency
+    GNSS Receiver and Low Cost INS
+  conference: ION GNSS+2016(Institute of navigation)
+  date: 2016-09
+  scope: null
+- topic: KASS 성능평가를 위한 운용시험 요소기술 분석
+  conference: 2016년도 항공우주시스템공학회 춘계학술대회(항공우주시스템공학회)
+  date: 2016-05
+  scope: null
+- topic: Multipath Mitigation using GPS/INS Integrated Navigation with Adaptive Kalman
+    Filtering
+  conference: ITM 2016(Institute of Navigation)
+  date: 2016-01
+  scope: null
+- topic: SBAS Message Type 25 변경에 따른 MSAS 보정정보 성능 분석
+  conference: 2015년 한국위성항법시스템학회 정기학술대회(한국위성항법시스템학회)
+  date: 2015-11
+  scope: null
+- topic: 드론용 저가형 GPS 수신기의 정확도 향상 및 보호수준 산출 알고리즘 제안
+  conference: 2015년 한국위성항법시스템학회 정기학술대회(한국위성항법시스템학회)
+  date: 2015-11
+  scope: null
+- topic: 스마트기기에 적용된 NMEA 위성배치정보를 활용한 DGNSS-CP 알고리즘 연구
+  conference: 2015년 한국위성항법시스템학회 정기학술대회(한국위성항법시스템학회 )
+  date: 2015-11
+  scope: null
+- topic: RRC 적용 여부에 따른 MSAS 보정정보 성능 분석9
+  conference: 2015 한국항행학회 종합학술대회(한국항행학회)
+  date: 2015-10
+  scope: null
+- topic: 스마트기기에서 위성배치 정보를 활용한 DGNSS-CP와 DGPS-CP 성능 비교
+  conference: 2015 한국항행학회 종합학술대회
+  date: 2015-10
+  scope: null
+- topic: 도심지역에서의 연도별 통합항법 성능 예측
+  conference: KSCE 2015 CONVENTION2015 CIVIL EXPO & CONFERENCE(대한토목학회 )
+  date: 2015-10
+  scope: null
+- topic: 고고도 장기체공 무인기를 활용한 국지적 대체항법에 관한 연구
+  conference: 2015 한국항행학회 종합학술대회( 한국항행학회)
+  date: 2015-10
+  scope: null
+- topic: 도심지역에서의 드론 운용을 위한 비행 고도 별 GPS 항법성능 분석
+  conference: 2015 한국항행학회 종합학술대회(한국항행학회)
+  date: 2015-10
+  scope: null
+- topic: 통신 단절 후 Compact RTK 미지정수 재결정 시간 성능 연구
+  conference: 2015 한국항행학회 종합학술대회(한국항행학회)
+  date: 2015-10
+  scope: null
+- topic: 무인항공기 함상 이착륙 유도를 위한 GNSS 상대 정밀 측위기법 적용 가능성 연구
+  conference: 2015 한국항행학회 종합학술대회(한국항행학회)
+  date: 2015-10
+  scope: null
+- topic: Dynamic Test Result of the Compact RTK Under a Harsh Communication Environment
+    of Land Transportation
+  conference: ION Pacific PNT(INSTITUTE OF NAVIGATION)
+  date: 2015-04
+  scope: null
+- topic: Navigation augmentation in Urban area with pseudolite equipped High Altitude
+    Long Endurance UAV
+  conference: Institute of Navigation International Technical Meeting 2015, ITM 2015(INSTITUTE
+    OF NAVIGATION)
+  date: 2015-01
+  scope: null
+- topic: 대체에너지를 이용하는 고고도 장기체공 무인기의 민군 복합 운용 전망
+  conference: 한국항공우주학회 2014 추계학술대회 및 정기총회(한국항공우주학회)
+  date: 2014-11
+  scope: null
+- topic: WA-DGNSS 광역 기준국 소프트웨어 테스트 방법론 제안
+  conference: 2014년도 한국항행학회 워크숍 및 종합학술발표대회(한국항행학회)
+  date: 2014-10
+  scope: null
+- topic: Latency Compensation Performance of Compact RTK in 30s Time Delay Environmen
+  conference: ISGNSS 2014 in conjunction with KGS Conference (국내에서 개최된 국제학술대회임)(ISGNSS)
+  date: 2014-10
+  scope: null
+- topic: Latency Compensation by Compact RTK Under Harsh Communication Environment
+    of Land Transportation
+  conference: ION GNSS+ 2014(Institute of Navigation)
+  date: 2014-09
+  scope: null
+- topic: Inertial Aided Cycle Slip Detectionby Considering Satellite Geometryfor Land
+    Vehicle
+  conference: ION GNSS+ 2014(Institute of Navigation)
+  date: 2014-09
+  scope: null
+- topic: 사용자 위치별 단방향 Network RTK 측위 성능 예측
+  conference: 2014년도 한국항해항만학회 공동학술대회(한국항해항만학회)
+  date: 2014-06
+  scope: null
+- topic: Correction Combination of Compact Network RTK Considering Tropospheric Delay
+    Variation Over Height
+  conference: Position, Location and Navigation Symposium-PLANS 2014(IEEE)
+  date: 2014-05
+  scope: null
+- topic: 차량 환경에서 RTK 위치 결정을 위한 저가 관성센서 기반 GPS 반송파 불연속 측정치 검출
+  conference: 2014 춘계학술발표대회(한국항공우주학회)
+  date: 2014-04
+  scope: null
+- topic: 항법위성의 NMEA 배치정보를 이용한 보정정보의 위치 영역 맵핑 알고리즘 및 DGPS 성능 비교
+  conference: 2013년 한국위성항법시스템 학회 정기학술대회(사단법인 한국위성항법시스템 학회)
+  date: 2013-11
+  scope: null
+- topic: 국내 위성항법 오차 요인별 공간 이격 경향성 분석
+  conference: 제9회 국방기술학술대회(한국국방기술학회, 대한전자공학회 )
+  date: 2013-10
+  scope: null
+- topic: 시공간이격오차 모델화 및 성능검증
+  conference: 2013 한국항행학회 워크숍 및 학술발표대회(한국항행학회)
+  date: 2013-10
+  scope: null
+- topic: 30sec Latency Static Test Result ofCompact RTK in Commercial Receiver
+  conference: RTCM SC-104 Meeting(RTCM)
+  date: 2013-09
+  scope: null
+- topic: GPS Cycle-slip Detection with Low-cost IMU and Single-frequency Receiver
+    of Land Vehicle
+  conference: ION 2013 Pacific PNT Meeting(Institute of Navigation)
+  date: 2013-04
+  scope: null
+- topic: Verification of Propagation DelayMeasurements for GNSS in LandTransportation
+    Environment
+  conference: European Navigation Conference 2013( Austrian Institute of Navigation)
+  date: 2013-04
+  scope: null
+- topic: Ambiguity Level Adjustment Among Networks of Compact Network RTK for Land
+    Vehicle Users
+  conference: ION 2013 Pacific PNT Meeting(Institute of Navigation)
+  date: 2013-04
+  scope: null
+- topic: 육상교통 사용자를 위한 미지정수 수준이 고려된 Compact Network RTK 보정정보 생성방안 연구
+  conference: 2013년도 한국항공우주학회 춘계학술대회(항공우주학회)
+  date: 2013-04
+  scope: null
+- topic: 'DGPS Enhancement to GPS NMEA Output Data: DGPS by Correction Projection
+    to Position-Domain'
+  conference: ION International Technical Meeting 2013(Institute of Navigation)
+  date: 2013-01
+  scope: null
+- topic: 'Cost-effective selection of Inertial Sensor for Cycle-slip Detection of
+    Land Vehicle:'
+  conference: ION GNSS 2012(ION)
+  date: 2012-09
+  scope: null

@@ -1,0 +1,82 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">News</span>
+    </nav>
+    <h1 class="page-title">News & Announcements</h1>
+    <p class="page-intro-text">Latest updates, publications, and events from the Navigation System Lab.</p>
+  </div>
+</div>
+
+<div class="container section">
+  <div class="news-list">
+    {{ $pages := .RegularPagesRecursive.ByDate.Reverse }}
+    {{ $paginator := .Paginate $pages }}
+    {{ range $paginator.Pages }}
+    <article class="news-list-item reveal">
+      <div class="news-list-date">
+        <span class="news-day">{{ .Date.Format "02" }}</span>
+        <span class="news-month">{{ .Date.Format "Jan" }}</span>
+        <span class="news-year-sm">{{ .Date.Format "2006" }}</span>
+      </div>
+      <div class="news-list-content">
+        <div class="news-list-meta">
+          {{ with .Params.category }}<span class="news-tag news-tag--{{ lower . }}">{{ . }}</span>{{ end }}
+        </div>
+        <h2 class="news-list-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p class="news-list-summary">{{ .Summary | truncate 250 }}</p>
+        <a href="{{ .Permalink }}" class="card-link">Read more &#8594;</a>
+      </div>
+    </article>
+    {{ else }}
+    <div class="empty-state reveal">
+      <p>No news items yet. Check back soon!</p>
+    </div>
+    {{ end }}
+  </div>
+
+  <!-- Pagination -->
+  {{ $paginator := .Paginator }}
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="pagination" aria-label="Pagination">
+    <ul class="pagination-list">
+      {{/* Previous */}}
+      {{ if $paginator.HasPrev }}
+      <li class="pagination-item">
+        <a href="{{ $paginator.Prev.URL }}" class="pagination-link pagination-prev" aria-label="Previous page">&laquo; Prev</a>
+      </li>
+      {{ else }}
+      <li class="pagination-item">
+        <span class="pagination-link pagination-prev pagination-disabled">&laquo; Prev</span>
+      </li>
+      {{ end }}
+
+      {{/* Page numbers */}}
+      {{ range $paginator.Pagers }}
+      <li class="pagination-item">
+        {{ if eq . $paginator }}
+        <span class="pagination-link pagination-current" aria-current="page">{{ .PageNumber }}</span>
+        {{ else }}
+        <a href="{{ .URL }}" class="pagination-link">{{ .PageNumber }}</a>
+        {{ end }}
+      </li>
+      {{ end }}
+
+      {{/* Next */}}
+      {{ if $paginator.HasNext }}
+      <li class="pagination-item">
+        <a href="{{ $paginator.Next.URL }}" class="pagination-link pagination-next" aria-label="Next page">Next &raquo;</a>
+      </li>
+      {{ else }}
+      <li class="pagination-item">
+        <span class="pagination-link pagination-next pagination-disabled">Next &raquo;</span>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+  {{ end }}
+</div>
+{{ end }}

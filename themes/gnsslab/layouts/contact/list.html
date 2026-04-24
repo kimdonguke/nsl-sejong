@@ -1,0 +1,106 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span class="breadcrumb-current">Contact</span>
+    </nav>
+    <h1 class="page-title">Contact Us</h1>
+    <p class="page-intro-text">항법시스템 연구실 · Navigation System Lab, Sejong University</p>
+  </div>
+</div>
+
+<div class="container section">
+  <div class="contact-grid">
+
+    <!-- Left: Lab Information -->
+    <div class="contact-info reveal">
+      <h2 class="contact-section-title">Lab Information</h2>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#127968;</div>
+        <div class="contact-detail">
+          <h4>Location</h4>
+          <p>충무관(C관) 1016호<br>세종대학교 항공우주공학과</p>
+          <p class="contact-ko">05006 서울특별시 광진구 능동로 209(군자동)</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#9993;</div>
+        <div class="contact-detail">
+          <h4>Email</h4>
+          <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128222;</div>
+        <div class="contact-detail">
+          <h4>Phone</h4>
+          <p>{{ .Site.Params.phone }}</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">&#128336;</div>
+        <div class="contact-detail">
+          <h4>Office Hours</h4>
+          <p>{{ .Site.Params.officeHours }}</p>
+          <p class="contact-ko">면담은 사전 이메일 예약 권장</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Map + Form -->
+    <div class="contact-map-section reveal">
+      <h2 class="contact-section-title">How to Get Here</h2>
+      <div class="map-placeholder">
+        <div class="map-inner">
+          <div class="map-pin">&#128205;</div>
+          <div class="map-label">
+            <strong>세종대학교</strong><br>
+            Sejong University<br>
+            <small>209 Neungdong-ro, Gwangjin-gu, Seoul</small>
+          </div>
+        </div>
+        <ul class="map-note-list">
+          <li><span class="transport-badge subway">지하철</span> 7호선 어린이대공원역 4번 출구 도보 5분</li>
+          <li><span class="transport-badge bus">버스</span> 세종대학교 정문 하차 (간선·지선 다수)</li>
+          <li><span class="transport-badge car">자가용</span> 서울 광진구 능동로 209 (교내 주차장 이용)</li>
+        </ul>
+      </div>
+
+      <div class="contact-form-section">
+        <h3>Send us a Message</h3>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic</option>
+              <option value="prospective">Prospective Student Inquiry</option>
+              <option value="research">Research Collaboration</option>
+              <option value="general">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}
