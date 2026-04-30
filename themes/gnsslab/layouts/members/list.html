@@ -175,16 +175,98 @@
         {{ $yr := .Params.graduationYear }}
         {{ if ne $yr ($s.Get "curYear") }}
           {{ $s.Set "curYear" $yr }}
-          <div class="alumni-year-heading">{{ $yr }}</div>
+          <h3 class="alumni-year-heading">{{ $yr }}</h3>
         {{ end }}
-        <div class="alumni-item">
-          <div class="alumni-main">
-            <span class="alumni-name">{{ .Title }}</span>
-            {{ with .Params.degree }}<span class="alumni-degree">{{ . }}</span>{{ end }}
+        <article class="alumni-card">
+          <div class="alumni-photo">
+            {{ if .Params.photo }}
+            <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="alumni-img">
+            {{ else }}
+            <div class="photo-placeholder photo-placeholder--alumni">
+              <span>{{ substr .Title 0 2 }}</span>
+            </div>
+            {{ end }}
           </div>
-          {{ with .Params.thesis }}<p class="alumni-thesis">{{ . }}</p>{{ end }}
-          {{ with .Params.currentPosition }}<p class="alumni-position">{{ . }}</p>{{ end }}
-        </div>
+          <div class="alumni-info">
+            <header class="alumni-header">
+              <h4 class="alumni-name">
+                {{ with .Params.nameKorean }}{{ . }}{{ end }}
+                <span class="alumni-name-en">{{ .Title }}</span>
+              </h4>
+              {{ with .Params.position }}<p class="alumni-position">{{ . }}</p>{{ end }}
+              {{ with .Params.education }}
+                {{ $last := index . (sub (len .) 1) }}
+                <p class="alumni-final-degree"><span class="alumni-meta-label">최종학위</span> {{ $last.year }} {{ $last.degree }}</p>
+              {{ end }}
+            </header>
+
+            {{ with .Params.research }}
+            <p class="alumni-research-line"><span class="alumni-meta-label">관심분야</span> {{ . }}</p>
+            {{ end }}
+
+            <details class="alumni-detail">
+              <summary class="alumni-detail-toggle"><span>상세 보기</span></summary>
+              <div class="alumni-detail-body">
+                {{ if or .Params.email .Params.emailAlt }}
+                <section class="alumni-section">
+                  <h5 class="alumni-section-title">Email</h5>
+                  <p class="alumni-email">
+                    {{ with .Params.email }}<span>{{ . }}</span>{{ end }}
+                    {{ with .Params.emailAlt }} <span class="alumni-email-alt">({{ . }})</span>{{ end }}
+                  </p>
+                </section>
+                {{ end }}
+
+                {{ with .Params.education }}
+                <section class="alumni-section">
+                  <h5 class="alumni-section-title">Education</h5>
+                  <table class="alumni-edu-table">
+                    <thead>
+                      <tr>
+                        <th>졸업년도</th>
+                        <th>학위</th>
+                        <th>학교 / 전공</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{ range . }}
+                      <tr>
+                        <td>{{ .year }}</td>
+                        <td>{{ .degree }}</td>
+                        <td>{{ .school }} / {{ .department }}</td>
+                      </tr>
+                      {{ end }}
+                    </tbody>
+                  </table>
+                </section>
+                {{ end }}
+
+                {{ with .Params.publications }}
+                <section class="alumni-section">
+                  <h5 class="alumni-section-title">주요실적</h5>
+                  <ul class="alumni-pubs">
+                    {{ range . }}
+                    <li class="alumni-pub-item">
+                      <span class="alumni-pub-date">{{ .date }}.</span>
+                      {{ .title }}{{ with .venue }}, <em>{{ . }}</em>{{ end }}{{ with .doi }}, <a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a>{{ end }}.
+                    </li>
+                    {{ end }}
+                  </ul>
+                </section>
+                {{ end }}
+
+                {{ with .Params.links }}
+                <div class="alumni-links">
+                  {{ with .linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" class="alumni-link">LinkedIn</a>{{ end }}
+                  {{ with .googleSite }}<a href="{{ . }}" target="_blank" rel="noopener" class="alumni-link">Google Site</a>{{ end }}
+                  {{ with .website }}<a href="{{ . }}" target="_blank" rel="noopener" class="alumni-link">Website</a>{{ end }}
+                  {{ with .github }}<a href="{{ . }}" target="_blank" rel="noopener" class="alumni-link">GitHub</a>{{ end }}
+                </div>
+                {{ end }}
+              </div>
+            </details>
+          </div>
+        </article>
       {{ end }}
     </div>
     {{ else }}
