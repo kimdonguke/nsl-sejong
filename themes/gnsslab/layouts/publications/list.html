@@ -16,7 +16,7 @@
   <!-- Stats -->
   {{ $papers := .Site.Data.publications.papers.papers }}
   {{ $patents := .Site.Data.publications.patents.patents }}
-  {{ $presentations := .Site.Data.publications.presentations.presentations }}
+  {{ $conferences := .Site.Data.publications.conferences.conferences }}
   <div class="pub-stats reveal">
     <div class="pub-stat-item">
       <span class="pub-stat-num">{{ len $papers }}</span>
@@ -27,21 +27,21 @@
       <span class="pub-stat-label">Patents</span>
     </div>
     <div class="pub-stat-item">
-      <span class="pub-stat-num">{{ len $presentations }}</span>
-      <span class="pub-stat-label">Presentations</span>
+      <span class="pub-stat-num">{{ len $conferences }}</span>
+      <span class="pub-stat-label">Conferences</span>
     </div>
   </div>
 
   <!-- Section Tabs -->
   <div class="pub-tabs reveal" role="tablist">
     <button class="pub-tab active" data-target="sec-papers" role="tab" aria-selected="true">
-      &#128196; Journal Papers
+      Journal Papers
     </button>
     <button class="pub-tab" data-target="sec-patents" role="tab" aria-selected="false">
-      &#128274; Patents
+      Patents
     </button>
-    <button class="pub-tab" data-target="sec-presentations" role="tab" aria-selected="false">
-      &#127908; Academic Presentations
+    <button class="pub-tab" data-target="sec-conferences" role="tab" aria-selected="false">
+      Conferences
     </button>
   </div>
 
@@ -121,10 +121,10 @@
     {{ end }}
   </div>
 
-  <!-- ===== SECTION 3: PRESENTATIONS ===== -->
-  <div id="sec-presentations" class="pub-section">
+  <!-- ===== SECTION 3: CONFERENCES ===== -->
+  <div id="sec-conferences" class="pub-section">
     {{ $.Scratch.Set "curYear" "" }}
-    {{ range sort $presentations "date" "desc" }}
+    {{ range sort $conferences "date" "desc" }}
       {{ $yr := substr .date 0 4 }}
       {{ if ne $yr ($.Scratch.Get "curYear") }}
         {{ if ne ($.Scratch.Get "curYear") "" }}

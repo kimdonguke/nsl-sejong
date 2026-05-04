@@ -154,6 +154,16 @@
   }
 
   /* ----------------------------------------------------------------
+     4b. ALUMNI DETAIL TOGGLE (Members > Alumni)
+     ---------------------------------------------------------------- */
+  document.querySelectorAll('.alumni-detail-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+    });
+  });
+
+  /* ----------------------------------------------------------------
      5. ACTIVE NAV LINK highlighting based on current URL
      ---------------------------------------------------------------- */
   const currentPath = window.location.pathname;
