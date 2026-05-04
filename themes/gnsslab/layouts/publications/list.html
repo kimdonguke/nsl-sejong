@@ -141,6 +141,11 @@
           <span class="pub-venue">{{ .conference }}</span>
         </div>
         <div class="pub-row-meta">
+          {{ if eq .scope "국외" }}
+            <span class="scope-badge scope-intl">International</span>
+          {{ else if eq .scope "국내" }}
+            <span class="scope-badge scope-domestic">Domestic</span>
+          {{ end }}
           <span class="pub-year-tag">{{ .date }}</span>
         </div>
       </li>
