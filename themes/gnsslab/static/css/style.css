@@ -2053,8 +2053,6 @@ input, textarea, select {
 /* Year groups */
 .pub-year-group {
   margin-bottom: var(--space-10);
-  content-visibility: auto;
-  contain-intrinsic-size: 0 800px;
 }
 
 .pub-year {

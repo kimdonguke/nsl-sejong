@@ -145,6 +145,12 @@
         pubSections.forEach(function (sec) {
           if (sec.id === target) {
             sec.classList.add('active');
+            // Reveal elements inside a previously hidden section never trigger
+            // the IntersectionObserver fast enough on tab switch, so force
+            // their visible state directly.
+            sec.querySelectorAll('.reveal').forEach(function (el) {
+              el.classList.add('visible');
+            });
           } else {
             sec.classList.remove('active');
           }
