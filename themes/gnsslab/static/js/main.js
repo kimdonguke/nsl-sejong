@@ -146,11 +146,13 @@
           if (sec.id === target) {
             sec.classList.add('active');
             // Reveal elements inside a previously hidden section never trigger
-            // the IntersectionObserver fast enough on tab switch, so force
-            // their visible state directly.
-            sec.querySelectorAll('.reveal').forEach(function (el) {
-              el.classList.add('visible');
-            });
+            // the IntersectionObserver fast enough on tab switch. Force the
+            // first one visible so the section isn't blank; later ones keep
+            // their reveal state and fade in as the user scrolls.
+            var firstReveal = sec.querySelector('.reveal');
+            if (firstReveal) {
+              firstReveal.classList.add('visible');
+            }
           } else {
             sec.classList.remove('active');
           }

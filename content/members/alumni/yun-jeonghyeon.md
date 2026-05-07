@@ -20,6 +20,9 @@ education:
     degree: "박사"
     school: "세종대학교"
     department: "항공우주공학과"
+thesis:
+  korean: "스마트기기 GNSS/INS/Magnetometer/Barometer 통합 측위 시스템에 관한 연구"
+  english: "A Study on the integrated Navigation System of GNSS/INS/Magnetometer/Barometer in Smart Device"
 research: "GNSS, Smartphone Positioning, Sensor Integration"
 publications:
   - date: "2024-02"

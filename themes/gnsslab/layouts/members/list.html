@@ -189,10 +189,14 @@
                 {{ with .Params.nameKorean }}{{ . }}{{ end }}
                 <span class="alumni-name-en">{{ .Title }}</span>
               </h4>
-              {{ with .Params.position }}<p class="alumni-position">{{ . }}</p>{{ end }}
               {{ with .Params.education }}
                 {{ $last := index . (sub (len .) 1) }}
-                <p class="alumni-final-degree"><span class="alumni-meta-label">최종학위</span> {{ $last.year }} {{ $last.degree }}</p>
+                <p class="alumni-final-degree"><span class="alumni-meta-label">최종학력</span> {{ $last.year }} {{ $last.degree }}</p>
+              {{ end }}
+              {{ with .Params.thesis }}
+                {{ with .korean }}
+                <p class="alumni-thesis-line"><span class="alumni-meta-label">학위 논문</span> {{ . }}</p>
+                {{ end }}
               {{ end }}
             </header>
 
@@ -206,6 +210,22 @@
               </button>
               <div class="alumni-detail-body-wrapper">
               <div class="alumni-detail-body">
+                {{ with .Params.position }}
+                <section class="alumni-section">
+                  <h5 class="alumni-section-title">현재 직위</h5>
+                  <p class="alumni-position-detail">{{ . }}</p>
+                </section>
+                {{ end }}
+
+                {{ with .Params.thesis }}
+                  {{ with .english }}
+                  <section class="alumni-section">
+                    <h5 class="alumni-section-title">Thesis (English)</h5>
+                    <p class="alumni-thesis-en">{{ . }}</p>
+                  </section>
+                  {{ end }}
+                {{ end }}
+
                 {{ if or .Params.email .Params.emailAlt }}
                 <section class="alumni-section">
                   <h5 class="alumni-section-title">Email</h5>
