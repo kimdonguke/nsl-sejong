@@ -1413,12 +1413,6 @@ input, textarea, select {
   grid-template-columns: 200px 1fr;
   gap: var(--space-10);
   box-shadow: var(--shadow-md);
-  transition: box-shadow var(--transition-base);
-}
-
-.professor-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
 }
 
 .photo-placeholder {
