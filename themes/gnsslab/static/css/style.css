@@ -750,8 +750,8 @@ input, textarea, select {
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
   border-color: rgba(26,58,92,0.15);
 }
 
@@ -1335,7 +1335,7 @@ input, textarea, select {
 }
 
 .list-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
@@ -1417,7 +1417,8 @@ input, textarea, select {
 }
 
 .professor-card:hover {
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .photo-placeholder {
@@ -1655,10 +1656,11 @@ input, textarea, select {
   border-radius: var(--radius-lg);
   padding: var(--space-6) var(--space-8);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition-base);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
 
 .alumni-card:hover {
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
@@ -2236,8 +2238,8 @@ input, textarea, select {
 }
 
 .research-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .research-card:hover::after {
@@ -2338,7 +2340,7 @@ input, textarea, select {
 }
 
 .funding-item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
@@ -2384,9 +2386,8 @@ input, textarea, select {
 }
 
 .news-list-item:hover {
-  transform: translateX(4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(26,58,92,0.15);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(26,58,92,0.20);
 }
 
 .news-list-date {
@@ -3054,28 +3055,9 @@ input, textarea, select {
   }
 }
 
-@media (max-width: 480px) {
-  :root {
-    --space-20: 3rem;
-    --space-16: 2.5rem;
-  }
-
-  .hero-title-ko { font-size: var(--text-3xl); }
-  .hero-title-en { font-size: var(--text-xl); }
-
-  .hero-cta {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-4);
-  }
-
-  .stat-divider { display: none; }
-
+/* Phablet / small tablet — switch member cards to a single horizontal
+   row early so the portrait photo doesn't dominate a narrow tile. */
+@media (max-width: 640px) {
   .members-grid {
     grid-template-columns: 1fr;
     gap: var(--space-3);
@@ -3101,6 +3083,29 @@ input, textarea, select {
   .member-research-tags { justify-content: flex-start; }
 
   .member-card:hover { transform: none; }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-20: 3rem;
+    --space-16: 2.5rem;
+  }
+
+  .hero-title-ko { font-size: var(--text-3xl); }
+  .hero-title-en { font-size: var(--text-xl); }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .stat-divider { display: none; }
 
   .logo-text { display: none; }
 

@@ -210,22 +210,6 @@
               </button>
               <div class="alumni-detail-body-wrapper">
               <div class="alumni-detail-body">
-                {{ with .Params.position }}
-                <section class="alumni-section">
-                  <h5 class="alumni-section-title">현재 직위</h5>
-                  <p class="alumni-position-detail">{{ . }}</p>
-                </section>
-                {{ end }}
-
-                {{ with .Params.thesis }}
-                  {{ with .english }}
-                  <section class="alumni-section">
-                    <h5 class="alumni-section-title">Thesis (English)</h5>
-                    <p class="alumni-thesis-en">{{ . }}</p>
-                  </section>
-                  {{ end }}
-                {{ end }}
-
                 {{ if or .Params.email .Params.emailAlt }}
                 <section class="alumni-section">
                   <h5 class="alumni-section-title">Email</h5>
