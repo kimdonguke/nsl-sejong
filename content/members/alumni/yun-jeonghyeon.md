@@ -5,7 +5,7 @@ role: "alumni"
 position: "박사"
 email: "alzkdpf929 at sju.ac.kr"
 emailAlt: "alzkdpf929 at outlook.kr"
-photo: "/images/alumni/yun-jeonghyeon.jpg"
+photo: "/images/members/alumni/yun-jeonghyeon.jpg"
 graduationYear: 2025
 education:
   - year: "2019.08"

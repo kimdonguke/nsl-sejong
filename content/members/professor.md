@@ -11,7 +11,7 @@ phone: "02-3408-4385"
 officeHours: "수요일 10:00–14:00"
 research: "GNSS, KPS, Augmentation System, Wide-area Precise Positioning, Smartphone Positioning, Urban Positioning, Space Navigation"
 googleScholar: "https://scholar.google.com/citations?hl=ko&user=Sg_7e4YAAAAJ&view_op=list_works"
-photo: "/images/members/park-byungwoon.jpg"
+photo: "/images/members/current/park-byungwoon.jpg"
 ---
 
 ## 연구분야

@@ -5,5 +5,5 @@ role: "ms"
 weight: 2
 research: "UAV Navigation, Visual Odometry"
 email: "student.e@sju.kr"
-photo: "/images/members/park-jungyo.jpg"
+photo: "/images/members/current/park-jungyo.jpg"
 ---

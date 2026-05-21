@@ -5,5 +5,5 @@ role: "undergrad"
 weight: 1
 research: "MBRTK"
 email: "10022011361@sju.kr"
-photo: "/images/members/kim-dongwook.jpg"
+photo: "/images/members/current/kim-dongwook.jpg"
 ---

@@ -5,5 +5,5 @@ role: "phd"
 weight: 3
 research: "GNSS Signal Processing, Anti-Spoofing"
 email: "student.a@sju.kr"
-photo: "/images/members/jo-yongrae.jpg"
+photo: "/images/members/current/jo-yongrae.jpg"
 ---

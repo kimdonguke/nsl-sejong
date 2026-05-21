@@ -5,5 +5,5 @@ role: "undergrad"
 weight: 2
 research: "-"
 email: "student@sju.kr"
-photo: "/images/members/park-inkyung.jpg"
+photo: "/images/members/current/park-inkyung.jpg"
 ---

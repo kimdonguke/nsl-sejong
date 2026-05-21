@@ -5,5 +5,5 @@ role: "undergrad"
 weight: 3
 research: "-"
 email: "student@sju.kr"
-photo: "/images/members/kim-jooheon.jpg"
+photo: "/images/members/current/kim-jooheon.jpg"
 ---

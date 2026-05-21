@@ -5,5 +5,5 @@ role: "phd"
 weight: 4
 research: "GNSS Signal Processing, Anti-Spoofing"
 email: "student@sju.kr"
-photo: "/images/members/lee-yebin.jpg"
+photo: "/images/members/current/lee-yebin.jpg"
 ---

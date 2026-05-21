@@ -5,5 +5,5 @@ role: "ms"
 weight: 5
 research: "UAV Navigation, Visual Odometry"
 email: "student.e@sju.kr"
-photo: "/images/members/kim-hyunwoo.jpg"
+photo: "/images/members/current/kim-hyunwoo.jpg"
 ---
