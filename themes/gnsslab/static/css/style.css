@@ -2193,6 +2193,21 @@ input, textarea, select {
 /* ----------------------------------------------------------------
    18. RESEARCH PAGE
    ---------------------------------------------------------------- */
+.research-intro {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-12);
+}
+
+.research-intro p {
+  margin-bottom: var(--space-4);
+}
+
+.research-intro p:last-child {
+  margin-bottom: 0;
+}
+
 .research-section-heading {
   font-size: var(--text-2xl);
   color: var(--color-primary);
@@ -2507,41 +2522,83 @@ input, textarea, select {
 .map-placeholder {
   background: linear-gradient(135deg, #1a3a5c 0%, #22487a 100%);
   border-radius: var(--radius-xl);
-  padding: var(--space-8) var(--space-10);
   margin-bottom: var(--space-8);
+  overflow: hidden;
+}
+
+.map-photo {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.map-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.map-photo:hover img {
+  transform: scale(1.04);
+}
+
+.map-photo-info {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-end;
+  padding: var(--space-6) var(--space-8);
+  background: linear-gradient(to top, rgba(15,39,68,0.92) 0%, rgba(15,39,68,0.55) 45%, rgba(15,39,68,0) 80%);
+  color: #fff;
 }
 
-.map-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: var(--space-5);
-}
-
-.map-pin {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-3);
-  filter: drop-shadow(0 4px 12px rgba(200,169,81,0.4));
-}
-
-.map-label {
-  color: white;
-  font-size: var(--text-base);
-  line-height: var(--leading-relaxed);
-}
-
-.map-label strong {
+.map-photo-label strong {
+  display: block;
   color: #e8c96a;
   font-size: var(--text-lg);
+  margin-bottom: 2px;
+}
+
+.map-photo-label span {
+  display: block;
+  font-size: var(--text-base);
+  color: rgba(255,255,255,0.95);
+}
+
+.map-photo-label small {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.75);
+}
+
+.map-photo-cta {
+  position: absolute;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  background: rgba(200,169,81,0.95);
+  color: #0f2744;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.map-photo:hover .map-photo-cta {
+  background: #e0bb60;
+  transform: translateY(-2px);
 }
 
 .map-note-list {
   list-style: none;
-  padding: 0;
+  padding: var(--space-5) var(--space-8) var(--space-6);
   margin: 0;
   width: 100%;
   display: flex;
@@ -2677,7 +2734,7 @@ input, textarea, select {
   color: #0f2744;
   font-size: var(--text-sm);
   font-weight: var(--weight-bold);
-  padding: var(--space-3) var(--space-7);
+  padding: var(--space-3) var(--space-8);
   border-radius: var(--radius-md);
   text-decoration: none;
   transition: background var(--transition-fast), transform var(--transition-fast);

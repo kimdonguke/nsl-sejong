@@ -57,14 +57,17 @@
     <div class="contact-map-section reveal">
       <h2 class="contact-section-title">How to Get Here</h2>
       <div class="map-placeholder">
-        <div class="map-inner">
-          <div class="map-pin">&#128205;</div>
-          <div class="map-label">
-            <strong>세종대학교</strong><br>
-            Sejong University<br>
-            <small>209 Neungdong-ro, Gwangjin-gu, Seoul</small>
+        <a href="https://www.google.com/maps/search/?api=1&query=Sejong+University+Seoul" target="_blank" rel="noopener" class="map-photo">
+          <img src="/images/contact/sejong_univ_pic.jpg" alt="세종대학교 정문">
+          <div class="map-photo-info">
+            <div class="map-photo-label">
+              <strong>세종대학교</strong>
+              <span>Sejong University</span>
+              <small>209 Neungdong-ro, Gwangjin-gu, Seoul</small>
+            </div>
           </div>
-        </div>
+          <span class="map-photo-cta">Open in Google Maps &#8599;</span>
+        </a>
         <ul class="map-note-list">
           <li><span class="transport-badge subway">지하철</span> 7호선 어린이대공원역 4번 출구 도보 5분</li>
           <li><span class="transport-badge bus">버스</span> 세종대학교 정문 하차 (간선·지선 다수)</li>
@@ -74,7 +77,7 @@
 
       <div class="contact-form-section">
         <h3>Send us a Message</h3>
-        <form class="contact-form" action="#" method="POST">
+        <form class="contact-form" data-recipient="{{ .Site.Params.email }}">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -87,9 +90,9 @@
             <label for="subject">Subject</label>
             <select id="subject" name="subject">
               <option value="">Select a topic</option>
-              <option value="prospective">Prospective Student Inquiry</option>
-              <option value="research">Research Collaboration</option>
-              <option value="general">General Inquiry</option>
+              <option value="Prospective Student Inquiry">Prospective Student Inquiry</option>
+              <option value="Research Collaboration">Research Collaboration</option>
+              <option value="General Inquiry">General Inquiry</option>
             </select>
           </div>
           <div class="form-group">

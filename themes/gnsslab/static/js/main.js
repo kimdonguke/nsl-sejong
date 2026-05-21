@@ -185,7 +185,7 @@
   });
 
   /* ----------------------------------------------------------------
-     6. CONTACT FORM: Simple client-side validation
+     6. CONTACT FORM: Validate and open user's mail client via mailto:
      ---------------------------------------------------------------- */
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
@@ -194,48 +194,42 @@
 
       const name = this.querySelector('#name');
       const email = this.querySelector('#email');
+      const subject = this.querySelector('#subject');
       const message = this.querySelector('#message');
       let isValid = true;
 
-      // Remove existing error states
       [name, email, message].forEach(function (field) {
-        if (field) {
-          field.style.borderColor = '';
-        }
+        if (field) field.style.borderColor = '';
       });
 
-      // Validate
       if (name && !name.value.trim()) {
         name.style.borderColor = '#e74c3c';
         isValid = false;
       }
-
       if (email && !validateEmail(email.value)) {
         email.style.borderColor = '#e74c3c';
         isValid = false;
       }
-
       if (message && !message.value.trim()) {
         message.style.borderColor = '#e74c3c';
         isValid = false;
       }
 
-      if (isValid) {
-        // Show success message
-        const btn = this.querySelector('button[type="submit"]');
-        const originalText = btn.textContent;
-        btn.textContent = 'Message Sent!';
-        btn.style.background = '#5cb85c';
-        btn.disabled = true;
+      if (!isValid) return;
 
-        setTimeout(function () {
-          btn.textContent = originalText;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 3000);
+      const recipient = this.dataset.recipient || '';
+      const subjectText = (subject && subject.value) ? subject.value : 'NSL Website Inquiry';
+      const bodyLines = [
+        'Name: ' + name.value,
+        'Email: ' + email.value,
+        '',
+        message.value
+      ];
+      const mailtoUrl = 'mailto:' + recipient
+        + '?subject=' + encodeURIComponent('[NSL] ' + subjectText)
+        + '&body=' + encodeURIComponent(bodyLines.join('\n'));
 
-        contactForm.reset();
-      }
+      window.location.href = mailtoUrl;
     });
   }
 

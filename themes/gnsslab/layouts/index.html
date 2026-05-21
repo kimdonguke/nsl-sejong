@@ -203,34 +203,6 @@
         <p class="news-excerpt">{{ .Summary | truncate 150 }}</p>
         <a href="{{ .Permalink }}" class="news-more">Read more &#8594;</a>
       </article>
-      {{ else }}
-      <article class="news-card reveal">
-        <div class="news-meta">
-          <span class="news-date">Mar 01, 2024</span>
-          <span class="news-tag">Announcement</span>
-        </div>
-        <h3 class="news-title"><a href="/news/">NSL Lab Established at Sejong University</a></h3>
-        <p class="news-excerpt">The Navigation System Lab has been officially established at Sejong University's Department of Aerospace Engineering, focusing on GNSS and navigation research.</p>
-        <a href="/news/" class="news-more">Read more &#8594;</a>
-      </article>
-      <article class="news-card reveal">
-        <div class="news-meta">
-          <span class="news-date">Feb 15, 2024</span>
-          <span class="news-tag">Publication</span>
-        </div>
-        <h3 class="news-title"><a href="/publications/">New Paper Accepted at ION GNSS+</a></h3>
-        <p class="news-excerpt">Our research on robust GNSS positioning in urban environments has been accepted for presentation at the ION GNSS+ 2024 conference.</p>
-        <a href="/publications/" class="news-more">Read more &#8594;</a>
-      </article>
-      <article class="news-card reveal">
-        <div class="news-meta">
-          <span class="news-date">Jan 20, 2024</span>
-          <span class="news-tag">Award</span>
-        </div>
-        <h3 class="news-title"><a href="/news/">Lab Receives NRF Research Grant</a></h3>
-        <p class="news-excerpt">The National Research Foundation of Korea has awarded our lab a major research grant to develop next-generation integrated navigation systems for autonomous vehicles.</p>
-        <a href="/news/" class="news-more">Read more &#8594;</a>
-      </article>
       {{ end }}
     </div>
 

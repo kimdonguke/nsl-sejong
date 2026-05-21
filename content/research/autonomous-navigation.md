@@ -3,7 +3,6 @@ title: "Autonomous Navigation"
 titleKorean: "자율 주행 항법"
 date: 2024-01-03
 icon: "autonomous"
-//funding: "IITP"
 topics:
   - "Autonomous Vehicles"
   - "UAV Navigation"
