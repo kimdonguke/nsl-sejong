@@ -53,7 +53,7 @@
           {{ with .Params.funding }}<span class="research-funding-badge">{{ . }}</span>{{ end }}
         </div>
       </div>
-      <h3 class="research-card-title">{{ .Title }}</h3>
+      <h3 class="research-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       {{ with .Params.titleKorean }}<p class="research-card-title-ko">{{ . }}</p>{{ end }}
       <p class="research-card-desc">{{ .Summary | truncate 220 }}</p>
       <div class="research-card-topics">
