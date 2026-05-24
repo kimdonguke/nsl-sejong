@@ -2586,11 +2586,15 @@ input, textarea, select {
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1.02);
+  transform-origin: center center;
   transition: transform 0.5s ease;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .map-photo:hover img {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 
 .map-photo-info {
