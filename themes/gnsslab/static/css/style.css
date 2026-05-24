@@ -2115,6 +2115,42 @@ input, textarea, select {
   margin-bottom: var(--space-1);
 }
 
+.pub-title-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: var(--space-1);
+}
+
+.pub-title-link .pub-title-text {
+  display: inline;
+  margin-bottom: 0;
+  transition: color var(--transition-fast);
+}
+
+.pub-title-link:hover .pub-title-text,
+.pub-title-link:focus-visible .pub-title-text {
+  color: var(--color-secondary-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.pub-link-icon {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.8em;
+  color: var(--color-secondary-dark);
+  opacity: 0.7;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.pub-title-link:hover .pub-link-icon,
+.pub-title-link:focus-visible .pub-link-icon {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
 .pub-venue {
   display: block;
   font-size: var(--text-xs);
@@ -3066,7 +3102,62 @@ input, textarea, select {
     gap: var(--space-4);
   }
 
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    margin-top: var(--space-6);
+  }
+
+  .contact-section-title {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-2);
+  }
+
+  .contact-item {
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .contact-icon { font-size: 1.25rem; }
+
+  .map-placeholder { margin-bottom: var(--space-6); }
+
+  .map-photo { aspect-ratio: 4 / 3; }
+
+  .map-photo-info {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .map-photo-label strong { font-size: var(--text-base); }
+  .map-photo-label span { font-size: var(--text-sm); }
+  .map-photo-label small { font-size: 0.7rem; }
+
+  .map-photo-cta {
+    right: var(--space-3);
+    bottom: var(--space-3);
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-xs);
+  }
+
+  .map-note-list {
+    padding: var(--space-4) var(--space-5) var(--space-5);
+    gap: var(--space-2);
+  }
+
+  .map-note-list li {
+    font-size: var(--text-xs);
+    flex-wrap: wrap;
+    line-height: var(--leading-normal);
+  }
+
+  .contact-form-section h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-5);
+  }
+
+  .contact-form { gap: var(--space-4); }
+
   .cta-inner { grid-template-columns: 1fr; gap: var(--space-8); }
   .cta-title { font-size: var(--text-2xl); }
 
@@ -3173,6 +3264,37 @@ input, textarea, select {
   .container { padding-inline: var(--space-4); }
 
   .section-title { font-size: var(--text-2xl); }
+
+  /* Contact: narrow phones — taller photo, CTA above label */
+  .map-photo { aspect-ratio: 5 / 4; }
+
+  .map-photo-info {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .map-photo-cta {
+    right: var(--space-3);
+    top: var(--space-3);
+    bottom: auto;
+  }
+
+  .map-note-list {
+    padding: var(--space-3) var(--space-4) var(--space-4);
+  }
+
+  .map-note-list li { font-size: 0.72rem; }
+
+  .transport-badge {
+    padding: 2px 6px;
+    font-size: 0.65rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: var(--space-3);
+    font-size: var(--text-sm);
+  }
 }
 
 /* ----------------------------------------------------------------

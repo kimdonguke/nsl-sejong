@@ -64,7 +64,13 @@
       {{ $.Scratch.Add "idx" 1 }}
       <li class="pub-row">
         <div class="pub-row-body">
-          <span class="pub-title-text">{{ .title }}</span>
+          {{ if .url }}
+            <a class="pub-title-link" href="{{ .url }}" target="_blank" rel="noopener">
+              <span class="pub-title-text">{{ .title }}</span><span class="pub-link-icon" aria-hidden="true">&#8599;</span>
+            </a>
+          {{ else }}
+            <span class="pub-title-text">{{ .title }}</span>
+          {{ end }}
           <span class="pub-venue">{{ .journal }}{{ with .volume }}, vol. {{ . }}{{ end }}</span>
         </div>
         <div class="pub-row-meta">
