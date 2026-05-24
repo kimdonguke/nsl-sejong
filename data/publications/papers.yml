@@ -283,12 +283,6 @@ papers:
   year: '2018'
   scope: 국내
   url: https://koreascience.kr/article/JAKO201810256455395.page
-- title: A Study on Compact Network RTK for Land Vehicles and Real-Time Test Results
-  journal: Journal of Positioning, Navigation, and Timing
-  volume: '7'
-  year: '2018'
-  scope: 국내
-  url: https://koreascience.kr/article/JAKO201810256455395.page
 - title: Navigation Augmentation in Urban Area by HALE UAV with Onboard Pseudolite
     during Multi-Purpose Missions
   journal: International Journal Of Aeronautical And Space Sciences
@@ -371,12 +365,6 @@ papers:
   year: '2015'
   scope: 국내
   url: https://koreascience.kr/article/JAKO201509139907630.page
-- title: 위성배치정보와 보정정보 맵핑 알고리즘을 이용한 저가형 GPS 수신기의 DGPS 서비스 적용 방안 연구
-  journal: 한국항해항만학회지
-  volume: '38'
-  year: '2014'
-  scope: 국내
-  url: https://doi.org/10.5394/KINPR.2014.38.2.121
 - title: 위성배치정보와 보정정보 맵핑 알고리즘을 이용한 저가형 GPS 수신기의 DGPS 서비스 적용 방안 연구
   journal: 한국항해항만학회지
   volume: '38'
