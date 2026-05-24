@@ -183,6 +183,7 @@ papers:
   volume: ''
   year: '2025'
   scope: 국내
+  url: https://koreascience.or.kr/article/JAKO202501561210856.page
 - title: 다중 GNSS 위성군 측정치를 활용한 EKF 기반 달 위성 궤도 결정 시뮬레이션
   journal: Journal of Positioning, Navigation, and Timing
   volume: '14'
@@ -212,11 +213,13 @@ papers:
   volume: '28'
   year: '2024'
   scope: 국내
+  url: https://koreascience.or.kr/article/JAKO202407933638655.page
 - title: Performance Analysis of GNSS Residual Error Bounding for QZSS CLAS
   journal: Journal of Positioning, Navigation, and Timing
   volume: '12'
   year: '2023'
   scope: 국내
+  url: https://www.jpnt.org/wp-content/uploads/2024/05/JPNT-1203-01.pdf
 - title: 해양 및 내륙 정밀 PNT 사용자 성능 최적화를 위한 내륙 기준국 배치 연구
   journal: 한국항행학회논문지
   volume: '27'
@@ -241,11 +244,13 @@ papers:
   volume: '11'
   year: '2022'
   scope: 국내
+  url: https://www.jpnt.org/wp-content/uploads/2024/03/JPNT-1103-08.pdf
 - title: 동적 드론과 RTK 수신기를 이용한 기압계 보정정보 생성 방법론
   journal: 한국항행학회논문지
   volume: '26'
   year: '2022'
   scope: 국내
+  url: https://www.koreascience.kr/article/JAKO202213251005538.page?&lang=ko
 - title: A Review on the Usage of RTKLIB for Precise Navigation of Unmanned Vehicles
   journal: Journal of Positioning, Navigation, and Timing
   volume: '10'
@@ -264,6 +269,7 @@ papers:
   volume: '9'
   year: '2020'
   scope: 국내
+  url: https://koreascience.kr/article/JAKO202026252144638.page
 - title: Feasibility Study on Integration of SSR Correction into Network RTK to Provide
     More Robust Service
   journal: Journal of Positioning, Navigation, and Timing
@@ -289,6 +295,7 @@ papers:
   volume: '18'
   year: '2017'
   scope: 국내
+  url: https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002269987
 - title: PAV를 활용한 공유형 항공 이동수단의 해외 연구 동향 및 국내 적용 방안
   journal: 한국항행학회논문지
   volume: '21'
@@ -306,6 +313,7 @@ papers:
   volume: '21'
   year: '2017'
   scope: 국내
+  url: https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002239756
 - title: Analysis on the Multi-Constellation SBAS Performance of SDCM in Korea
   journal: Journal of Positioning, Navigation, and Timing
   volume: '5'
@@ -317,6 +325,7 @@ papers:
   volume: '20'
   year: '2016'
   scope: 국내
+  url: https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002161531
 - title: SDCM의 국내 적용 및 성능 평가를 통한 다중 위성군 SBAS의 효과 예측
   journal: 한국항행학회논문지
   volume: '20'
@@ -334,11 +343,13 @@ papers:
   volume: '34'
   year: '2016'
   scope: 국내
+  url: https://koreascience.or.kr/article/JAKO201609941583971.page
 - title: 고고도 장기체공 무인기와 의사위성/트랜시버를 활용한 국지적 대체항법에 관한 연구
   journal: 한국항행학회논문지
   volume: '19'
   year: '2015'
   scope: 국내
+  url: https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002067966
 - title: 비행거리와 적재량 변화에 따른 항공기 온실가스 배출량 및 연료소모량 산정
   journal: 한국항행학회논문지
   volume: '19'
@@ -358,6 +369,7 @@ papers:
   volume: '4'
   year: '2015'
   scope: 국내
+  url: https://ipnt.or.kr/2014proc/54
 - title: DO-278의 Validation & Verification에 적합한 WA-DGNSS 기준국 소프트웨어의 모듈별 통합 검증 방법론
     제시
   journal: 한국항행학회논문지
@@ -382,11 +394,13 @@ papers:
   volume: '17'
   year: '2013'
   scope: 국내
+  url: https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001817603
 - title: 육상교통 인프라 구축을 위한 다중 네트워크 간 미지정수 수준 조정이 고려된 Compact Network RTK 보정정보 생성기법 연구
   journal: 한국항행학회논문지
   volume: '17'
   year: '2013'
   scope: 국내
+  url: https://koreascience.or.kr/article/JAKO201328053102049.page
 - title: 위성항법 보정정보 표준화 동향 - GNSS 성능 향상을 위한 약속
   journal: TTA Journal
   volume: ''
@@ -397,6 +411,7 @@ papers:
   volume: '16'
   year: '2012'
   scope: 국내
+  url: https://www.koreascience.or.kr/article/ArticleFullRecord.jsp?cn=HHHHBI_2012_v16n4_619
 - title: A Closed-form Method for the Attitude Determination Using GNSS Doppler Measurements
   journal: INTERNATIONAL JOURNAL OF CONTROL AUTOMATION AND SYSTEMS
   volume: '9'
