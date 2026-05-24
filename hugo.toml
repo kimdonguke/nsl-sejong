@@ -20,6 +20,7 @@ theme = "gnsslab"
   address = "209 Neungdong-ro, Gwangjin-gu, Seoul 05006, Republic of Korea"
   addressKorean = "서울특별시 광진구 능동로 209(군자동) 세종대학교 05006"
   description = "세종대학교 항공우주공학과 항법시스템 연구실 - Navigation System Lab at Sejong University"
+  heroSubtitle = "Pioneering research in GNSS signal processing, integrated navigation systems,<br>and autonomous vehicle navigation technologies"
   themeCSS = "style.css"
 
 [pagination]

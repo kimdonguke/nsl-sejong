@@ -9,33 +9,41 @@
   <div class="hero-content">
     <div class="hero-badge fade-in">
       <span class="hero-badge-dot"></span>
-      세종대학교 항공우주공학과
+      {{ .Site.Params.universityKorean }} {{ .Site.Params.departmentKorean }}
     </div>
     <h1 class="hero-title fade-in">
-      <span class="hero-title-ko">위성항법 연구실</span>
-      <span class="hero-title-en">Navigation System Lab</span>
+      <span class="hero-title-ko">{{ .Site.Params.labNameKorean }}</span>
+      <span class="hero-title-en">{{ .Site.Params.labNameEnglish }}</span>
     </h1>
     <p class="hero-subtitle fade-in">
-      Pioneering research in GNSS signal processing, integrated navigation systems,<br>
-      and autonomous vehicle navigation technologies
+      {{ .Site.Params.heroSubtitle | safeHTML }}
     </p>
     <div class="hero-cta fade-in">
       <a href="/research/" class="btn btn-primary">Our Research</a>
       <a href="/members/" class="btn btn-outline">Meet the Team</a>
     </div>
+    {{ $researchPages := where .Site.RegularPages "Section" "research" }}
+    {{ $papers := index .Site.Data.publications.papers "papers" }}
+    {{ $confs := index .Site.Data.publications.conferences "conferences" }}
+    {{ $patents := index .Site.Data.publications.patents "patents" }}
+    {{ $pubTotal := add (add (len $papers) (len $confs)) (len $patents) }}
+    {{ $pubRound := mul (div $pubTotal 10) 10 }}
+    {{ $memberPages := where .Site.RegularPages "Section" "members" }}
+    {{ $currentMembers := where $memberPages "Params.role" "!=" "alumni" }}
+    {{ $memRound := mul (div (len $currentMembers) 10) 10 }}
     <div class="hero-stats fade-in">
       <div class="stat">
-        <span class="stat-num">10+</span>
-        <span class="stat-label">Research Projects</span>
+        <span class="stat-num">{{ len $researchPages }}</span>
+        <span class="stat-label">Research Areas</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num">50+</span>
+        <span class="stat-num">{{ $pubRound }}+</span>
         <span class="stat-label">Publications</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num">20+</span>
+        <span class="stat-num">{{ $memRound }}+</span>
         <span class="stat-label">Lab Members</span>
       </div>
     </div>
