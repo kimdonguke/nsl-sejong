@@ -22,6 +22,9 @@ theme = "gnsslab"
   description = "세종대학교 항공우주공학과 항법시스템 연구실 - Navigation System Lab at Sejong University"
   heroSubtitle = "Pioneering research in GNSS signal processing, integrated navigation systems,<br>and autonomous vehicle navigation technologies"
   themeCSS = "style.css"
+  # 파비콘 색 — 팔레트와 함께 변경할 것 (# 없이 6자리 hex)
+  faviconBg = "1a3a5c"
+  faviconFg = "c8a951"
 
 [pagination]
   pagerSize = 6
