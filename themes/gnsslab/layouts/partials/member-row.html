@@ -1,0 +1,21 @@
+{{- /* 멤버 한 명 = 가로 행 하나.
+     순서: 사진 | 이름(한글) → 영문 이름 → 이메일 → 관심분야 */ -}}
+<article class="member-card">
+  <div class="member-photo">
+    {{ if .Params.photo }}
+    <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="member-img">
+    {{ else }}
+    <div class="photo-placeholder">
+      <span>{{ substr .Title 0 2 }}</span>
+    </div>
+    {{ end }}
+  </div>
+  <div class="member-info">
+    <h3 class="member-name">{{ with .Params.nameKorean }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h3>
+    {{ if .Params.nameKorean }}<p class="member-name-en">{{ .Title }}</p>{{ end }}
+    {{ with .Params.email }}
+    <p class="member-meta"><a href="mailto:{{ . }}" class="member-email">{{ . }}</a></p>
+    {{ end }}
+    {{ partial "research-tags.html" (dict "research" .Params.research "site" .Site) }}
+  </div>
+</article>

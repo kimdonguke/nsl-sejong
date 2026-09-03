@@ -1454,7 +1454,7 @@ input, textarea, select {
    16. MEMBERS PAGE
    ---------------------------------------------------------------- */
 .professor-section {
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--space-16);
 }
 
 .members-section-title {
@@ -1474,12 +1474,12 @@ input, textarea, select {
 
 .professor-card {
   background: var(--color-surface);
-  border-radius: var(--radius-xl);
-  padding: var(--space-10);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8);
   border: 1px solid var(--color-border-light);
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: var(--space-10);
+  grid-template-columns: 120px 1fr;
+  gap: var(--space-6);
   box-shadow: var(--shadow-md);
 }
 
@@ -1497,9 +1497,9 @@ input, textarea, select {
 }
 
 .photo-placeholder--lg {
-  width: 180px;
-  height: 210px;
-  font-size: var(--text-3xl);
+  width: 120px;
+  height: 160px;
+  font-size: var(--text-2xl);
 }
 
 .professor-photo img,
@@ -1508,36 +1508,36 @@ input, textarea, select {
 }
 
 .professor-photo img {
-  width: 180px;
-  height: 210px;
+  width: 120px;
+  height: 160px;
   object-fit: cover;
   display: block;
 }
 
 .professor-name {
-  font-size: var(--text-3xl);
+  font-size: var(--text-xl);
   color: var(--color-primary);
   margin-bottom: var(--space-1);
+  font-family: var(--font-korean);
 }
 
-.professor-name-ko {
-  font-size: var(--text-xl);
+.professor-name-en {
+  font-size: var(--text-base);
   color: var(--color-text-light);
-  font-family: var(--font-korean);
   margin-bottom: var(--space-2);
 }
 
 .professor-position {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--color-secondary-dark);
   font-weight: var(--weight-medium);
   margin-bottom: var(--space-2);
 }
 
 .professor-dept {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   color: var(--color-text-light);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
 }
 
 .professor-email a {
@@ -1559,7 +1559,7 @@ input, textarea, select {
   display: flex;
   gap: var(--space-3);
   flex-wrap: wrap;
-  margin-top: var(--space-5);
+  margin-top: var(--space-4);
 }
 
 .prof-link {
@@ -1580,24 +1580,27 @@ input, textarea, select {
   border-color: var(--color-primary);
 }
 
-/* Members Grid */
+/* Members List — 졸업생 카드(.alumni-card)와 같은 가로 행 문법 */
 .members-group {
   margin-bottom: var(--space-16);
 }
 
-.members-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-6);
+.members-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .member-card {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: var(--space-5);
   background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
   border: 1px solid var(--color-border-light);
-  text-align: center;
-  transition: all var(--transition-base);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
 
 .member-card:hover {
@@ -1608,56 +1611,49 @@ input, textarea, select {
 .member-photo {
   display: flex;
   justify-content: center;
-  margin-bottom: var(--space-4);
+  align-items: flex-start;
 }
 
 .member-photo img,
 .member-photo .photo-placeholder {
-  width: 160px;
-  height: 220px;
+  width: 96px;
+  height: 128px;
   border-radius: var(--radius-lg);
   object-fit: cover;
   display: block;
 }
 
 .member-photo .photo-placeholder {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
+}
+
+.member-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .member-name {
   font-size: var(--text-base);
   font-weight: var(--weight-semibold);
   color: var(--color-primary);
-  margin-bottom: var(--space-1);
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-korean);
 }
 
-.member-name-ko {
+.member-name-en {
   font-size: var(--text-sm);
   color: var(--color-text-light);
-  font-family: var(--font-korean);
-  margin-bottom: var(--space-2);
-}
-
-.member-role-label {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
   font-weight: var(--weight-medium);
-  margin-bottom: var(--space-2);
-  letter-spacing: 0.03em;
-}
-
-.member-research {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  line-height: var(--leading-relaxed);
-  margin-bottom: var(--space-3);
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-sans);
 }
 
 .member-research-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: var(--space-3);
 }
 
 .research-tag {
@@ -1682,8 +1678,12 @@ input, textarea, select {
   color: var(--color-text-inverse);
 }
 
+.member-meta {
+  font-size: var(--text-sm);
+  margin: 0 0 var(--space-2);
+}
+
 .member-email {
-  font-size: var(--text-xs);
   color: var(--color-primary);
   word-break: break-all;
 }
@@ -1806,7 +1806,8 @@ input, textarea, select {
   line-height: var(--leading-relaxed);
 }
 
-.alumni-meta-label {
+.alumni-meta-label,
+.member-meta-label {
   display: inline-block;
   font-size: var(--text-xs);
   font-weight: var(--weight-bold);
@@ -3038,10 +3039,6 @@ input, textarea, select {
     grid-template-columns: 1fr 1fr;
   }
 
-  .members-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .funding-logos {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -3143,8 +3140,6 @@ input, textarea, select {
   .professor-links {
     justify-content: center;
   }
-
-  .members-grid { grid-template-columns: repeat(2, 1fr); }
 
   .alumni-card {
     grid-template-columns: 1fr;
@@ -3279,32 +3274,21 @@ input, textarea, select {
   }
 }
 
-/* Phablet / small tablet — switch member cards to a single horizontal
-   row early so the portrait photo doesn't dominate a narrow tile. */
+/* Phablet — 멤버 행: 구조는 그대로, 사진과 여백만 줄인다. */
 @media (max-width: 640px) {
-  .members-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-  }
+  .members-list { gap: var(--space-3); }
 
   .member-card {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    align-items: center;
+    grid-template-columns: 80px 1fr;
     gap: var(--space-4);
-    text-align: left;
-    padding: var(--space-4);
+    padding: var(--space-3) var(--space-4);
   }
-
-  .member-photo { margin-bottom: 0; }
 
   .member-photo img,
   .member-photo .photo-placeholder {
-    width: 100px;
-    height: 138px;
+    width: 80px;
+    height: 106px;
   }
-
-  .member-research-tags { justify-content: flex-start; }
 
   .member-card:hover { transform: none; }
 }
@@ -3336,6 +3320,12 @@ input, textarea, select {
   .container { padding-inline: var(--space-4); }
 
   .section-title { font-size: var(--text-2xl); }
+
+  .member-photo img,
+  .member-photo .photo-placeholder {
+    width: 72px;
+    height: 96px;
+  }
 
   /* Contact: narrow phones — taller photo, CTA above label */
   .map-photo { aspect-ratio: 5 / 4; }

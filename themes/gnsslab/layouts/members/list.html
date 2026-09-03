@@ -31,8 +31,8 @@
         {{ end }}
       </div>
       <div class="professor-info">
-        <h3 class="professor-name">{{ .Title }}</h3>
-        {{ with .Params.nameKorean }}<p class="professor-name-ko">{{ . }}</p>{{ end }}
+        <h3 class="professor-name">{{ with .Params.nameKorean }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h3>
+        {{ if .Params.nameKorean }}<p class="professor-name-en">{{ .Title }}</p>{{ end }}
         {{ with .Params.position }}<p class="professor-position">{{ . }}</p>{{ end }}
         <p class="professor-dept">{{ $.Site.Params.department }}<br>{{ $.Site.Params.university }}</p>
         {{ with .Params.email }}<p class="professor-email"><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
@@ -69,26 +69,9 @@
       <h2 class="members-section-title">
         PhD Students
       </h2>
-      <div class="members-grid">
+      <div class="members-list">
         {{ range sort $phd "Params.weight" "desc" }}
-        <div class="member-card">
-          <div class="member-photo">
-            {{ if .Params.photo }}
-            <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="member-img">
-            {{ else }}
-            <div class="photo-placeholder">
-              <span>{{ substr .Title 0 2 }}</span>
-            </div>
-            {{ end }}
-          </div>
-          <div class="member-info">
-            <h3 class="member-name">{{ .Title }}</h3>
-            {{ with .Params.nameKorean }}<p class="member-name-ko">{{ . }}</p>{{ end }}
-            <p class="member-role-label">PhD Student</p>
-            {{ partial "research-tags.html" (dict "research" .Params.research "site" $.Site) }}
-            {{ with .Params.email }}<a href="mailto:{{ . }}" class="member-email">{{ . }}</a>{{ end }}
-          </div>
-        </div>
+        {{ partial "member-row.html" . }}
         {{ end }}
       </div>
     </div>
@@ -101,26 +84,9 @@
       <h2 class="members-section-title">
         Master's Students
       </h2>
-      <div class="members-grid">
+      <div class="members-list">
         {{ range sort $ms "Params.weight" "desc" }}
-        <div class="member-card">
-          <div class="member-photo">
-            {{ if .Params.photo }}
-            <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="member-img">
-            {{ else }}
-            <div class="photo-placeholder">
-              <span>{{ substr .Title 0 2 }}</span>
-            </div>
-            {{ end }}
-          </div>
-          <div class="member-info">
-            <h3 class="member-name">{{ .Title }}</h3>
-            {{ with .Params.nameKorean }}<p class="member-name-ko">{{ . }}</p>{{ end }}
-            <p class="member-role-label">Master Student</p>
-            {{ partial "research-tags.html" (dict "research" .Params.research "site" $.Site) }}
-            {{ with .Params.email }}<a href="mailto:{{ . }}" class="member-email">{{ . }}</a>{{ end }}
-          </div>
-        </div>
+        {{ partial "member-row.html" . }}
         {{ end }}
       </div>
     </div>
@@ -133,26 +99,9 @@
       <h2 class="members-section-title">
         Undergraduate Students
       </h2>
-      <div class="members-grid">
+      <div class="members-list">
         {{ range sort $undergrad "Params.weight" "desc" }}
-        <div class="member-card">
-          <div class="member-photo">
-            {{ if .Params.photo }}
-            <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="member-img">
-            {{ else }}
-            <div class="photo-placeholder">
-              <span>{{ substr .Title 0 2 }}</span>
-            </div>
-            {{ end }}
-          </div>
-          <div class="member-info">
-            <h3 class="member-name">{{ .Title }}</h3>
-            {{ with .Params.nameKorean }}<p class="member-name-ko">{{ . }}</p>{{ end }}
-            <p class="member-role-label">Undergraduate Researcher</p>
-            {{ partial "research-tags.html" (dict "research" .Params.research "site" $.Site) }}
-            {{ with .Params.email }}<a href="mailto:{{ . }}" class="member-email">{{ . }}</a>{{ end }}
-          </div>
-        </div>
+        {{ partial "member-row.html" . }}
         {{ end }}
       </div>
     </div>
