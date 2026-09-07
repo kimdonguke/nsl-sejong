@@ -19,10 +19,14 @@
 
   <!-- Research Areas -->
   <h2 class="research-section-heading reveal">Research Areas</h2>
-  <div class="research-areas-grid">
-    {{ range .Pages }}
-    <article class="research-card reveal">
-      <div class="research-card-header">
+</div>
+
+<!-- 연구 분야 — 규칙선으로 구분되는 컴팩트 2단 섹션 스택 -->
+<div class="research-bands">
+  {{ range .Pages }}
+  <section class="research-band reveal">
+    <div class="research-band-inner">
+      <div class="research-band-head">
         <div class="research-icon-wrap">
           {{ if eq .Params.icon "gnss" }}
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,22 +61,29 @@
           </svg>
           {{ end }}
         </div>
-        <div class="research-card-meta">
-          {{ with .Params.funding }}<span class="research-funding-badge">{{ . }}</span>{{ end }}
+        <h2 class="research-band-title">
+          {{ with .Params.titleKorean }}<span class="research-band-title-ko">{{ . }}</span>{{ end }}
+          <span class="research-band-title-en">{{ .Title }}</span>
+        </h2>
+        {{ with .Params.funding }}<span class="research-funding-badge">{{ . }}</span>{{ end }}
+      </div>
+      <div class="research-band-body">
+        <p class="research-band-desc">{{ .Summary }}</p>
+        {{ with .Params.topics }}
+        <div class="research-band-topics">
+          {{ range . }}
+          <span class="topic-tag">{{ . }}</span>
+          {{ end }}
         </div>
-      </div>
-      <h3 class="research-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      {{ with .Params.titleKorean }}<p class="research-card-title-ko">{{ . }}</p>{{ end }}
-      <p class="research-card-desc">{{ .Summary | truncate 220 }}</p>
-      <div class="research-card-topics">
-        {{ range .Params.topics }}
-        <span class="topic-tag">{{ . }}</span>
         {{ end }}
+        <a href="{{ .Permalink }}" class="card-link">View details &#8594;</a>
       </div>
-      <a href="{{ .Permalink }}" class="card-link">View details &#8594;</a>
-    </article>
-    {{ end }}
-  </div>
+    </div>
+  </section>
+  {{ end }}
+</div>
+
+<div class="container section">
 
   <!-- Funding Section -->
   <div class="funding-section reveal">
