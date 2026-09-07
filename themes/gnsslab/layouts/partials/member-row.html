@@ -1,5 +1,8 @@
 {{- /* 멤버 한 명 = 가로 행 하나.
-     순서: 사진 | 이름(한글) → 영문 이름 → 이메일 → 관심분야 */ -}}
+     순서: 사진 | 이름 → 영문 → 이메일 → 과정 → 관심분야 → 상세보기
+     신규 필드는 값이 없으면 줄 자체가 렌더되지 않는다 (데이터는 점진적으로 채움).
+     상세 토글·학력 표·실적 목록·링크는 alumni 컴포넌트(클래스·JS)를 그대로 공유한다.
+     education/publications 스키마는 alumni와 동일 — 졸업 시 role만 바꾸면 데이터가 이사한다. */ -}}
 <article class="member-card">
   <div class="member-photo">
     {{ if .Params.photo }}
@@ -16,6 +19,67 @@
     {{ with .Params.email }}
     <p class="member-meta"><a href="mailto:{{ . }}" class="member-email">{{ . }}</a></p>
     {{ end }}
+    {{ if or .Params.degree .Params.admission }}
+    <p class="member-meta"><span class="member-meta-label">과정</span> {{ .Params.degree }}{{ with .Params.admission }} ({{ . }}~){{ end }}</p>
+    {{ end }}
     {{ partial "research-tags.html" (dict "research" .Params.research "site" .Site) }}
+
+    {{ if or .Params.education .Params.publications .Params.links }}
+    <div class="alumni-detail">
+      <button type="button" class="alumni-detail-toggle" aria-expanded="false">
+        <span class="alumni-detail-toggle-label">상세 보기</span>
+      </button>
+      <div class="alumni-detail-body-wrapper">
+        <div class="alumni-detail-body">
+          {{ with .Params.education }}
+          <section class="alumni-section">
+            <h5 class="alumni-section-title">Education</h5>
+            <table class="alumni-edu-table">
+              <thead>
+                <tr>
+                  <th>졸업년도</th>
+                  <th>학위</th>
+                  <th>학교 / 전공</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{ range . }}
+                <tr>
+                  <td>{{ .year }}</td>
+                  <td>{{ .degree }}</td>
+                  <td>{{ .school }} / {{ .department }}</td>
+                </tr>
+                {{ end }}
+              </tbody>
+            </table>
+          </section>
+          {{ end }}
+
+          {{ with .Params.publications }}
+          <section class="alumni-section">
+            <h5 class="alumni-section-title">주요실적</h5>
+            <ul class="alumni-pubs">
+              {{ range . }}
+              <li class="alumni-pub-item">
+                <span class="alumni-pub-date">{{ .date }}.</span>
+                {{ .title }}{{ with .venue }}, <em>{{ . }}</em>{{ end }}{{ with .doi }}, <a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a>{{ end }}.
+              </li>
+              {{ end }}
+            </ul>
+          </section>
+          {{ end }}
+
+          {{ with .Params.links }}
+          <div class="alumni-links">
+            {{ with .scholar }}<a href="{{ . }}" target="_blank" rel="noopener" class="alumni-link">Google Scholar</a>{{ end }}
+            {{ with .github }}<a href="{{ . }}" target="_blank" rel="noopener" class="alumni-link">GitHub</a>{{ end }}
+            {{ with .linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" class="alumni-link">LinkedIn</a>{{ end }}
+            {{ with .website }}<a href="{{ . }}" target="_blank" rel="noopener" class="alumni-link">Website</a>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
   </div>
 </article>

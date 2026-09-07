@@ -1638,6 +1638,11 @@ input, textarea, select {
   align-items: flex-start;
 }
 
+/* 상세 보기 버튼 — 텍스트 블록(4px 리듬)과 구분되게 위로 12px */
+.member-info .alumni-detail {
+  margin-top: var(--space-3);
+}
+
 .member-name {
   font-size: var(--text-base);
   font-weight: var(--weight-semibold);
@@ -1650,7 +1655,7 @@ input, textarea, select {
   font-size: var(--text-sm);
   color: var(--color-text-light);
   font-weight: var(--weight-medium);
-  margin: 0 0 var(--space-2);
+  margin: 0 0 var(--space-1);
   font-family: var(--font-sans);
 }
 
@@ -1658,6 +1663,7 @@ input, textarea, select {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  margin-bottom: var(--space-1);
 }
 
 .research-tag {
@@ -1684,7 +1690,7 @@ input, textarea, select {
 
 .member-meta {
   font-size: var(--text-sm);
-  margin: 0 0 var(--space-2);
+  margin: 0 0 var(--space-1);
 }
 
 .member-email {
@@ -3329,6 +3335,15 @@ input, textarea, select {
   .member-photo .photo-placeholder {
     width: 72px;
     height: 96px;
+  }
+
+  /* 좁은 정보 칼럼(<=210px)에서 긴 연구 태그가 카드 밖으로 나가지 않게 */
+  .research-tag { white-space: normal; }
+
+  /* 멤버 상세의 학력 표 — 칼럼이 좁으면 표 내부 가로 스크롤 */
+  .member-info .alumni-edu-table {
+    display: block;
+    overflow-x: auto;
   }
 
   /* Contact: narrow phones — taller photo, CTA above label */
