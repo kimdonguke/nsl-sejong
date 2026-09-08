@@ -172,6 +172,52 @@
   });
 
   /* ----------------------------------------------------------------
+     4c. RESEARCH CAROUSEL (Home) — 자동 전환 + 화살표/점 내비
+     ---------------------------------------------------------------- */
+  var carousel = document.getElementById('researchCarousel');
+  if (carousel) {
+    var slides = carousel.querySelectorAll('.research-slide');
+    var dots = carousel.querySelectorAll('.research-dot');
+    var idx = 0;
+    var timer = null;
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function show(n) {
+      idx = (n + slides.length) % slides.length;
+      slides.forEach(function (sl, i) {
+        sl.classList.toggle('active', i === idx);
+        sl.setAttribute('aria-hidden', i === idx ? 'false' : 'true');
+      });
+      dots.forEach(function (d, i) {
+        d.classList.toggle('active', i === idx);
+      });
+    }
+
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function start() {
+      if (reduced || slides.length < 2 || timer) return;
+      timer = setInterval(function () { show(idx + 1); }, 6000);
+    }
+    function restart() { stop(); start(); }
+
+    carousel.querySelectorAll('.research-nav-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        show(idx + parseInt(this.dataset.dir, 10));
+        restart();
+      });
+    });
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () {
+        show(parseInt(this.dataset.index, 10));
+        restart();
+      });
+    });
+    carousel.addEventListener('focusin', stop);
+    carousel.addEventListener('focusout', start);
+    start();
+  }
+
+  /* ----------------------------------------------------------------
      5. ACTIVE NAV LINK highlighting based on current URL
      ---------------------------------------------------------------- */
   const currentPath = window.location.pathname;

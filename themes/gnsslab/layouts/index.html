@@ -16,12 +16,8 @@
       <span class="hero-title-en">{{ .Site.Params.labNameEnglish }}</span>
     </h1>
     <p class="hero-subtitle fade-in">
-      {{ .Site.Params.heroSubtitle | safeHTML }}
+      {{ i18n "hero_subtitle" | safeHTML }}
     </p>
-    <div class="hero-cta fade-in">
-      <a href="/research/" class="btn btn-primary">Our Research</a>
-      <a href="/members/" class="btn btn-outline">Meet the Team</a>
-    </div>
     {{ $researchPages := where .Site.RegularPages "Section" "research" }}
     {{ $papers := index .Site.Data.publications.papers "papers" }}
     {{ $confs := index .Site.Data.publications.conferences "conferences" }}
@@ -34,22 +30,22 @@
     <div class="hero-stats fade-in">
       <div class="stat">
         <span class="stat-num">{{ len $researchPages }}</span>
-        <span class="stat-label">Research Areas</span>
+        <span class="stat-label">{{ i18n "stat_research" }}</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
         <span class="stat-num">{{ $pubRound }}+</span>
-        <span class="stat-label">Publications</span>
+        <span class="stat-label">{{ i18n "stat_publications" }}</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
         <span class="stat-num">{{ $memRound }}+</span>
-        <span class="stat-label">Lab Members</span>
+        <span class="stat-label">{{ i18n "stat_members" }}</span>
       </div>
     </div>
   </div>
   <div class="hero-scroll-indicator">
-    <span>Scroll</span>
+    <span>{{ i18n "hero_scroll" }}</span>
     <div class="scroll-arrow"></div>
   </div>
 </section>
@@ -58,64 +54,50 @@
 <section class="section research-highlights" id="research">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">What We Do</span>
-      <h2 class="section-title">Research Areas</h2>
-      <p class="section-desc">Our lab focuses on cutting-edge research in satellite navigation and positioning technologies, bridging theoretical innovation with practical applications.</p>
+      <span class="section-tag">{{ i18n "home_research_tag" }}</span>
+      <h2 class="section-title">{{ i18n "home_research_title" }}</h2>
+      <p class="section-desc">{{ i18n "home_research_desc" }}</p>
     </div>
 
-    <div class="cards-grid">
-
-      <div class="card reveal">
-        <div class="card-icon card-icon--blue">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
-            <circle cx="20" cy="20" r="3" fill="currentColor"/>
-            <path d="M20 2 L20 8 M20 32 L20 38 M2 20 L8 20 M32 20 L38 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M8.6 8.6 L13 13 M27 27 L31.4 31.4 M8.6 31.4 L13 27 M27 13 L31.4 8.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">GNSS Signal Processing</h3>
-          <p class="card-desc">Advanced algorithms for acquisition, tracking, and positioning using GPS, GLONASS, Galileo, and BeiDou signals. Research includes anti-jamming, anti-spoofing, and multipath mitigation techniques.</p>
-          <a href="/research/gnss-signal-processing/" class="card-link">Learn more &#8594;</a>
-        </div>
+    <div class="research-carousel reveal" id="researchCarousel">
+      <div class="research-slides">
+        {{ range $i, $p := (where .Site.RegularPages "Section" "research") }}
+        <article class="research-slide{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}"{{ if ne $i 0 }} aria-hidden="true"{{ end }}>
+          {{- /* 미디어 박스는 항상 렌더 — 사진(photo -> cover.*) 없으면 아이콘 타일.
+               연구 목록 페이지와 같은 소스·기하를 공유한다. */}}
+          {{ $photo := $p.Params.photo }}
+          {{ $cover := $p.Resources.GetMatch "cover*" }}
+          <div class="research-slide-media">
+            {{ if or $photo $cover }}
+            <img src="{{ with $photo }}{{ . }}{{ else }}{{ $cover.RelPermalink }}{{ end }}" alt="{{ $p.Params.titleKorean | default $p.Title }}" class="research-slide-img">
+            {{ else }}
+            <div class="research-slide-media-placeholder">{{ partial "research-icon.html" $p.Params.icon }}</div>
+            {{ end }}
+          </div>
+          <div class="research-slide-body">
+            <h3 class="research-slide-title">
+              {{ with $p.Params.titleKorean }}<span class="research-slide-title-ko">{{ . }}</span>{{ end }}
+              <span class="research-slide-title-en">{{ $p.Title }}</span>
+            </h3>
+            <p class="research-slide-desc">{{ $p.Summary }}</p>
+            <a href="{{ $p.Permalink }}" class="card-link">{{ i18n "view_details" }} &#8594;</a>
+          </div>
+        </article>
+        {{ end }}
       </div>
-
-      <div class="card reveal">
-        <div class="card-icon card-icon--gold">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="16" width="32" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
-            <path d="M14 16 L14 10 C14 7 17 4 20 4 C23 4 26 7 26 10 L26 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="20" cy="26" r="4" stroke="currentColor" stroke-width="2"/>
-            <path d="M20 22 L20 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+      <div class="research-carousel-nav">
+        <button type="button" class="research-nav-btn" data-dir="-1" aria-label="{{ i18n "pagination_prev" }}">&larr;</button>
+        <div class="research-dots" role="tablist">
+          {{ range $i, $p := (where .Site.RegularPages "Section" "research") }}
+          <button type="button" class="research-dot{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}" aria-label="{{ with $p.Params.titleKorean }}{{ . }}{{ else }}{{ $p.Title }}{{ end }}"></button>
+          {{ end }}
         </div>
-        <div class="card-content">
-          <h3 class="card-title">Integrated Navigation</h3>
-          <p class="card-desc">Sensor fusion of GNSS with IMU, barometers, and vision systems. Development of robust Kalman filter architectures for seamless navigation in GNSS-degraded and denied environments.</p>
-          <a href="/research/integrated-navigation/" class="card-link">Learn more &#8594;</a>
-        </div>
+        <button type="button" class="research-nav-btn" data-dir="1" aria-label="{{ i18n "pagination_next" }}">&rarr;</button>
       </div>
-
-      <div class="card reveal">
-        <div class="card-icon card-icon--teal">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 4 L32 12 L32 28 L20 36 L8 28 L8 12 Z" stroke="currentColor" stroke-width="2"/>
-            <circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="2"/>
-            <path d="M20 4 L20 15 M20 25 L20 36 M8 12 L16.5 17 M23.5 23 L32 28 M32 12 L23.5 17 M16.5 23 L8 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">Autonomous Navigation</h3>
-          <p class="card-desc">Navigation solutions for autonomous vehicles and UAVs. Combining GNSS/INS with LiDAR, camera, and HD maps for precise localization in urban and challenging environments.</p>
-          <a href="/research/autonomous-navigation/" class="card-link">Learn more &#8594;</a>
-        </div>
-      </div>
-
     </div>
 
     <div class="section-cta reveal">
-      <a href="/research/" class="btn btn-secondary">View All Research Areas</a>
+      <a href="/research/" class="btn btn-outline">{{ i18n "home_view_all_research" }}</a>
     </div>
   </div>
 </section>
@@ -125,29 +107,29 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-text reveal">
-        <span class="section-tag">About Our Lab</span>
-        <h2 class="section-title">Navigating the Future</h2>
-        <p>The Navigation System Lab (NSL) at Sejong University's Department of Aerospace Engineering conducts fundamental and applied research in satellite navigation and positioning technologies.</p>
-        <p>Our interdisciplinary team works at the intersection of signal processing, control systems, and machine learning to develop next-generation navigation solutions for aerospace, automotive, and robotics applications.</p>
+        <span class="section-tag">{{ i18n "about_tag" }}</span>
+        <h2 class="section-title">{{ i18n "about_title" }}</h2>
+        <p>{{ i18n "about_p1" }}</p>
+        <p>{{ i18n "about_p2" }}</p>
         <ul class="about-list">
           <li>
             <span class="about-list-icon">&#10003;</span>
-            State-of-the-art GNSS signal simulator and testing equipment
+            {{ i18n "about_li1" }}
           </li>
           <li>
             <span class="about-list-icon">&#10003;</span>
-            Collaboration with national and international research institutes
+            {{ i18n "about_li2" }}
           </li>
           <li>
             <span class="about-list-icon">&#10003;</span>
-            Industry partnerships with leading aerospace companies
+            {{ i18n "about_li3" }}
           </li>
           <li>
             <span class="about-list-icon">&#10003;</span>
-            Government-funded research projects (NRF, ADD, IITP)
+            {{ i18n "about_li4" }}
           </li>
         </ul>
-        <a href="/members/" class="btn btn-primary">Meet Our Team</a>
+        <a href="/members/" class="btn btn-primary">{{ i18n "about_cta" }}</a>
       </div>
       <div class="about-visual reveal">
         <div class="about-orbit-display">
@@ -195,8 +177,8 @@
 <section class="section news-section" id="news">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">Latest Updates</span>
-      <h2 class="section-title">News & Announcements</h2>
+      <span class="section-tag">{{ i18n "home_news_tag" }}</span>
+      <h2 class="section-title">{{ i18n "home_news_title" }}</h2>
     </div>
 
     <div class="news-grid">
@@ -205,17 +187,17 @@
       <article class="news-card reveal">
         <div class="news-meta">
           <span class="news-date">{{ .Date.Format "Jan 02, 2006" }}</span>
-          {{ with .Params.category }}<span class="news-tag">{{ . }}</span>{{ end }}
+          {{ with .Params.category }}<span class="news-tag news-tag--{{ lower . }}">{{ with i18n (printf "news_cat_%s" (lower .)) }}{{ . }}{{ else }}{{ . }}{{ end }}</span>{{ end }}
         </div>
         <h3 class="news-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         <p class="news-excerpt">{{ .Summary | truncate 150 }}</p>
-        <a href="{{ .Permalink }}" class="news-more">Read more &#8594;</a>
+        <a href="{{ .Permalink }}" class="news-more">{{ i18n "read_more" }} &#8594;</a>
       </article>
       {{ end }}
     </div>
 
     <div class="section-cta reveal">
-      <a href="/news/" class="btn btn-secondary">All News</a>
+      <a href="/news/" class="btn btn-outline">{{ i18n "home_all_news" }}</a>
     </div>
   </div>
 </section>
@@ -225,11 +207,11 @@
   <div class="container">
     <div class="cta-box reveal">
       <div class="cta-content">
-        <h2 class="cta-title">Join Our Research Team</h2>
-        <p class="cta-desc">We are always looking for motivated students and researchers passionate about navigation systems, GNSS technology, and autonomous vehicles. Graduate positions (MS/PhD) available.</p>
+        <h2 class="cta-title">{{ i18n "cta_title" }}</h2>
+        <p class="cta-desc">{{ i18n "cta_desc" }}</p>
         <div class="cta-buttons">
-          <a href="/contact/" class="btn btn-primary btn-lg">Contact Us</a>
-          <a href="/members/" class="btn btn-outline btn-lg">Meet the Team</a>
+          <a href="/contact/" class="btn btn-primary btn-lg">{{ i18n "cta_contact" }}</a>
+          <a href="/members/" class="btn btn-outline btn-lg">{{ i18n "cta_members" }}</a>
         </div>
       </div>
       <div class="cta-visual">
