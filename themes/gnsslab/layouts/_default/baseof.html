@@ -30,7 +30,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/{{ default "style.css" .Site.Params.themeCSS }}">
+  {{ $cssPath := default "style.css" .Site.Params.themeCSS }}
+  <link rel="stylesheet" href="/css/{{ $cssPath }}?v={{ md5 (readFile (printf "themes/gnsslab/static/css/%s" $cssPath)) | truncate 8 "" }}">
   {{ $favBg := default "1a3a5c" .Site.Params.faviconBg }}
   {{ $favFg := default "c8a951" .Site.Params.faviconFg }}
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23{{ $favBg }}'/><text y='.9em' font-size='60' x='50%' text-anchor='middle' fill='%23{{ $favFg }}' font-family='Inter' font-weight='700'>N</text></svg>">
@@ -113,12 +114,12 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; {{ now.Year }} {{ .Site.Params.labNameEnglish }}, {{ .Site.Params.university }}. All rights reserved.</p>
-        <p class="footer-bottom-ko">세종대학교 항공우주공학과 위성항법 연구실</p>
+        <p>&copy; {{ now.Year }} {{ i18n "footer_copyright" }}</p>
+        <p class="footer-bottom-ko">Navigation System Lab, Dept. of Aerospace Engineering, Sejong University</p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js?v={{ md5 (readFile "themes/gnsslab/static/js/main.js") | truncate 8 "" }}"></script>
 </body>
 </html>
