@@ -838,55 +838,56 @@ input, textarea, select {
   gap: var(--space-2);
 }
 
-/* Research carousel — 홈 연구 카드 전환. 슬라이드 = [사진 | 설명] 가로형,
-   사진이 없으면 같은 자리에 아이콘 타일 (연구 목록과 동일 문법) */
+/* Research carousel — 가운데 카드 + 양옆 엿보임(peek).
+   가로 스크롤 스냅 트랙: 터치 스와이프 기본 지원, 활성 카드만 원색·원크기. */
 .research-carousel {
-  max-width: 880px;
-  margin-inline: auto;
+  --rslide-w: min(720px, 86vw);
 }
 
-.research-slides {
-  display: grid;
+.research-track {
+  display: flex;
+  gap: var(--space-6);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-block: var(--space-2) var(--space-4);
+  padding-inline: calc((100% - var(--rslide-w)) / 2);
+  scrollbar-width: none;
+}
+
+.research-track::-webkit-scrollbar {
+  display: none;
 }
 
 .research-slide {
-  grid-area: 1 / 1;
-  height: 100%;
-  display: grid;
-  grid-template-columns: minmax(240px, 320px) 1fr;
-  gap: var(--space-8);
-  align-items: center;
+  flex: 0 0 var(--rslide-w);
+  scroll-snap-align: center;
   background: var(--color-surface);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
-  padding: var(--space-6);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(24px);
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  overflow: hidden;
+  opacity: 0.45;
+  transform: scale(0.95);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
 .research-slide.active {
   opacity: 1;
-  visibility: visible;
   transform: none;
 }
 
 .research-slide-media {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .research-slide-img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
 .research-slide-media-placeholder {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -895,14 +896,14 @@ input, textarea, select {
 }
 
 .research-slide-media-placeholder svg {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   opacity: 0.55;
 }
 
 .research-slide-body {
+  padding: var(--space-6) var(--space-8);
   text-align: left;
-  min-width: 0;
 }
 
 .research-slide-title {
@@ -3267,16 +3268,6 @@ input, textarea, select {
 
   .research-band-img,
   .research-band-media-placeholder {
-    aspect-ratio: 16 / 9;
-  }
-
-  .research-slide {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-  }
-
-  .research-slide-img,
-  .research-slide-media-placeholder {
     aspect-ratio: 16 / 9;
   }
 

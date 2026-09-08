@@ -60,11 +60,10 @@
     </div>
 
     <div class="research-carousel reveal" id="researchCarousel">
-      <div class="research-slides">
+      <div class="research-track" tabindex="0">
         {{ range $i, $p := (where .Site.RegularPages "Section" "research") }}
-        <article class="research-slide{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}"{{ if ne $i 0 }} aria-hidden="true"{{ end }}>
-          {{- /* 미디어 박스는 항상 렌더 — 사진(photo -> cover.*) 없으면 아이콘 타일.
-               연구 목록 페이지와 같은 소스·기하를 공유한다. */}}
+        <article class="research-slide{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}">
+          {{- /* 사진 상단 대면적 배치. photo -> cover.* -> 아이콘 타일 (연구 목록과 소스 공유) */}}
           {{ $photo := $p.Params.photo }}
           {{ $cover := $p.Resources.GetMatch "cover*" }}
           <div class="research-slide-media">
@@ -94,6 +93,7 @@
         </div>
         <button type="button" class="research-nav-btn" data-dir="1" aria-label="{{ i18n "pagination_next" }}">&rarr;</button>
       </div>
+    </div>
     </div>
 
     <div class="section-cta reveal">

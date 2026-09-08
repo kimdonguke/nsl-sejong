@@ -172,48 +172,72 @@
   });
 
   /* ----------------------------------------------------------------
-     4c. RESEARCH CAROUSEL (Home) — 자동 전환 + 화살표/점 내비
+     4c. RESEARCH CAROUSEL (Home) — 스크롤 스냅 트랙 + 가운데 활성/양옆 엿보임
      ---------------------------------------------------------------- */
   var carousel = document.getElementById('researchCarousel');
   if (carousel) {
-    var slides = carousel.querySelectorAll('.research-slide');
+    var track = carousel.querySelector('.research-track');
+    var slides = track.querySelectorAll('.research-slide');
     var dots = carousel.querySelectorAll('.research-dot');
     var idx = 0;
     var timer = null;
+    var raf = null;
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function show(n) {
-      idx = (n + slides.length) % slides.length;
-      slides.forEach(function (sl, i) {
-        sl.classList.toggle('active', i === idx);
-        sl.setAttribute('aria-hidden', i === idx ? 'false' : 'true');
-      });
-      dots.forEach(function (d, i) {
-        d.classList.toggle('active', i === idx);
+    function goTo(n, instant) {
+      n = (n + slides.length) % slides.length;
+      var sl = slides[n];
+      track.scrollTo({
+        left: sl.offsetLeft - (track.clientWidth - sl.offsetWidth) / 2,
+        behavior: (instant || reduced) ? 'auto' : 'smooth'
       });
     }
+
+    function markActive() {
+      var center = track.scrollLeft + track.clientWidth / 2;
+      var best = 0, bestDist = Infinity;
+      slides.forEach(function (sl, i) {
+        var d = Math.abs(sl.offsetLeft + sl.offsetWidth / 2 - center);
+        if (d < bestDist) { bestDist = d; best = i; }
+      });
+      if (best !== idx) {
+        idx = best;
+        slides.forEach(function (sl, i) { sl.classList.toggle('active', i === idx); });
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+      }
+    }
+
+    track.addEventListener('scroll', function () {
+      if (raf) return;
+      raf = requestAnimationFrame(function () { raf = null; markActive(); });
+    }, { passive: true });
 
     function stop() { if (timer) { clearInterval(timer); timer = null; } }
     function start() {
       if (reduced || slides.length < 2 || timer) return;
-      timer = setInterval(function () { show(idx + 1); }, 6000);
+      timer = setInterval(function () { goTo(idx + 1); }, 6000);
     }
     function restart() { stop(); start(); }
 
     carousel.querySelectorAll('.research-nav-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        show(idx + parseInt(this.dataset.dir, 10));
+        goTo(idx + parseInt(this.dataset.dir, 10));
         restart();
       });
     });
     dots.forEach(function (d) {
       d.addEventListener('click', function () {
-        show(parseInt(this.dataset.index, 10));
+        goTo(parseInt(this.dataset.index, 10));
         restart();
       });
     });
+    track.addEventListener('pointerdown', stop);
+    track.addEventListener('pointerup', function () { restart(); });
     carousel.addEventListener('focusin', stop);
     carousel.addEventListener('focusout', start);
+    window.addEventListener('resize', function () { goTo(idx, true); });
+
+    goTo(0, true);
     start();
   }
 
