@@ -172,62 +172,93 @@
   });
 
   /* ----------------------------------------------------------------
-     4c. RESEARCH CAROUSEL (Home) — 스크롤 스냅 트랙 + 가운데 활성/양옆 엿보임
+     4c. RESEARCH CAROUSEL (Home) — 원통형 무한 순환 peek 트랙.
+     양끝에 클론을 심고, 클론에 멈추면 같은 내용의 진짜 카드로 무음 순간이동한다.
      ---------------------------------------------------------------- */
   var carousel = document.getElementById('researchCarousel');
   if (carousel) {
     var track = carousel.querySelector('.research-track');
-    var slides = track.querySelectorAll('.research-slide');
+    var real = Array.prototype.slice.call(track.querySelectorAll('.research-slide'));
+    var n = real.length;
+    var K = Math.min(2, n);           // 양쪽 클론 수 (엿보임 커버)
     var dots = carousel.querySelectorAll('.research-dot');
-    var idx = 0;
-    var timer = null;
-    var raf = null;
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var timer = null, raf = null, settleTimer = null, teleporting = false;
 
-    function goTo(n, instant) {
-      n = (n + slides.length) % slides.length;
-      var sl = slides[n];
-      track.scrollTo({
-        left: sl.offsetLeft - (track.clientWidth - sl.offsetWidth) / 2,
-        behavior: (instant || reduced) ? 'auto' : 'smooth'
-      });
+    // 클론 심기: 앞에 [n-K..n-1], 뒤에 [0..K-1]
+    for (var i = 0; i < K; i++) {
+      var head = real[n - K + i].cloneNode(true);
+      var tail = real[i].cloneNode(true);
+      head.classList.add('clone');
+      tail.classList.add('clone');
+      head.setAttribute('aria-hidden', 'true');
+      tail.setAttribute('aria-hidden', 'true');
+      track.insertBefore(head, track.children[i]);
+      track.appendChild(tail);
+    }
+    var slides = track.querySelectorAll('.research-slide');   // n + 2K
+    var domIdx = K;                                           // 진짜 첫 카드
+
+    function centerOf(el) { return el.offsetLeft - (track.clientWidth - el.offsetWidth) / 2; }
+
+    function goToDom(d, instant) {
+      domIdx = Math.max(0, Math.min(slides.length - 1, d));
+      track.scrollTo({ left: centerOf(slides[domIdx]), behavior: (instant || reduced) ? 'auto' : 'smooth' });
     }
 
-    function markActive() {
+    function nearestDom() {
       var center = track.scrollLeft + track.clientWidth / 2;
       var best = 0, bestDist = Infinity;
       slides.forEach(function (sl, i) {
         var d = Math.abs(sl.offsetLeft + sl.offsetWidth / 2 - center);
         if (d < bestDist) { bestDist = d; best = i; }
       });
-      if (best !== idx) {
-        idx = best;
-        slides.forEach(function (sl, i) { sl.classList.toggle('active', i === idx); });
-        dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+      return best;
+    }
+
+    function markActive() {
+      var d = nearestDom();
+      domIdx = d;
+      var logical = parseInt(slides[d].dataset.index, 10);
+      slides.forEach(function (sl, i) { sl.classList.toggle('active', i === d); });
+      dots.forEach(function (dot, i) { dot.classList.toggle('active', i === logical); });
+    }
+
+    function settle() {
+      var d = nearestDom();
+      if (slides[d].classList.contains('clone')) {
+        // 클론 위 -> 같은 내용의 진짜 카드로 무음 이동
+        teleporting = true;
+        goToDom(K + parseInt(slides[d].dataset.index, 10), true);
+        requestAnimationFrame(function () { teleporting = false; markActive(); });
       }
     }
 
     track.addEventListener('scroll', function () {
-      if (raf) return;
-      raf = requestAnimationFrame(function () { raf = null; markActive(); });
+      if (!raf) {
+        raf = requestAnimationFrame(function () { raf = null; markActive(); });
+      }
+      if (teleporting) return;
+      clearTimeout(settleTimer);
+      settleTimer = setTimeout(settle, 120);
     }, { passive: true });
 
     function stop() { if (timer) { clearInterval(timer); timer = null; } }
     function start() {
-      if (reduced || slides.length < 2 || timer) return;
-      timer = setInterval(function () { goTo(idx + 1); }, 6000);
+      if (reduced || n < 2 || timer) return;
+      timer = setInterval(function () { goToDom(domIdx + 1); }, 6000);
     }
     function restart() { stop(); start(); }
 
     carousel.querySelectorAll('.research-nav-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        goTo(idx + parseInt(this.dataset.dir, 10));
+        goToDom(domIdx + parseInt(this.dataset.dir, 10));
         restart();
       });
     });
     dots.forEach(function (d) {
       d.addEventListener('click', function () {
-        goTo(parseInt(this.dataset.index, 10));
+        goToDom(K + parseInt(this.dataset.index, 10));
         restart();
       });
     });
@@ -235,9 +266,10 @@
     track.addEventListener('pointerup', function () { restart(); });
     carousel.addEventListener('focusin', stop);
     carousel.addEventListener('focusout', start);
-    window.addEventListener('resize', function () { goTo(idx, true); });
+    window.addEventListener('resize', function () { goToDom(domIdx, true); });
 
-    goTo(0, true);
+    goToDom(K, true);
+    markActive();
     start();
   }
 
