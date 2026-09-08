@@ -1,11 +1,9 @@
 ---
-title: "Contact"
+title: "연락처"
 description: "세종대학교 항공우주공학과 항법시스템 연구실 연락처"
 ---
 
 대학원 입학, 공동연구, 산학협력 등 문의 사항은 아래 연락처로 연락 주시기 바랍니다.
-
-We welcome inquiries from prospective students, research collaborators, and industry partners.
 
 ## 연락처 / Contact Information
 

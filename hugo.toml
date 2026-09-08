@@ -2,6 +2,7 @@ baseURL = "/"
 languageCode = "ko-kr"
 title = "Navigation System Lab"
 theme = "gnsslab"
+defaultContentLanguage = "ko"
 
 [params]
   labNameKorean = "항법시스템 연구실"
@@ -20,7 +21,6 @@ theme = "gnsslab"
   address = "209 Neungdong-ro, Gwangjin-gu, Seoul 05006, Republic of Korea"
   addressKorean = "서울특별시 광진구 능동로 209(군자동) 세종대학교 05006"
   description = "세종대학교 항공우주공학과 항법시스템 연구실 - Navigation System Lab at Sejong University"
-  heroSubtitle = "Pioneering research in GNSS signal processing, integrated navigation systems,<br>and autonomous vehicle navigation technologies"
   themeCSS = "style.css"
   # 파비콘 색 — 팔레트와 함께 변경할 것 (# 없이 6자리 hex)
   faviconBg = "1a3a5c"
@@ -30,31 +30,31 @@ theme = "gnsslab"
   pagerSize = 6
 
 [[menus.main]]
-  name = "Home"
+  name = "홈"
   url = "/"
   weight = 1
 
 [[menus.main]]
-  name = "Research"
+  name = "연구"
   url = "/research/"
   weight = 2
 
 [[menus.main]]
-  name = "Publications"
+  name = "연구실적"
   url = "/publications/"
   weight = 3
 
 [[menus.main]]
-  name = "Members"
+  name = "구성원"
   url = "/members/"
   weight = 4
 
 [[menus.main]]
-  name = "News"
+  name = "소식"
   url = "/news/"
   weight = 5
 
 [[menus.main]]
-  name = "Contact"
+  name = "연락처"
   url = "/contact/"
   weight = 6

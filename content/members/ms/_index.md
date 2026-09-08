@@ -1,3 +1,3 @@
 ---
-title: "Master's Students"
+title: "석사과정"
 ---

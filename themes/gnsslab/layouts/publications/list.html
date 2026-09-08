@@ -2,11 +2,11 @@
 <div class="page-header">
   <div class="container">
     <nav class="breadcrumb" aria-label="breadcrumb">
-      <a href="/">Home</a>
+      <a href="/">{{ i18n "breadcrumb_home" }}</a>
       <span class="breadcrumb-sep">&#8250;</span>
-      <span class="breadcrumb-current">Publications</span>
+      <span class="breadcrumb-current">{{ i18n "pub_title" }}</span>
     </nav>
-    <h1 class="page-title">Publications</h1>
+    <h1 class="page-title">{{ i18n "pub_title" }}</h1>
     <p class="page-intro-text">세종대학교 항법시스템 연구실 연구 실적</p>
   </div>
 </div>
@@ -20,28 +20,28 @@
   <div class="pub-stats reveal">
     <div class="pub-stat-item">
       <span class="pub-stat-num">{{ len $papers }}</span>
-      <span class="pub-stat-label">Journal Papers</span>
+      <span class="pub-stat-label">{{ i18n "pub_papers" }}</span>
     </div>
     <div class="pub-stat-item">
       <span class="pub-stat-num">{{ len $patents }}</span>
-      <span class="pub-stat-label">Patents</span>
+      <span class="pub-stat-label">{{ i18n "pub_patents" }}</span>
     </div>
     <div class="pub-stat-item">
       <span class="pub-stat-num">{{ len $conferences }}</span>
-      <span class="pub-stat-label">Conferences</span>
+      <span class="pub-stat-label">{{ i18n "pub_conferences" }}</span>
     </div>
   </div>
 
   <!-- Section Tabs -->
   <div class="pub-tabs reveal" role="tablist">
     <button class="pub-tab active" data-target="sec-papers" role="tab" aria-selected="true">
-      Journal Papers
+      {{ i18n "pub_papers" }}
     </button>
     <button class="pub-tab" data-target="sec-patents" role="tab" aria-selected="false">
-      Patents
+      {{ i18n "pub_patents" }}
     </button>
     <button class="pub-tab" data-target="sec-conferences" role="tab" aria-selected="false">
-      Conferences
+      {{ i18n "pub_conferences" }}
     </button>
   </div>
 
@@ -75,9 +75,9 @@
         </div>
         <div class="pub-row-meta">
           {{ if eq .scope "국외" }}
-            <span class="scope-badge scope-intl">International</span>
+            <span class="scope-badge scope-intl">{{ i18n "scope_intl" }}</span>
           {{ else if eq .scope "국내" }}
-            <span class="scope-badge scope-domestic">Domestic</span>
+            <span class="scope-badge scope-domestic">{{ i18n "scope_domestic" }}</span>
           {{ end }}
           <span class="pub-year-tag">{{ .year }}</span>
         </div>
@@ -121,9 +121,9 @@
             <span class="status-badge status-filed">출원</span>
           {{ end }}
           {{ if eq .scope "국외" }}
-            <span class="scope-badge scope-intl">International</span>
+            <span class="scope-badge scope-intl">{{ i18n "scope_intl" }}</span>
           {{ else if eq .scope "국내" }}
-            <span class="scope-badge scope-domestic">Domestic</span>
+            <span class="scope-badge scope-domestic">{{ i18n "scope_domestic" }}</span>
           {{ end }}
         </div>
       </li>
@@ -160,9 +160,9 @@
         </div>
         <div class="pub-row-meta">
           {{ if eq .scope "국외" }}
-            <span class="scope-badge scope-intl">International</span>
+            <span class="scope-badge scope-intl">{{ i18n "scope_intl" }}</span>
           {{ else if eq .scope "국내" }}
-            <span class="scope-badge scope-domestic">Domestic</span>
+            <span class="scope-badge scope-domestic">{{ i18n "scope_domestic" }}</span>
           {{ end }}
           <span class="pub-year-tag">{{ .date }}</span>
         </div>

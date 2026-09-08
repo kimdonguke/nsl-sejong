@@ -1,5 +1,5 @@
 ---
-title: "Members"
+title: "구성원"
 description: "세종대학교 항법시스템 연구실 구성원"
 ---
 

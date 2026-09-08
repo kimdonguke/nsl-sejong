@@ -1,3 +1,3 @@
 ---
-title: "Alumni"
+title: "졸업생"
 ---

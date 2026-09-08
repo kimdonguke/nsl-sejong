@@ -2,12 +2,12 @@
 <div class="page-header">
   <div class="container">
     <nav class="breadcrumb" aria-label="breadcrumb">
-      <a href="/">Home</a>
+      <a href="/">{{ i18n "breadcrumb_home" }}</a>
       <span class="breadcrumb-sep">&#8250;</span>
-      <span class="breadcrumb-current">Contact</span>
+      <span class="breadcrumb-current">{{ i18n "contact_title" }}</span>
     </nav>
-    <h1 class="page-title">Contact Us</h1>
-    <p class="page-intro-text">항법시스템 연구실 · Navigation System Lab, Sejong University</p>
+    <h1 class="page-title">{{ i18n "contact_title" }}</h1>
+    <p class="page-intro-text">{{ i18n "contact_intro" }}</p>
   </div>
 </div>
 
@@ -16,12 +16,12 @@
 
     <!-- Left: Lab Information -->
     <div class="contact-info reveal">
-      <h2 class="contact-section-title">Lab Information</h2>
+      <h2 class="contact-section-title">{{ i18n "contact_lab_info" }}</h2>
 
       <div class="contact-item">
         <div class="contact-icon">&#127968;</div>
         <div class="contact-detail">
-          <h4>Location</h4>
+          <h4>{{ i18n "contact_location" }}</h4>
           <p>충무관(C관) 1016호<br>세종대학교 항공우주공학과</p>
           <p class="contact-ko">05006 서울특별시 광진구 능동로 209(군자동)</p>
         </div>
@@ -30,7 +30,7 @@
       <div class="contact-item">
         <div class="contact-icon">&#9993;</div>
         <div class="contact-detail">
-          <h4>Email</h4>
+          <h4>{{ i18n "contact_email" }}</h4>
           <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
         </div>
       </div>
@@ -38,7 +38,7 @@
       <div class="contact-item">
         <div class="contact-icon">&#128222;</div>
         <div class="contact-detail">
-          <h4>Phone</h4>
+          <h4>{{ i18n "contact_phone" }}</h4>
           <p>{{ .Site.Params.phone }}</p>
         </div>
       </div>
@@ -46,7 +46,7 @@
       <div class="contact-item">
         <div class="contact-icon">&#128336;</div>
         <div class="contact-detail">
-          <h4>Office Hours</h4>
+          <h4>{{ i18n "contact_hours" }}</h4>
           <p>{{ .Site.Params.officeHours }}</p>
           <p class="contact-ko">면담은 사전 이메일 예약 권장</p>
         </div>
@@ -55,7 +55,7 @@
 
     <!-- Right: Map + Form -->
     <div class="contact-map-section reveal">
-      <h2 class="contact-section-title">How to Get Here</h2>
+      <h2 class="contact-section-title">{{ i18n "contact_directions" }}</h2>
       <div class="map-placeholder">
         <a href="https://www.google.com/maps/search/?api=1&query=Sejong+University+Seoul" target="_blank" rel="noopener" class="map-photo">
           <img src="/images/contact/sejong_univ_pic.jpg" alt="세종대학교 정문">
@@ -66,7 +66,7 @@
               <small>209 Neungdong-ro, Gwangjin-gu, Seoul</small>
             </div>
           </div>
-          <span class="map-photo-cta">Open in Google Maps &#8599;</span>
+          <span class="map-photo-cta">{{ i18n "contact_map_cta" }} &#8599;</span>
         </a>
         <ul class="map-note-list">
           <li><span class="transport-badge subway">지하철</span> 7호선 어린이대공원역 4번 출구 도보 5분</li>
@@ -76,30 +76,30 @@
       </div>
 
       <div class="contact-form-section">
-        <h3>Send us a Message</h3>
+        <h3>{{ i18n "contact_form_title" }}</h3>
         <form class="contact-form" data-recipient="{{ .Site.Params.email }}">
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <label for="name">{{ i18n "form_name" }}</label>
+            <input type="text" id="name" name="name" placeholder="{{ i18n "form_name_ph" }}" required>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">{{ i18n "form_email" }}</label>
             <input type="email" id="email" name="email" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
-            <label for="subject">Subject</label>
+            <label for="subject">{{ i18n "form_subject" }}</label>
             <select id="subject" name="subject">
-              <option value="">Select a topic</option>
-              <option value="Prospective Student Inquiry">Prospective Student Inquiry</option>
-              <option value="Research Collaboration">Research Collaboration</option>
-              <option value="General Inquiry">General Inquiry</option>
+              <option value="">{{ i18n "form_subject_ph" }}</option>
+              <option value="{{ i18n "form_subject_student" }}">{{ i18n "form_subject_student" }}</option>
+              <option value="{{ i18n "form_subject_collab" }}">{{ i18n "form_subject_collab" }}</option>
+              <option value="{{ i18n "form_subject_general" }}">{{ i18n "form_subject_general" }}</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+            <label for="message">{{ i18n "form_message" }}</label>
+            <textarea id="message" name="message" rows="5" placeholder="{{ i18n "form_message_ph" }}" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <button type="submit" class="btn btn-primary btn-full">{{ i18n "form_send" }}</button>
         </form>
       </div>
     </div>

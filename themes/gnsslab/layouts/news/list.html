@@ -2,12 +2,12 @@
 <div class="page-header">
   <div class="container">
     <nav class="breadcrumb" aria-label="breadcrumb">
-      <a href="/">Home</a>
+      <a href="/">{{ i18n "breadcrumb_home" }}</a>
       <span class="breadcrumb-sep">&#8250;</span>
-      <span class="breadcrumb-current">News</span>
+      <span class="breadcrumb-current">{{ i18n "news_title" }}</span>
     </nav>
-    <h1 class="page-title">News & Announcements</h1>
-    <p class="page-intro-text">Latest updates, publications, and events from the Navigation System Lab.</p>
+    <h1 class="page-title">{{ i18n "news_title" }}</h1>
+    <p class="page-intro-text">{{ i18n "news_intro" }}</p>
   </div>
 </div>
 
@@ -24,16 +24,16 @@
       </div>
       <div class="news-list-content">
         <div class="news-list-meta">
-          {{ with .Params.category }}<span class="news-tag news-tag--{{ lower . }}">{{ . }}</span>{{ end }}
+          {{ with .Params.category }}<span class="news-tag news-tag--{{ lower . }}">{{ with i18n (printf "news_cat_%s" (lower .)) }}{{ . }}{{ else }}{{ . }}{{ end }}</span>{{ end }}
         </div>
         <h2 class="news-list-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p class="news-list-summary">{{ .Summary | truncate 250 }}</p>
-        <a href="{{ .Permalink }}" class="card-link">Read more &#8594;</a>
+        <a href="{{ .Permalink }}" class="card-link">{{ i18n "read_more" }} &#8594;</a>
       </div>
     </article>
     {{ else }}
     <div class="empty-state reveal">
-      <p>No news items yet. Check back soon!</p>
+      <p>{{ i18n "news_empty" }}</p>
     </div>
     {{ end }}
   </div>
@@ -46,7 +46,7 @@
       {{/* Previous */}}
       {{ if $paginator.HasPrev }}
       <li class="pagination-item">
-        <a href="{{ $paginator.Prev.URL }}" class="pagination-link pagination-prev" aria-label="Previous page">&laquo; Prev</a>
+        <a href="{{ $paginator.Prev.URL }}" class="pagination-link pagination-prev" aria-label="Previous page">&laquo; {{ i18n "pagination_prev" }}</a>
       </li>
       {{ else }}
       <li class="pagination-item">
@@ -68,7 +68,7 @@
       {{/* Next */}}
       {{ if $paginator.HasNext }}
       <li class="pagination-item">
-        <a href="{{ $paginator.Next.URL }}" class="pagination-link pagination-next" aria-label="Next page">Next &raquo;</a>
+        <a href="{{ $paginator.Next.URL }}" class="pagination-link pagination-next" aria-label="Next page">{{ i18n "pagination_next" }} &raquo;</a>
       </li>
       {{ else }}
       <li class="pagination-item">

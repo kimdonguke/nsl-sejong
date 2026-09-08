@@ -20,26 +20,26 @@
     <p class="member-meta"><a href="mailto:{{ . }}" class="member-email">{{ . }}</a></p>
     {{ end }}
     {{ if or .Params.degree .Params.admission }}
-    <p class="member-meta"><span class="member-meta-label">과정</span> {{ .Params.degree }}{{ with .Params.admission }} ({{ . }}~){{ end }}</p>
+    <p class="member-meta"><span class="member-meta-label">{{ i18n "label_course" }}</span> {{ .Params.degree }}{{ with .Params.admission }} ({{ . }}~){{ end }}</p>
     {{ end }}
     {{ partial "research-tags.html" (dict "research" .Params.research "site" .Site) }}
 
     {{ if or .Params.education .Params.publications .Params.links }}
     <div class="alumni-detail">
       <button type="button" class="alumni-detail-toggle" aria-expanded="false">
-        <span class="alumni-detail-toggle-label">상세 보기</span>
+        <span class="alumni-detail-toggle-label">{{ i18n "detail_toggle" }}</span>
       </button>
       <div class="alumni-detail-body-wrapper">
         <div class="alumni-detail-body">
           {{ with .Params.education }}
           <section class="alumni-section">
-            <h5 class="alumni-section-title">Education</h5>
+            <h5 class="alumni-section-title">{{ i18n "detail_education" }}</h5>
             <table class="alumni-edu-table">
               <thead>
                 <tr>
-                  <th>졸업년도</th>
-                  <th>학위</th>
-                  <th>학교 / 전공</th>
+                  <th>{{ i18n "edu_year" }}</th>
+                  <th>{{ i18n "edu_degree" }}</th>
+                  <th>{{ i18n "edu_school" }}</th>
                 </tr>
               </thead>
               <tbody>
@@ -57,7 +57,7 @@
 
           {{ with .Params.publications }}
           <section class="alumni-section">
-            <h5 class="alumni-section-title">주요실적</h5>
+            <h5 class="alumni-section-title">{{ i18n "detail_publications" }}</h5>
             <ul class="alumni-pubs">
               {{ range . }}
               <li class="alumni-pub-item">

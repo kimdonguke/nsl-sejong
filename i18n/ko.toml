@@ -1,0 +1,359 @@
+# ==================================================================
+# NSL UI 문구 — 한국어 (기본 언어)
+# en.toml과 키가 1:1 대응한다. 영어판 확장 시 hugo.toml에 en 언어만 추가하면 된다.
+# ==================================================================
+
+# ---- 공통 ----
+[breadcrumb_home]
+other = "홈"
+
+[read_more]
+other = "더 보기"
+
+[view_details]
+other = "자세히 보기"
+
+# ---- 홈: 히어로 ----
+[hero_subtitle]
+other = "GNSS 신호처리와 정밀측위부터 복합항법, 자율 이동체 항법까지<br>차세대 PNT 기술을 연구합니다"
+
+[hero_cta_research]
+other = "연구 소개"
+
+[hero_cta_members]
+other = "구성원 보기"
+
+[stat_research]
+other = "연구 분야"
+
+[stat_publications]
+other = "연구 실적"
+
+[stat_members]
+other = "구성원"
+
+[hero_scroll]
+other = "스크롤"
+
+# ---- 홈: 연구 섹션 ----
+[home_research_tag]
+other = "연구"
+
+[home_research_title]
+other = "연구 분야"
+
+[home_research_desc]
+other = "위성항법과 측위 기술 전반에서 이론 연구와 실용 시스템 개발을 함께 수행합니다."
+
+[home_card_gnss_title]
+other = "위성항법 신호처리 및 정밀측위"
+
+[home_card_gnss_desc]
+other = "GPS·GLONASS·Galileo·BeiDou 신호의 획득·추적·측위 알고리즘을 연구하며, 항재밍·항기만과 다중경로 완화 기법을 다룹니다."
+
+[home_card_integration_title]
+other = "복합항법 시스템"
+
+[home_card_integration_desc]
+other = "GNSS와 IMU·기압계·영상 센서를 융합하고, 신호 차단 환경에서도 끊김 없는 항법을 위한 강건한 칼만필터 구조를 설계합니다."
+
+[home_card_autonomous_title]
+other = "자율 이동체 항법"
+
+[home_card_autonomous_desc]
+other = "자율주행차와 UAV를 위한 항법 솔루션을 연구합니다. GNSS/INS에 LiDAR·카메라·정밀지도를 결합해 도심 환경에서 정밀 측위를 구현합니다."
+
+[home_view_all_research]
+other = "전체 연구 분야 보기"
+
+# ---- 홈: 소개 섹션 ----
+[about_tag]
+other = "연구실 소개"
+
+[about_title]
+other = "항법 기술의 미래를 엽니다"
+
+[about_p1]
+other = "세종대학교 항공우주공학과 항법시스템 연구실(NSL)은 위성항법과 측위 기술의 기초 연구와 응용 연구를 수행합니다."
+
+[about_p2]
+other = "신호처리·제어시스템·머신러닝을 아우르는 학제간 연구를 통해 항공우주, 자동차, 로보틱스 분야의 차세대 항법 솔루션을 개발합니다."
+
+[about_li1]
+other = "GNSS 신호 시뮬레이터 등 첨단 실험 장비 보유"
+
+[about_li2]
+other = "국내외 연구기관과의 활발한 공동연구"
+
+[about_li3]
+other = "항공우주 분야 선도 기업들과의 산학협력"
+
+[about_li4]
+other = "정부 지원 연구과제 수행 (NRF·ADD·IITP)"
+
+[about_cta]
+other = "구성원 소개"
+
+# ---- 홈: 소식 · CTA ----
+[home_news_tag]
+other = "새 소식"
+
+[home_news_title]
+other = "연구실 소식"
+
+[home_all_news]
+other = "전체 소식 보기"
+
+[cta_title]
+other = "함께 연구할 학생을 찾습니다"
+
+[cta_desc]
+other = "항법시스템과 GNSS, 자율 이동체에 관심 있는 열정적인 학생과 연구자를 기다립니다. 석사·박사 과정 대학원생을 상시 모집합니다."
+
+[cta_contact]
+other = "문의하기"
+
+[cta_members]
+other = "구성원 보기"
+
+# ---- 푸터 ----
+[footer_desc]
+other = "위성항법과 GNSS 신호처리, 자율 항법 시스템의 미래를 연구합니다."
+
+[footer_quicklinks]
+other = "바로가기"
+
+[footer_contact]
+other = "연락처"
+
+[footer_copyright]
+other = "세종대학교 항법시스템 연구실. All rights reserved."
+
+# ---- 구성원 ----
+[members_title]
+other = "구성원"
+
+[members_intro]
+other = "항법시스템 연구실을 이끌어가는 구성원을 소개합니다."
+
+[members_professor_heading]
+other = "지도교수"
+
+[members_tab_current]
+other = "재학생"
+
+[members_tab_alumni]
+other = "졸업생"
+
+[members_phd]
+other = "박사과정"
+
+[members_ms]
+other = "석사과정"
+
+[members_undergrad]
+other = "학부연구생"
+
+[members_full_profile]
+other = "전체 프로필"
+
+[prof_office_label]
+other = "연구실:"
+
+[prof_research_label]
+other = "연구 분야:"
+
+[detail_email]
+other = "이메일"
+
+[detail_education]
+other = "학력"
+
+[members_alumni_empty]
+other = "졸업생 정보는 준비 중입니다."
+
+[members_join_title]
+other = "NSL과 함께할 학생을 찾습니다"
+
+[members_join_desc]
+other = "GNSS와 항법시스템 분야에 관심 있는 학생이라면 누구든 환영합니다. 대학원 진학과 연구 참여에 대해 편하게 문의해주세요."
+
+[members_join_cta]
+other = "문의하기"
+
+# ---- 연구 ----
+[research_title]
+other = "연구"
+
+[research_intro]
+other = "위성항법의 기초 이론부터 실용 시스템까지, 측위 기술 전반을 연구합니다."
+
+[research_areas]
+other = "연구 분야"
+
+[research_funding_title]
+other = "연구 지원"
+
+[research_funding_intro]
+other = "연구실의 연구는 정부 연구지원 기관과 산업체의 지원으로 수행됩니다."
+
+[funding_nrf]
+other = "한국연구재단"
+
+[funding_add]
+other = "국방과학연구소"
+
+[funding_iitp]
+other = "정보통신기획평가원"
+
+[funding_msit]
+other = "과학기술정보통신부"
+
+# ---- 연구실적 ----
+[pub_title]
+other = "연구실적"
+
+[pub_papers]
+other = "학술논문"
+
+[pub_patents]
+other = "특허"
+
+[pub_conferences]
+other = "학술발표"
+
+[scope_intl]
+other = "국외"
+
+[scope_domestic]
+other = "국내"
+
+# ---- 소식 ----
+[news_title]
+other = "소식"
+
+[news_intro]
+other = "연구실의 새로운 소식과 수상, 언론 보도를 전합니다."
+
+[news_empty]
+other = "아직 등록된 소식이 없습니다."
+
+[pagination_prev]
+other = "이전"
+
+[pagination_next]
+other = "다음"
+
+# ---- 연락처 ----
+[contact_title]
+other = "연락처"
+
+[contact_intro]
+other = "대학원 진학, 공동연구, 산학협력 문의를 환영합니다."
+
+[contact_lab_info]
+other = "연구실 정보"
+
+[contact_location]
+other = "위치"
+
+[contact_email]
+other = "이메일"
+
+[contact_phone]
+other = "전화"
+
+[contact_hours]
+other = "면담 시간"
+
+[contact_directions]
+other = "오시는 길"
+
+[contact_map_cta]
+other = "구글 지도에서 열기"
+
+[contact_form_title]
+other = "메시지 보내기"
+
+[form_name]
+other = "이름"
+
+[form_name_ph]
+other = "성함을 입력해주세요"
+
+[form_email]
+other = "이메일"
+
+[form_subject]
+other = "문의 유형"
+
+[form_subject_ph]
+other = "문의 유형을 선택해주세요"
+
+[form_subject_student]
+other = "대학원 진학 문의"
+
+[form_subject_collab]
+other = "공동연구 제안"
+
+[form_subject_general]
+other = "일반 문의"
+
+[form_message]
+other = "내용"
+
+[form_message_ph]
+other = "문의 내용을 적어주세요"
+
+[form_send]
+other = "메시지 보내기"
+
+# ---- 상세/라벨 (한국어 원문도 키로 — 영어판 확장 대비) ----
+[detail_publications]
+other = "주요실적"
+
+[detail_toggle]
+other = "상세 보기"
+
+[edu_year]
+other = "졸업년도"
+
+[edu_degree]
+other = "학위"
+
+[edu_school]
+other = "학교 / 전공"
+
+[label_course]
+other = "과정"
+
+[label_final_degree]
+other = "최종학력"
+
+[label_thesis]
+other = "학위 논문"
+
+[label_research]
+other = "관심분야"
+
+[post_nav_older]
+other = "이전글"
+
+[post_nav_newer]
+other = "다음글"
+
+# ---- 뉴스 카테고리 표기 ----
+[news_cat_award]
+other = "수상"
+
+[news_cat_press]
+other = "언론"
+
+[news_cat_alumni]
+other = "졸업생"
+
+[news_cat_publication]
+other = "논문"
+
+[news_cat_event]
+other = "행사"

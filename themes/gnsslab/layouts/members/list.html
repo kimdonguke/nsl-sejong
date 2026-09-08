@@ -2,12 +2,12 @@
 <div class="page-header">
   <div class="container">
     <nav class="breadcrumb" aria-label="breadcrumb">
-      <a href="/">Home</a>
+      <a href="/">{{ i18n "breadcrumb_home" }}</a>
       <span class="breadcrumb-sep">&#8250;</span>
-      <span class="breadcrumb-current">Members</span>
+      <span class="breadcrumb-current">{{ i18n "members_title" }}</span>
     </nav>
-    <h1 class="page-title">Lab Members</h1>
-    <p class="page-intro-text">Meet the talented researchers and students driving innovation at the Navigation System Lab.</p>
+    <h1 class="page-title">{{ i18n "members_title" }}</h1>
+    <p class="page-intro-text">{{ i18n "members_intro" }}</p>
   </div>
 </div>
 
@@ -18,7 +18,7 @@
   {{ with index $professor 0 }}
   <div class="professor-section reveal">
     <h2 class="members-section-title">
-      Principal Investigator
+      {{ i18n "members_professor_heading" }}
     </h2>
     <div class="professor-card">
       <div class="professor-photo">
@@ -34,15 +34,15 @@
         <h3 class="professor-name">{{ with .Params.nameKorean }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h3>
         {{ if .Params.nameKorean }}<p class="professor-name-en">{{ .Title }}</p>{{ end }}
         {{ with .Params.position }}<p class="professor-position">{{ . }}</p>{{ end }}
-        <p class="professor-dept">{{ $.Site.Params.department }}<br>{{ $.Site.Params.university }}</p>
+        <p class="professor-dept">{{ $.Site.Params.departmentKorean }}<br>{{ $.Site.Params.universityKorean }}</p>
         {{ with .Params.email }}<p class="professor-email"><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
-        {{ with .Params.office }}<p class="professor-detail"><strong>Office:</strong> {{ . }}</p>{{ end }}
-        {{ with .Params.research }}<p class="professor-detail"><strong>Research Interests:</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.office }}<p class="professor-detail"><strong>{{ i18n "prof_office_label" }}</strong> {{ . }}</p>{{ end }}
+        {{ with .Params.research }}<p class="professor-detail"><strong>{{ i18n "prof_research_label" }}</strong> {{ . }}</p>{{ end }}
         <div class="professor-links">
           {{ with .Params.googleScholar }}<a href="{{ . }}" class="prof-link" target="_blank" rel="noopener">Google Scholar</a>{{ end }}
           {{ with .Params.researchgate }}<a href="{{ . }}" class="prof-link" target="_blank" rel="noopener">ResearchGate</a>{{ end }}
           {{ with .Params.orcid }}<a href="{{ . }}" class="prof-link" target="_blank" rel="noopener">ORCID</a>{{ end }}
-          <a href="{{ .Permalink }}" class="prof-link">Full Profile</a>
+          <a href="{{ .Permalink }}" class="prof-link">{{ i18n "members_full_profile" }}</a>
         </div>
       </div>
     </div>
@@ -52,10 +52,10 @@
   <!-- Tabs -->
   <div class="pub-tabs reveal" role="tablist">
     <button class="pub-tab active" data-target="sec-current" role="tab" aria-selected="true">
-      Current Members
+      {{ i18n "members_tab_current" }}
     </button>
     <button class="pub-tab" data-target="sec-alumni" role="tab" aria-selected="false">
-      Alumni
+      {{ i18n "members_tab_alumni" }}
     </button>
   </div>
 
@@ -67,7 +67,7 @@
     {{ if $phd }}
     <div class="members-group reveal">
       <h2 class="members-section-title">
-        PhD Students
+        {{ i18n "members_phd" }}
       </h2>
       <div class="members-list">
         {{ range sort $phd "Params.weight" "desc" }}
@@ -82,7 +82,7 @@
     {{ if $ms }}
     <div class="members-group reveal">
       <h2 class="members-section-title">
-        Master's Students
+        {{ i18n "members_ms" }}
       </h2>
       <div class="members-list">
         {{ range sort $ms "Params.weight" "desc" }}
@@ -97,7 +97,7 @@
     {{ if $undergrad }}
     <div class="members-group reveal">
       <h2 class="members-section-title">
-        Undergraduate Students
+        {{ i18n "members_undergrad" }}
       </h2>
       <div class="members-list">
         {{ range sort $undergrad "Params.weight" "desc" }}
@@ -140,28 +140,28 @@
               </h4>
               {{ with .Params.education }}
                 {{ $last := index . (sub (len .) 1) }}
-                <p class="alumni-final-degree"><span class="alumni-meta-label">최종학력</span> {{ $last.year }} {{ $last.degree }}</p>
+                <p class="alumni-final-degree"><span class="alumni-meta-label">{{ i18n "label_final_degree" }}</span> {{ $last.year }} {{ $last.degree }}</p>
               {{ end }}
               {{ with .Params.thesis }}
                 {{ with .korean }}
-                <p class="alumni-thesis-line"><span class="alumni-meta-label">학위 논문</span> {{ . }}</p>
+                <p class="alumni-thesis-line"><span class="alumni-meta-label">{{ i18n "label_thesis" }}</span> {{ . }}</p>
                 {{ end }}
               {{ end }}
             </header>
 
             {{ with .Params.research }}
-            <p class="alumni-research-line"><span class="alumni-meta-label">관심분야</span> {{ . }}</p>
+            <p class="alumni-research-line"><span class="alumni-meta-label">{{ i18n "label_research" }}</span> {{ . }}</p>
             {{ end }}
 
             <div class="alumni-detail">
               <button type="button" class="alumni-detail-toggle" aria-expanded="false">
-                <span class="alumni-detail-toggle-label">상세 보기</span>
+                <span class="alumni-detail-toggle-label">{{ i18n "detail_toggle" }}</span>
               </button>
               <div class="alumni-detail-body-wrapper">
               <div class="alumni-detail-body">
                 {{ if or .Params.email .Params.emailAlt }}
                 <section class="alumni-section">
-                  <h5 class="alumni-section-title">Email</h5>
+                  <h5 class="alumni-section-title">{{ i18n "detail_email" }}</h5>
                   <p class="alumni-email">
                     {{ with .Params.email }}<span>{{ . }}</span>{{ end }}
                     {{ with .Params.emailAlt }} <span class="alumni-email-alt">({{ . }})</span>{{ end }}
@@ -171,13 +171,13 @@
 
                 {{ with .Params.education }}
                 <section class="alumni-section">
-                  <h5 class="alumni-section-title">Education</h5>
+                  <h5 class="alumni-section-title">{{ i18n "detail_education" }}</h5>
                   <table class="alumni-edu-table">
                     <thead>
                       <tr>
-                        <th>졸업년도</th>
-                        <th>학위</th>
-                        <th>학교 / 전공</th>
+                        <th>{{ i18n "edu_year" }}</th>
+                        <th>{{ i18n "edu_degree" }}</th>
+                        <th>{{ i18n "edu_school" }}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -195,7 +195,7 @@
 
                 {{ with .Params.publications }}
                 <section class="alumni-section">
-                  <h5 class="alumni-section-title">주요실적</h5>
+                  <h5 class="alumni-section-title">{{ i18n "detail_publications" }}</h5>
                   <ul class="alumni-pubs">
                     {{ range . }}
                     <li class="alumni-pub-item">
@@ -223,16 +223,16 @@
       {{ end }}
     </div>
     {{ else }}
-    <p class="alumni-empty">Alumni information will be updated soon.</p>
+    <p class="alumni-empty">{{ i18n "members_alumni_empty" }}</p>
     {{ end }}
   </div>
 
   <!-- Join Us -->
   <div class="join-section reveal">
     <div class="join-box">
-      <h3>Interested in Joining NSL?</h3>
-      <p>We welcome motivated students interested in GNSS, navigation systems, and related fields. Please contact us for available positions.</p>
-      <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+      <h3>{{ i18n "members_join_title" }}</h3>
+      <p>{{ i18n "members_join_desc" }}</p>
+      <a href="/contact/" class="btn btn-primary">{{ i18n "members_join_cta" }}</a>
     </div>
   </div>
 

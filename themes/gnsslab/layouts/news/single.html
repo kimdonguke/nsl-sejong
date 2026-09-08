@@ -2,16 +2,16 @@
 <div class="page-header">
   <div class="container">
     <nav class="breadcrumb" aria-label="breadcrumb">
-      <a href="/">Home</a>
+      <a href="/">{{ i18n "breadcrumb_home" }}</a>
       <span class="breadcrumb-sep">&#8250;</span>
-      <a href="/news/">News</a>
+      <a href="/news/">{{ i18n "news_title" }}</a>
       <span class="breadcrumb-sep">&#8250;</span>
       <span class="breadcrumb-current">{{ .Title }}</span>
     </nav>
     <h1 class="page-title">{{ .Title }}</h1>
     <div class="page-meta">
       {{ if not .Date.IsZero }}<span>{{ .Date.Format "January 02, 2006" }}</span>{{ end }}
-      {{ with .Params.category }}<span class="news-tag news-tag--{{ lower . }}">{{ . }}</span>{{ end }}
+      {{ with .Params.category }}<span class="news-tag news-tag--{{ lower . }}">{{ with i18n (printf "news_cat_%s" (lower .)) }}{{ . }}{{ else }}{{ . }}{{ end }}</span>{{ end }}
     </div>
   </div>
 </div>
@@ -45,13 +45,13 @@
       <div class="post-nav-cell post-nav-older">
         {{ with $older }}
         <a href="{{ .Permalink }}" class="post-nav-link">
-          <span class="post-nav-label"><span class="post-nav-arrow">&larr;</span>이전글</span>
+          <span class="post-nav-label"><span class="post-nav-arrow">&larr;</span>{{ i18n "post_nav_older" }}</span>
           <span class="post-nav-title">{{ .Title }}</span>
           <span class="post-nav-date">{{ .Date.Format "2006.01.02" }}</span>
         </a>
         {{ else }}
         <div class="post-nav-empty">
-          <span class="post-nav-label"><span class="post-nav-arrow">&larr;</span>이전글</span>
+          <span class="post-nav-label"><span class="post-nav-arrow">&larr;</span>{{ i18n "post_nav_older" }}</span>
           <span class="post-nav-placeholder">가장 오래된 글입니다</span>
         </div>
         {{ end }}

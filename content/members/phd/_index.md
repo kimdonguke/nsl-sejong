@@ -1,3 +1,3 @@
 ---
-title: "PhD Students"
+title: "박사과정"
 ---

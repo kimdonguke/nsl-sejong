@@ -1,0 +1,349 @@
+# ==================================================================
+# NSL UI strings — English (future expansion set)
+# Keys map 1:1 to ko.toml. Original site copy is preserved here.
+# To enable: add an `en` language block to hugo.toml and .en.md content.
+# Nav menu (for future [languages.en.menus]):
+#   Home / Research / Publications / Members / News / Contact
+# ==================================================================
+
+[breadcrumb_home]
+other = "Home"
+
+[read_more]
+other = "Read more"
+
+[view_details]
+other = "View details"
+
+[hero_subtitle]
+other = "Pioneering research in GNSS signal processing, integrated navigation systems,<br>and autonomous vehicle navigation technologies"
+
+[hero_cta_research]
+other = "Our Research"
+
+[hero_cta_members]
+other = "Meet the Team"
+
+[stat_research]
+other = "Research Areas"
+
+[stat_publications]
+other = "Publications"
+
+[stat_members]
+other = "Lab Members"
+
+[hero_scroll]
+other = "Scroll"
+
+[home_research_tag]
+other = "What We Do"
+
+[home_research_title]
+other = "Research Areas"
+
+[home_research_desc]
+other = "Our lab focuses on cutting-edge research in satellite navigation and positioning technologies, bridging theoretical innovation with practical applications."
+
+[home_card_gnss_title]
+other = "GNSS Signal Processing"
+
+[home_card_gnss_desc]
+other = "Advanced algorithms for acquisition, tracking, and positioning using GPS, GLONASS, Galileo, and BeiDou signals. Research includes anti-jamming, anti-spoofing, and multipath mitigation techniques."
+
+[home_card_integration_title]
+other = "Integrated Navigation"
+
+[home_card_integration_desc]
+other = "Sensor fusion of GNSS with IMU, barometers, and vision systems. Development of robust Kalman filter architectures for seamless navigation in GNSS-degraded and denied environments."
+
+[home_card_autonomous_title]
+other = "Autonomous Navigation"
+
+[home_card_autonomous_desc]
+other = "Navigation solutions for autonomous vehicles and UAVs. Combining GNSS/INS with LiDAR, camera, and HD maps for precise localization in urban and challenging environments."
+
+[home_view_all_research]
+other = "View All Research Areas"
+
+[about_tag]
+other = "About Our Lab"
+
+[about_title]
+other = "Navigating the Future"
+
+[about_p1]
+other = "The Navigation System Lab (NSL) at Sejong University's Department of Aerospace Engineering conducts fundamental and applied research in satellite navigation and positioning technologies."
+
+[about_p2]
+other = "Our interdisciplinary team works at the intersection of signal processing, control systems, and machine learning to develop next-generation navigation solutions for aerospace, automotive, and robotics applications."
+
+[about_li1]
+other = "State-of-the-art GNSS signal simulator and testing equipment"
+
+[about_li2]
+other = "Collaboration with national and international research institutes"
+
+[about_li3]
+other = "Industry partnerships with leading aerospace companies"
+
+[about_li4]
+other = "Government-funded research projects (NRF, ADD, IITP)"
+
+[about_cta]
+other = "Meet Our Team"
+
+[home_news_tag]
+other = "Latest Updates"
+
+[home_news_title]
+other = "News & Announcements"
+
+[home_all_news]
+other = "All News"
+
+[cta_title]
+other = "Join Our Research Team"
+
+[cta_desc]
+other = "We are always looking for motivated students and researchers passionate about navigation systems, GNSS technology, and autonomous vehicles. Graduate positions (MS/PhD) available."
+
+[cta_contact]
+other = "Contact Us"
+
+[cta_members]
+other = "Meet the Team"
+
+[footer_desc]
+other = "Advancing the frontiers of satellite navigation, GNSS signal processing, and autonomous navigation systems."
+
+[footer_quicklinks]
+other = "Quick Links"
+
+[footer_contact]
+other = "Contact"
+
+[footer_copyright]
+other = "Navigation System Lab, Sejong University. All rights reserved."
+
+[members_title]
+other = "Lab Members"
+
+[members_intro]
+other = "Meet the talented researchers and students driving innovation at the Navigation System Lab."
+
+[members_professor_heading]
+other = "Principal Investigator"
+
+[members_tab_current]
+other = "Current Members"
+
+[members_tab_alumni]
+other = "Alumni"
+
+[members_phd]
+other = "PhD Students"
+
+[members_ms]
+other = "Master's Students"
+
+[members_undergrad]
+other = "Undergraduate Students"
+
+[members_full_profile]
+other = "Full Profile"
+
+[prof_office_label]
+other = "Office:"
+
+[prof_research_label]
+other = "Research Interests:"
+
+[detail_email]
+other = "Email"
+
+[detail_education]
+other = "Education"
+
+[members_alumni_empty]
+other = "Alumni information will be updated soon."
+
+[members_join_title]
+other = "Interested in Joining NSL?"
+
+[members_join_desc]
+other = "We welcome motivated students interested in GNSS, navigation systems, and related fields. Please contact us for available positions."
+
+[members_join_cta]
+other = "Get in Touch"
+
+[research_title]
+other = "Research"
+
+[research_intro]
+other = "Our research spans fundamental theory and practical applications in satellite navigation and positioning systems."
+
+[research_areas]
+other = "Research Areas"
+
+[research_funding_title]
+other = "Research Funding"
+
+[research_funding_intro]
+other = "Our research is supported by leading national funding agencies and industry partners."
+
+[funding_nrf]
+other = "National Research Foundation of Korea"
+
+[funding_add]
+other = "Agency for Defense Development"
+
+[funding_iitp]
+other = "Institute of Information & Communications Technology Planning & Evaluation"
+
+[funding_msit]
+other = "Ministry of Science and ICT"
+
+[pub_title]
+other = "Publications"
+
+[pub_papers]
+other = "Journal Papers"
+
+[pub_patents]
+other = "Patents"
+
+[pub_conferences]
+other = "Conferences"
+
+[scope_intl]
+other = "International"
+
+[scope_domestic]
+other = "Domestic"
+
+[news_title]
+other = "News"
+
+[news_intro]
+other = "Latest updates, publications, and events from the Navigation System Lab."
+
+[news_empty]
+other = "No news items yet. Check back soon!"
+
+[pagination_prev]
+other = "Prev"
+
+[pagination_next]
+other = "Next"
+
+[contact_title]
+other = "Contact Us"
+
+[contact_intro]
+other = "We welcome inquiries from prospective students, research collaborators, and industry partners."
+
+[contact_lab_info]
+other = "Lab Information"
+
+[contact_location]
+other = "Location"
+
+[contact_email]
+other = "Email"
+
+[contact_phone]
+other = "Phone"
+
+[contact_hours]
+other = "Office Hours"
+
+[contact_directions]
+other = "How to Get Here"
+
+[contact_map_cta]
+other = "Open in Google Maps"
+
+[contact_form_title]
+other = "Send us a Message"
+
+[form_name]
+other = "Name"
+
+[form_name_ph]
+other = "Your full name"
+
+[form_email]
+other = "Email"
+
+[form_subject]
+other = "Subject"
+
+[form_subject_ph]
+other = "Select a topic"
+
+[form_subject_student]
+other = "Prospective Student Inquiry"
+
+[form_subject_collab]
+other = "Research Collaboration"
+
+[form_subject_general]
+other = "General Inquiry"
+
+[form_message]
+other = "Message"
+
+[form_message_ph]
+other = "Your message..."
+
+[form_send]
+other = "Send Message"
+
+[detail_publications]
+other = "Selected Publications"
+
+[detail_toggle]
+other = "Details"
+
+[edu_year]
+other = "Year"
+
+[edu_degree]
+other = "Degree"
+
+[edu_school]
+other = "School / Major"
+
+[label_course]
+other = "Course"
+
+[label_final_degree]
+other = "Final Degree"
+
+[label_thesis]
+other = "Thesis"
+
+[label_research]
+other = "Research Interests"
+
+[post_nav_older]
+other = "Older"
+
+[post_nav_newer]
+other = "Newer"
+
+[news_cat_award]
+other = "Award"
+
+[news_cat_press]
+other = "Press"
+
+[news_cat_alumni]
+other = "Alumni"
+
+[news_cat_publication]
+other = "Publication"
+
+[news_cat_event]
+other = "Event"

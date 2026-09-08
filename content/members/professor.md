@@ -2,7 +2,7 @@
 title: "Byungwoon Park"
 nameKorean: "박병운"
 role: "professor"
-position: "Professor"
+position: "교수"
 department: "Department of Aerospace Engineering"
 university: "Sejong University"
 email: "byungwoon@sejong.ac.kr"

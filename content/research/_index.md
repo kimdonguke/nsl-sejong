@@ -1,8 +1,6 @@
 ---
-title: "Research"
+title: "연구"
 description: "세종대학교 항법시스템 연구실 연구 분야 — 위성항법 신호처리·정밀측위, 복합항법, 자율 이동체 항법, 우주 PNT"
 ---
 
 세종대학교 항법시스템 연구실(NSL@Sejong)은 GNSS(위성항법시스템)를 비롯한 차세대 PNT(Position, Navigation, Timing) 인프라 전반에 대한 기초·응용 연구를 수행합니다. KASS·KPS 등 국가 항법사업과 정부기관·산업체 협력 과제를 통해 연구 성과를 실용 시스템으로 구현하고 있으며, 최근에는 달·시스루나·저궤도로 확장되는 우주 항법 영역까지 연구 범위를 넓히고 있습니다.
-
-The Navigation System Laboratory at Sejong University conducts fundamental and applied research across the full PNT (Position, Navigation, Timing) stack — from GNSS signal processing and precise positioning to integrated navigation, autonomous platforms, and emerging space PNT systems including Lunar and LEO-PNT.
