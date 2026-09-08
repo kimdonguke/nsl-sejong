@@ -2371,21 +2371,38 @@ input, textarea, select {
 
 .research-band-inner {
   display: grid;
-  grid-template-columns: minmax(260px, 340px) 1fr;
-  gap: var(--space-10) var(--space-16);
-  align-items: start;
+  grid-template-columns: minmax(300px, 420px) 1fr;
+  gap: var(--space-8) var(--space-12);
+  align-items: center;
 }
 
-.research-band .research-icon-wrap {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-4);
+.research-band-media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
 }
 
-.research-band .research-icon-wrap svg {
-  width: 26px;
-  height: 26px;
+.research-band-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+/* 사진이 들어오기 전까지의 자리 — 분야 아이콘을 크게 */
+.research-band-media-placeholder {
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-card);
+  color: var(--color-primary);
+}
+
+.research-band-media-placeholder svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.55;
 }
 
 .research-band-title {
@@ -2413,15 +2430,8 @@ input, textarea, select {
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--color-text);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-6);
   max-width: 62ch;
-}
-
-.research-band-topics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-bottom: var(--space-5);
 }
 
 .topic-tag {
