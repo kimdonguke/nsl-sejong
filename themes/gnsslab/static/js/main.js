@@ -201,9 +201,43 @@
 
     function centerOf(el) { return el.offsetLeft - (track.clientWidth - el.offsetWidth) / 2; }
 
+    /* 브라우저 기본 smooth 대신 rAF + easeInOutCubic — 길이·곡선을 직접 제어 */
+    var animId = null;
+    function cancelAnim() {
+      if (animId) { cancelAnimationFrame(animId); animId = null; }
+      track.style.scrollSnapType = '';
+    }
+    function animateTo(target) {
+      cancelAnim();
+      track.style.scrollSnapType = 'none';   /* 애니메이션 중 스냅 개입 방지 */
+      var from = track.scrollLeft;
+      var dist = target - from;
+      var dur = 650;
+      var t0 = null;
+      function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+      function step(ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min(1, (ts - t0) / dur);
+        track.scrollLeft = from + dist * ease(p);
+        if (p < 1) {
+          animId = requestAnimationFrame(step);
+        } else {
+          animId = null;
+          track.style.scrollSnapType = '';
+        }
+      }
+      animId = requestAnimationFrame(step);
+    }
+
     function goToDom(d, instant) {
       domIdx = Math.max(0, Math.min(slides.length - 1, d));
-      track.scrollTo({ left: centerOf(slides[domIdx]), behavior: (instant || reduced) ? 'auto' : 'smooth' });
+      var target = centerOf(slides[domIdx]);
+      if (instant || reduced) {
+        cancelAnim();
+        track.scrollTo({ left: target, behavior: 'auto' });
+      } else {
+        animateTo(target);
+      }
     }
 
     function nearestDom() {
@@ -227,10 +261,21 @@
     function settle() {
       var d = nearestDom();
       if (slides[d].classList.contains('clone')) {
-        // 클론 위 -> 같은 내용의 진짜 카드로 무음 이동
+        // 클론 위 -> 같은 내용의 진짜 카드로 무음 이동.
+        // 점프 "전에" active 상태를 옮기고 그 프레임만 전환을 꺼서
+        // 진짜 카드가 흐림에서 되살아나는 이음새를 없앤다.
         teleporting = true;
-        goToDom(K + parseInt(slides[d].dataset.index, 10), true);
-        requestAnimationFrame(function () { teleporting = false; markActive(); });
+        var logical = parseInt(slides[d].dataset.index, 10);
+        var target = K + logical;
+        track.classList.add('no-anim');
+        slides.forEach(function (sl, i) { sl.classList.toggle('active', i === target); });
+        dots.forEach(function (dot, i) { dot.classList.toggle('active', i === logical); });
+        goToDom(target, true);
+        void track.offsetWidth;   // 리플로우 강제 — no-anim 상태로 그리게
+        requestAnimationFrame(function () {
+          track.classList.remove('no-anim');
+          teleporting = false;
+        });
       }
     }
 
@@ -262,7 +307,9 @@
         restart();
       });
     });
-    track.addEventListener('pointerdown', stop);
+    track.addEventListener('pointerdown', function () { cancelAnim(); stop(); });
+    track.addEventListener('wheel', cancelAnim, { passive: true });
+    track.addEventListener('touchstart', cancelAnim, { passive: true });
     track.addEventListener('pointerup', function () { restart(); });
     carousel.addEventListener('focusin', stop);
     carousel.addEventListener('focusout', start);

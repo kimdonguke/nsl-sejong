@@ -866,13 +866,16 @@ input, textarea, select {
   border-radius: var(--radius-lg);
   overflow: hidden;
   opacity: 0.45;
-  transform: scale(0.95);
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .research-slide.active {
   opacity: 1;
-  transform: none;
+}
+
+/* 원통 순간이동 프레임 — 전환 애니메이션 일시 차단 */
+.research-track.no-anim .research-slide {
+  transition: none;
 }
 
 .research-slide-media {
@@ -1260,6 +1263,7 @@ input, textarea, select {
    12. CTA SECTION
    ---------------------------------------------------------------- */
 .cta-section {
+  background: var(--color-bg-alt);
   padding-bottom: var(--space-24);
 }
 
