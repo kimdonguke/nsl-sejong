@@ -318,6 +318,9 @@ other = "School / Major"
 [label_course]
 other = "Course"
 
+[label_current]
+other = "Current Position"
+
 [label_final_degree]
 other = "Final Degree"
 

@@ -3,9 +3,10 @@ title: "Jeonghyeon Yun"
 nameKorean: "윤정현"
 role: "alumni"
 position: "박사"
-email: "alzkdpf929 at sju.ac.kr"
-emailAlt: "alzkdpf929 at outlook.kr"
+email: ""
+emailAlt: ""
 photo: "/images/members/alumni/yun-jeonghyeon.jpg"
+currentPosition: ""
 graduationYear: 2025
 education:
   - year: "2019.08"
@@ -23,7 +24,6 @@ education:
 thesis:
   korean: "스마트기기 GNSS/INS/Magnetometer/Barometer 통합 측위 시스템에 관한 연구"
   english: "A Study on the integrated Navigation System of GNSS/INS/Magnetometer/Barometer in Smart Device"
-research: "GNSS, Smartphone Positioning, Sensor Integration"
 publications:
   - date: "2024-02"
     title: "A GNSS/Barometric Altimeter Tightly-coupled Integration for Three-Dimensional Semi-indoor Mapping with Android Smartphones"

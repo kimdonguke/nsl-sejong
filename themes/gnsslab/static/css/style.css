@@ -1905,6 +1905,7 @@ input, textarea, select {
   font-family: var(--font-sans);
 }
 
+.alumni-current-line,
 .alumni-final-degree,
 .alumni-thesis-line,
 .alumni-research-line {
@@ -1914,8 +1915,9 @@ input, textarea, select {
   line-height: var(--leading-relaxed);
 }
 
-.alumni-research-line {
-  margin-bottom: var(--space-5);
+/* 상세 보기 버튼 — 어떤 줄이 마지막이든 동일한 간격을 갖도록 버튼에 여백을 준다 */
+.alumni-info .alumni-detail {
+  margin-top: var(--space-3);
 }
 
 .alumni-position-detail {

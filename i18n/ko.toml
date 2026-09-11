@@ -327,6 +327,9 @@ other = "학교 / 전공"
 [label_course]
 other = "과정"
 
+[label_current]
+other = "현직"
+
 [label_final_degree]
 other = "최종학력"
 

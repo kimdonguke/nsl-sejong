@@ -138,6 +138,9 @@
                 {{ with .Params.nameKorean }}{{ . }}{{ end }}
                 <span class="alumni-name-en">{{ .Title }}</span>
               </h4>
+              {{ with .Params.currentPosition }}
+                <p class="alumni-current-line"><span class="alumni-meta-label">{{ i18n "label_current" }}</span> {{ . }}</p>
+              {{ end }}
               {{ with .Params.education }}
                 {{ $last := index . (sub (len .) 1) }}
                 <p class="alumni-final-degree"><span class="alumni-meta-label">{{ i18n "label_final_degree" }}</span> {{ $last.year }} {{ $last.degree }}</p>
