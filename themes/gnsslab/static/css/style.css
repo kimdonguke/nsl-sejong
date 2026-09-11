@@ -840,6 +840,19 @@ input, textarea, select {
 
 /* Research carousel — 가운데 카드 + 양옆 엿보임(peek).
    가로 스크롤 스냅 트랙: 터치 스와이프 기본 지원, 활성 카드만 원색·원크기. */
+/* 홈 연구 섹션 — 한 화면에 담기도록 기본 .section보다 세로 리듬을 좁힌다 */
+.research-highlights {
+  padding-block: var(--space-16);
+}
+
+.research-highlights .section-header {
+  margin-bottom: var(--space-8);
+}
+
+.research-highlights .section-cta {
+  margin-top: var(--space-8);
+}
+
 .research-carousel {
   --rslide-w: min(720px, 86vw);
 }
@@ -849,7 +862,7 @@ input, textarea, select {
   gap: var(--space-6);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-block: var(--space-2) var(--space-4);
+  padding-block: var(--space-2) var(--space-3);
   padding-inline: calc((100% - var(--rslide-w)) / 2);
   scrollbar-width: none;
 }
@@ -905,7 +918,7 @@ input, textarea, select {
 }
 
 .research-slide-body {
-  padding: var(--space-6) var(--space-8);
+  padding: var(--space-5) var(--space-6);
   text-align: left;
 }
 
@@ -913,7 +926,7 @@ input, textarea, select {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .research-slide-title-ko {
@@ -934,7 +947,7 @@ input, textarea, select {
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
   color: var(--color-text-light);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
 }
 
 .research-carousel-nav {
@@ -942,7 +955,7 @@ input, textarea, select {
   align-items: center;
   justify-content: center;
   gap: var(--space-5);
-  margin-top: var(--space-6);
+  margin-top: var(--space-4);
 }
 
 .research-nav-btn {
@@ -985,6 +998,21 @@ input, textarea, select {
 
 @media (prefers-reduced-motion: reduce) {
   .research-slide { transition: none; }
+}
+
+/* 모바일 — 세로 배치를 유지하되 설명 줄 수를 묶어 스크롤 없이 담는다 */
+@media (max-width: 640px) {
+  .research-slide-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .research-highlights .section-cta {
+    margin-top: var(--space-6);
+  }
 }
 
 /* ----------------------------------------------------------------
