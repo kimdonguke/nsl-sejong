@@ -1,5 +1,5 @@
 ---
-title: "Kim Taeho"
+title: "Taeho Kim"
 nameKorean: "김태호"
 role: "ms"
 weight: 1

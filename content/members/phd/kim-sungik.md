@@ -1,5 +1,5 @@
 ---
-title: "Kim Sungik"
+title: "Sungik Kim"
 nameKorean: "김성익"
 role: "phd"
 weight: 2

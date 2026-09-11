@@ -1,5 +1,5 @@
 ---
-title: "Lee Yebin"
+title: "Yebin Lee"
 nameKorean: "이예빈"
 role: "phd"
 weight: 4

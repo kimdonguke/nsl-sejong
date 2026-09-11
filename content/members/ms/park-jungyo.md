@@ -1,5 +1,5 @@
 ---
-title: "Park Jungyo"
+title: "Jungyo Park"
 nameKorean: "박준교"
 role: "ms"
 weight: 2

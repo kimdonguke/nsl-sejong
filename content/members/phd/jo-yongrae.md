@@ -1,5 +1,5 @@
 ---
-title: "Jo Yongrae"
+title: "Yongrae Jo"
 nameKorean: "조용래"
 role: "phd"
 weight: 3

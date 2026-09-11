@@ -1,5 +1,5 @@
 ---
-title: "Kim Jooheon"
+title: "Jooheon Kim"
 nameKorean: "김주헌"
 role: "undergrad"
 weight: 3

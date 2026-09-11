@@ -1,5 +1,5 @@
 ---
-title: "Park Wonwoo"
+title: "Wonwoo Park"
 nameKorean: "박원우"
 role: "phd"
 weight: 1

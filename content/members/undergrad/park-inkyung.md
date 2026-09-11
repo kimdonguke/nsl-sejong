@@ -1,5 +1,5 @@
 ---
-title: "Park Inkyeong"
+title: "Inkyeong Park"
 nameKorean: "박인경"
 role: "undergrad"
 weight: 2

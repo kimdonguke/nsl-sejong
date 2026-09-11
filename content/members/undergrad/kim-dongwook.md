@@ -1,5 +1,5 @@
 ---
-title: "Kim dongwook"
+title: "Dongwook Kim"
 nameKorean: "김동욱"
 role: "undergrad"
 weight: 1

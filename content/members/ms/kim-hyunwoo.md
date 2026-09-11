@@ -1,5 +1,5 @@
 ---
-title: "Kim Hyunwoo"
+title: "Hyunwoo Kim"
 nameKorean: "김현우"
 role: "ms"
 weight: 5
