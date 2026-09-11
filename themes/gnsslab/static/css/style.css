@@ -3253,20 +3253,6 @@ input, textarea, select {
 
   .cta-visual { display: none; }
 
-  .professor-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .professor-photo {
-    display: flex;
-    justify-content: center;
-  }
-
-  .professor-links {
-    justify-content: center;
-  }
-
   .research-band-inner {
     grid-template-columns: 1fr;
     gap: var(--space-5);
@@ -3426,6 +3412,19 @@ input, textarea, select {
     height: 112px;
   }
 
+  /* 교수 카드도 학생과 같은 가로 포맷. 사진만 한 단계 크게 — 데스크톱 96:120과 같은 비율 */
+  .professor-card {
+    grid-template-columns: 105px 1fr;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .professor-photo img,
+  .professor-photo .photo-placeholder--lg {
+    width: 105px;
+    height: 140px;
+  }
+
   .member-card:hover { transform: none; }
 }
 
@@ -3456,6 +3455,30 @@ input, textarea, select {
   .member-photo .photo-placeholder {
     width: 72px;
     height: 96px;
+  }
+
+  .professor-card {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .professor-photo img,
+  .professor-photo .photo-placeholder--lg {
+    width: 90px;
+    height: 120px;
+  }
+
+  /* 칼럼이 좁아지므로 이메일 주소가 카드 밖으로 나가지 않게 */
+  .professor-email a {
+    overflow-wrap: anywhere;
+  }
+
+  /* 링크 4개가 한 줄씩 차지하지 않도록 조금 좁힌다 */
+  .professor-links {
+    gap: var(--space-2);
+  }
+
+  .prof-link {
+    padding: var(--space-1) var(--space-3);
   }
 
   /* 좁은 정보 칼럼(<=210px)에서 긴 연구 태그가 카드 밖으로 나가지 않게 */
