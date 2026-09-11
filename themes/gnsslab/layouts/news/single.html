@@ -59,13 +59,13 @@
       <div class="post-nav-cell post-nav-newer">
         {{ with $newer }}
         <a href="{{ .Permalink }}" class="post-nav-link">
-          <span class="post-nav-label">다음글<span class="post-nav-arrow">&rarr;</span></span>
+          <span class="post-nav-label">{{ i18n "post_nav_newer" }}<span class="post-nav-arrow">&rarr;</span></span>
           <span class="post-nav-title">{{ .Title }}</span>
           <span class="post-nav-date">{{ .Date.Format "2006.01.02" }}</span>
         </a>
         {{ else }}
         <div class="post-nav-empty">
-          <span class="post-nav-label">다음글<span class="post-nav-arrow">&rarr;</span></span>
+          <span class="post-nav-label">{{ i18n "post_nav_newer" }}<span class="post-nav-arrow">&rarr;</span></span>
           <span class="post-nav-placeholder">최신 글입니다</span>
         </div>
         {{ end }}

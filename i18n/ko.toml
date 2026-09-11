@@ -17,12 +17,6 @@ other = "자세히 보기"
 [hero_subtitle]
 other = "GNSS 신호처리와 정밀측위부터 복합항법, 자율 이동체 항법까지<br>차세대 PNT 기술을 연구합니다"
 
-[hero_cta_research]
-other = "연구 소개"
-
-[hero_cta_members]
-other = "구성원 보기"
-
 [stat_research]
 other = "연구 분야"
 
@@ -36,32 +30,8 @@ other = "구성원"
 other = "스크롤"
 
 # ---- 홈: 연구 섹션 ----
-[home_research_tag]
-other = "연구"
-
 [home_research_title]
 other = "연구 분야"
-
-[home_research_desc]
-other = "위성항법과 측위 기술 전반에서 이론 연구와 실용 시스템 개발을 함께 수행합니다."
-
-[home_card_gnss_title]
-other = "위성항법 신호처리 및 정밀측위"
-
-[home_card_gnss_desc]
-other = "GPS·GLONASS·Galileo·BeiDou 신호의 획득·추적·측위 알고리즘을 연구하며, 항재밍·항기만과 다중경로 완화 기법을 다룹니다."
-
-[home_card_integration_title]
-other = "복합항법 시스템"
-
-[home_card_integration_desc]
-other = "GNSS와 IMU·기압계·영상 센서를 융합하고, 신호 차단 환경에서도 끊김 없는 항법을 위한 강건한 칼만필터 구조를 설계합니다."
-
-[home_card_autonomous_title]
-other = "자율 이동체 항법"
-
-[home_card_autonomous_desc]
-other = "자율주행차와 UAV를 위한 항법 솔루션을 연구합니다. GNSS/INS에 LiDAR·카메라·정밀지도를 결합해 도심 환경에서 정밀 측위를 구현합니다."
 
 [home_view_all_research]
 other = "전체 연구 분야 보기"
@@ -190,24 +160,6 @@ other = "위성항법의 기초 이론부터 실용 시스템까지, 측위 기�
 
 [research_areas]
 other = "연구 분야"
-
-[research_funding_title]
-other = "연구 지원"
-
-[research_funding_intro]
-other = "연구실의 연구는 정부 연구지원 기관과 산업체의 지원으로 수행됩니다."
-
-[funding_nrf]
-other = "한국연구재단"
-
-[funding_add]
-other = "국방과학연구소"
-
-[funding_iitp]
-other = "정보통신기획평가원"
-
-[funding_msit]
-other = "과학기술정보통신부"
 
 # ---- 연구실적 ----
 [pub_title]

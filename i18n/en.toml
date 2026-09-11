@@ -18,12 +18,6 @@ other = "View details"
 [hero_subtitle]
 other = "Pioneering research in GNSS signal processing, integrated navigation systems,<br>and autonomous vehicle navigation technologies"
 
-[hero_cta_research]
-other = "Our Research"
-
-[hero_cta_members]
-other = "Meet the Team"
-
 [stat_research]
 other = "Research Areas"
 
@@ -36,32 +30,8 @@ other = "Lab Members"
 [hero_scroll]
 other = "Scroll"
 
-[home_research_tag]
-other = "What We Do"
-
 [home_research_title]
 other = "Research Areas"
-
-[home_research_desc]
-other = "Our lab focuses on cutting-edge research in satellite navigation and positioning technologies, bridging theoretical innovation with practical applications."
-
-[home_card_gnss_title]
-other = "GNSS Signal Processing"
-
-[home_card_gnss_desc]
-other = "Advanced algorithms for acquisition, tracking, and positioning using GPS, GLONASS, Galileo, and BeiDou signals. Research includes anti-jamming, anti-spoofing, and multipath mitigation techniques."
-
-[home_card_integration_title]
-other = "Integrated Navigation"
-
-[home_card_integration_desc]
-other = "Sensor fusion of GNSS with IMU, barometers, and vision systems. Development of robust Kalman filter architectures for seamless navigation in GNSS-degraded and denied environments."
-
-[home_card_autonomous_title]
-other = "Autonomous Navigation"
-
-[home_card_autonomous_desc]
-other = "Navigation solutions for autonomous vehicles and UAVs. Combining GNSS/INS with LiDAR, camera, and HD maps for precise localization in urban and challenging environments."
 
 [home_view_all_research]
 other = "View All Research Areas"
@@ -185,24 +155,6 @@ other = "Our research spans fundamental theory and practical applications in sat
 
 [research_areas]
 other = "Research Areas"
-
-[research_funding_title]
-other = "Research Funding"
-
-[research_funding_intro]
-other = "Our research is supported by leading national funding agencies and industry partners."
-
-[funding_nrf]
-other = "National Research Foundation of Korea"
-
-[funding_add]
-other = "Agency for Defense Development"
-
-[funding_iitp]
-other = "Institute of Information & Communications Technology Planning & Evaluation"
-
-[funding_msit]
-other = "Ministry of Science and ICT"
 
 [pub_title]
 other = "Publications"
